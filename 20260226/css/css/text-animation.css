@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+A {
+    text-decoration: none;
+    color: #333;
+}
+ul {
+    list-style: none;
+}
+
+html,
+body {
+    font-size: 14px;
+}
+
+.container {
+    width: 700px;
+    height: 700px;
+    margin: 200px auto;
+    background-color: green;
+}
