@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+/* ✨ 꾸미기 ✨ */
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+    /* 기본 설정 */
+}
+body {
+    background: #a6c9a8;
+    color: #3d8b7d;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 4rem;
+    /* 64px */
+}
+
+p {
+    font-size: 2rem;
+    /* 32px */
+}
+
+/* ////////////////////////////////
+   📌 반응형
+   //////////////////////////////// */
+
+@media screen and (max-width: 1500px) {
+    html {
+        font-size: 14px;
+    }
+    body {
+        background: #dbc557;
+        color: #cc6f31;
+    }
+}
+/* ========================================
+   🧩 화면 너비에 따른 css 변경
+   ----------------------------------------
+   - min-width : 최소 너비 === 이상
+   - max-width : 최대 너비 === 이하
+======================================== */
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 12px;
+    }
+    body {
+        background: #d1eaf5;
+        color: #315acc;
+    }
+}
+
+/* ========================================
+   🧩 브레이크 포인트
+   ----------------------------------------
+    위와 같이 스크린 크기에 따른 css가 변경되는 
+    포인트를 **브레이크 포인트**라고 부른다.
+   ======================================== */
+
+@media screen and (max-width: 700px) {
+    body {
+        background-color: coral;
+        color: rgb(255, 243, 240);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 10px;
+    }
+    body {
+        background-color: royalblue;
+    }
+}

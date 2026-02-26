@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 초기화 할 때 반드시 이 코드를 넣어야 하는 이유 */
+}
+
+div {
+    width: 300px;
+    height: 200px;
+    background: red;
+    color: white;
+    text-align: center;
+    line-height: 200px;
+    font-weight: bold;
+}
+.margin_div {
+    /* display: block; */
+    margin: 30px;
+    margin: 30px 30px;
+    margin: 30px 30px 30px; /* 상 좌우 하 */
+    margin: 30px 30px 30px 30px; /* 위 오른쪽 아래 왼쪽(시계방향) */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* 
+    마진이 상하로 놓여질 때는 이중으로 되어 있지 않고 중첩된다. 
+    즉 ===> 
+
+    (30px)
+    요소
+    (30px)   ===> 여백 중첩
+    요소 
+    (30px)   ===> 여백 중첩
+    요소 
+    (30px)
+
+
+    단, 세로로는 아래위로 중첩이 되지만 좌우로는 중첩되지 않는다.  
+    인라인은 너비 높이+ 상하 여백 등이 적용이 되지 않는다. 
+    즉, 마진의 상하: 중첩됨/ 좌우 : 중첩안됨
+*/
+
+.padding_div {
+    margin: 30px;
+    border: 2px solid green;
+    padding: 30px;
+    padding: 20px 30px;
+    padding: 20px 30px 20px;
+    padding: 30px 30px 30px 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* box-sizing: border-box; */
+/* 
+    padding / border를 주면 요소의 크기가 커진다. ==> border까지가 요소의 영역
+    box-sizing : border-box 를 주는 이유 --> 박스의 사이즈를 보더에 맞춘다는 말 
+                -> 늘어나지 않는다. -> 컨텐츠 영역이 줄어든다.
+    contents-box는 박스의 사이즈를 컨텐츠에 맞춘다는 뜻
+    margin은 외부에 주는 여백이라 요소 크기를 추가하지 않는다.
+*/
+
+/* box-sizing & bax-shadow */
+.box-sizing-div.content-box {
+    padding: 30px;
+    margin: 30px;
+    box-sizing: content-box;
+}
+
+.box-sizing-div.border-box {
+    padding: 30px;
+    margin: 30px;
+    box-sizing: border-box;
+    /* 
+    콘텐츠 영역이 100px 밖에 안 됨(현재 line-height 가 200px 인상황)
+    */
+    line-height: 150px;
+    /* 그러므로 새로 설정해줘야 함 */
+}
+
+/* 
+box-sizing 속성을 사용해 이 방식을 바꿀 수 있습니다.
+
+content-box는 기본 CSS 박스 크기 결정법을 사용합니다. 요소의 너비를 100 픽셀로 설정하면 콘텐츠 영역이 100 픽셀 너비를 가지고, 테두리와 안쪽 여백은 이에 더해집니다.
+border-box는 테두리와 안쪽 여백의 크기도 요소의 크기로 고려합니다. 너비를 100 픽셀로 설정하고 테두리와 안쪽 여백을 추가하면, 콘텐츠 영역이 줄어들어 총 너비 100 픽셀을 유지합니다. 대부분의 경우 이 편이 크기를 조절할 때 쉽습니다.
+*/
+
+.box-shadow-none {
+    width: 300px;
+    height: 200px;
+    box-shadow: none;
+    margin: 50px;
+}
+.box-shadow {
+    width: 300px;
+    height: 200px;
+    box-shadow: 2px 2px 5px 0 black;
+    /* box-shadow: 가로거리 세로거리 흐림정도 번짐정도 색상 inset(내부로 그림자를 드리울 떄, 안적으면 바깥 그림자(offset)가 되며 디폴트); */
+    margin: 50px;
+}
+.box-shadow-bg {
+    margin: 50px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.28);
+    /* 
+        경계구분을 할떄 많이 쓰는 속성 === box-shadow
+        속성 값이 많이 넣을수록 촌스러워 짐
+    */
+}
+.box-shadow-bg:hover {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.28) inset;
+    /* 호버시 요소 내부로 그림자가 져서 버튼이 눌리는 효과가 난다  */
+}

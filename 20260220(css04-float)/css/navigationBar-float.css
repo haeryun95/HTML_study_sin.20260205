@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+ul {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+/* 공통클래스 */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* style */
+nav {
+    width: 500px;
+    margin: 0 auto;
+}
+nav ul {
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    line-height: 30px;
+    background-color: skyblue;
+}

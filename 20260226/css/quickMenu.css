@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: #444e53;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 600;
+}
+img {
+    vertical-align: top;
+}
+
+/* common */
+.clearFix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* style */
+section {
+    background-color: #f2f4f7;
+}
+section .container {
+    width: 100%;
+    max-width: 1400px;
+    /* background-color: #fff; */
+    margin: 0 auto;
+}
+section .container ul {
+    padding: 10px 0;
+}
+
+/* =========== li  공통 부문*/
+section .container ul li {
+    float: left;
+    line-height: 44px;
+    width: calc(100% / 5);
+    border-right: 2px solid #e1e3e6;
+}
+
+/* 개별 li */
+section .container ul li:last-child {
+    border: 0;
+}
+
+section .container ul li a {
+    padding: 10px 20px;
+    padding-left: 100px;
+    background-size: 56px 56px;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+section .container ul li:hover a {
+    transform: translateX(-20px);
+}
+
+/* 개별 a */
+
+section .container ul li:nth-of-type(1) a {
+    background-image: url(../images/img_icon01.svg);
+    background-position: 28% 46%;
+}
+section .container ul li:nth-of-type(2) a {
+    background-image: url(../images/img_icon02.svg);
+    background-position: 32% 48%;
+}
+section .container ul li:nth-of-type(3) a {
+    background-image: url(../images/img_icon03.svg);
+    background-size: 50px 50px;
+    background-position: 30% 35%;
+}
+section .container ul li:nth-of-type(4) a {
+    background-image: url(../images/img_icon04_new.png);
+    background-position: 28% 48%;
+}
+section .container ul li:last-child a {
+    background-image: url(../images/img_icon05_new.png);
+    background-size: 50px 50px;
+    background-position: 30% 40%;
+}

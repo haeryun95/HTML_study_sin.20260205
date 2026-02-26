@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* ========================================
+   😨 이슈 001 ===> 개행? 단어 사이의 띄어쓰기가 있어야 정상적으로 개행이 됩니다..!! 만약 개행이 안된다면
+   띄어쓰기를 확인해보세용~
+======================================== */
+
+/* ✨ 초기화 ✨ */
+* {
+    margin: 0;
+    padding: 0;
+    word-break: normal;
+}
+
+/* ✨ basic ✨ */
+html {
+    margin: 10px;
+    padding: 20px;
+    color: green;
+    font-size: 20px;
+    border: 5px solid red;
+}
+p {
+    color: black;
+    padding: 20px 0;
+    border: 5px solid black;
+}
+div {
+    padding: 10px;
+    border: 5px solid blue;
+}
+
+/* ✨ specific ✨ */
+
+/* === body === */
+
+body p:nth-child(1) {
+    margin: 40px 0;
+    font-size: 2rem;
+}
+body p:nth-child(2) {
+    margin: 20px 0;
+}
+
+/* === Container === */
+
+.container {
+    color: red;
+    font-size: 2rem;
+}
+.container p:nth-child(1) {
+    margin: 80px 0;
+    font-size: 4rem;
+}
+.container p:nth-child(2) {
+    font-size: 1rem;
+}
+
+/* === Box === */
+
+.box {
+    color: red;
+    font-size: 4rem;
+}
+.box p:nth-child(1) {
+    margin: 160px 0;
+    font-size: 8rem;
+}
+.box p:nth-child(2) {
+    font-size: 1rem;
+}
+
+/* ========================================
+   🧩 시험 피드백 
+   ----------------------------------------
+   - 클래스 명으로 주는 것이 훨씬 쉽다!
+   - 가독성에 따라 판단할 것!
+======================================== */

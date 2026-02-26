@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>table-ex01</title>
+    </head>
+    <body>
+        <!-- thead , tfoot == 글자 굵기 다름, 가운데 정렬 -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Fee</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Kim</td>
+                    <td>2400</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lee</td>
+                    <td>2200</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">3</td>
+                    <td>Park</td>
+                    <td>2600</td>
+                </tr>
+                <tr>
+                    <!-- <td>4</td> -->
+                    <td>Choi</td>
+                    <td>3000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="2">total</th>
+                    <th>10200</th>
+                </tr>
+            </tfoot>
+        </table>
+        <!-- 행 Row / 열 Colum 의 병합에 따른  -->
+    </body>
+</html>

@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    /* vertical-align: top; */
+    display: block;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    /* color: white; */
+    color: #333;
+    height: 35px;
+    line-height: 35px;
+    /* background-color: #333; */
+    background-color: white;
+}
+
+/* common */
+
+.container {
+    position: relative;
+    border: 4px solid green;
+    padding: 5px;
+    width: 800px;
+    height: 300px;
+}
+.container > img {
+    float: left;
+    /* width: 400px;
+    height: 280px; */
+    height: 100%;
+    /* 
+    부모요소의 높이가 명확하게 있으므로 100%를 써도된다.
+    컨텐츠 영역의 100%를 의미 -> 패딩이포함되지 않는다.
+    만약 부모가 auto값이나 무작위의 값을 가지고 있으면 쓰면 좋지않다.
+    */
+
+    margin-right: 10px;
+}
+.container .controls a {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 7px #3333334f;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+}
+.container .controls a:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+}
+.container .controls .prev {
+    right: 90%;
+}
+.container .controls .next {
+    left: 90%;
+}
+.container .controls a img {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .controls a.prev img {
+    transform: translate(-50%, -50%) scaleX(-1);
+}
+
+/* 
+img는 “replaced element(대체 요소)”라서 width/height가 먹는다
+img, video, iframe, input 같은 애들은
+
+요소의 내용(content)을 CSS가 직접 그리는 게 아니라
+“외부 리소스(이미지 파일 등)로 대체(replace)”해서 렌더링하는 요소
+
+라서 일반 inline 텍스트 요소랑 규칙이 달라.
+
+replaced element의 특징 (핵심)
+display:inline이어도 **고유 크기(intrinsic size)**가 있음
+(이미지 원본 픽셀 크기 같은 거)
+
+그래서 width/height 지정이 가능함
+
+지정 안 하면 원본 크기(또는 비율)에 따라 사이즈가 잡힘
+
+즉, img는 “인라인”이긴 한데
+텍스트처럼 취급되는 인라인이 아니라 자체 크기를 가진 인라인이라서 width/height가 먹는 거야.
+
+*/

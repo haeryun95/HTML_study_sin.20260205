@@ -1,0 +1,290 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+image {
+    vertical-align: top;
+}
+
+/* common class */
+
+.section1 {
+    position: static;
+    /* 
+        static : 벽돌이 쌓이는 것처럼 차곡차곡 쌓이는 상태. 디폴트 
+                 써도되고 안써도 됨
+    */
+    width: 100%;
+    height: 100px;
+    background: green;
+}
+.section2 {
+    width: 100%;
+    height: 100px;
+    background: steelblue;
+}
+.wrapper {
+    position: relative;
+    /* relative : 자기 자신을 기준점으로 만들며,
+   absolute 자식들의 기준이 된다 */
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    background: beige;
+}
+.container {
+    position: absolute;
+    /* absolute:
+   가장 가까운 position이 있는 조상을 기준으로 한다.
+   없으면 뷰포트를 기준으로 한다 
+   
+   position: absolute 는
+조상 요소 중에서 position이 static이 아닌
+가장 가까운 요소를 기준으로 위치가 결정된다.
+   
+   */
+    top: 50px;
+    left: 50px;
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: gold;
+}
+.box {
+    position: absolute;
+    /* 
+        문서에서 벗어난다. float와 비슷 / 너비와 높이가 컨텐츠만큼 줄어든다. 
+    */
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.a {
+    background: red;
+    /* 
+        디폴트 
+        left :0;
+        top : 0;
+
+        부모 기준으로 
+
+    */
+
+    top: 50px;
+    left: 50px;
+}
+.b {
+    background: green;
+    bottom: 100%;
+    right: 0;
+}
+.c {
+    background: blue;
+    /* 
+    right: -100px; 은 추천하지 않는다. 
+    계산을 하면 좋지않다. 
+    코딩을 할때는 모든 상황에 다쓸수있게
+    영역 안쪽에선 right를 쓰는게 좋다
+    */
+    left: 100%;
+
+    top: 0;
+}
+
+/* 
+
+한 줄 요약부터 할게
+relative 👉 “나는 기준점이 될게”
+absolute 👉 “나를 어디 기준으로 놓을지 알려줘”
+
+1️⃣ position의 핵심 개념은 딱 하나야
+👉 “이 요소의 좌표( top / left / right / bottom )를 무엇을 기준으로 계산하느냐”
+
+relative의 진짜 역할
+❌ “부모 요소를 지정하는 속성” ← 이 표현이 조금 위험
+⭕ “자기 자신이 기준점이 된다”
+
+원래 있던 자리 그대로 차지함
+
+top, left를 주면 자기 자리 기준으로 살짝 이동
+
+가장 중요한 역할 👉
+👉 자식 absolute들의 기준점이 됨
+
+즉,
+
+relative는 ‘움직이려고 쓰는 속성’이 아니라
+‘기준을 만들려고 쓰는 속성’인 경우가 훨씬 많다
+
+그래서 실무에서 이렇게 쓰지 👇
+
+부모 {
+  position: relative;  기준만 만들기 
+}
+
+자식 {
+  position: absolute;  정확한 위치 배치 
+}
+
+3️⃣ position: absolute 정확한 의미
+
+absolute의 진짜 규칙 (이게 핵심이야)
+가장 가까운 “position이 static이 아닌 조상”을 기준으로 움직인다
+
+여기서 중요한 단어:
+
+❗ 부모가 아니라 “조상”
+
+❗ static이 아닌 요소 (relative / absolute / fixed / sticky)
+
+absolute의 특징
+문서 흐름에서 완전히 빠짐 (float랑 비슷하지만 다름)
+
+width/height 없으면 내용 크기만큼 줄어듦
+
+margin auto 같은 건 거의 의미 없음 (지금 코드에서도 사실상 무시됨)
+
+5️⃣ 질문의 핵심
+absolute 부모 안에 absolute 자식이 있을 수 있나?
+
+👉 있다. 완전히 가능하고, 아주 흔하다.
+
+왜 가능한지 흐름으로 설명해볼게
+
+① .container는 왜 .wrapper 기준이야? 👉 .container는 가장 가까운 position 있는 조상 = .wrapper
+.container의 top/left → wrapper 기준
+
+② .box는 누구를 기준으로 할까? 👉 .container 자체가 position이 static이 아님
+.box의 top/left → container 기준
+
+
+wrapper (relative)
+└── container (absolute) → wrapper 기준
+    └── box (absolute) → container 기준
+*/
+
+.relative-box {
+    position: relative;
+}
+
+.red {
+    position: relative;
+    /* 
+        상대적 위치/ 원래 가진 영역은 그대로 유지 
+    
+    */
+    top: 100px;
+    left: 100px;
+    /* 
+        relative-> 블록이 다잡혀있음 높이를 가짐
+        absolute는 높이를 갖지 않음
+
+    */
+}
+
+/* 
+1) position: relative가 “relative”인 이유
+relative는 자기 원래 위치(정상 흐름에서 계산된 위치) 를 기준으로 top/left/right/bottom 오프셋을 적용한다는 뜻이야.
+
+즉,
+
+먼저 브라우저가 평소대로 배치함 (static처럼)
+
+그 다음 top/left 같은 값을 주면 그 “원래 위치”에서 살짝 이동함
+2) “원래 위치가 있으며, 블록으로 높이를 가진다”는 말의 정확한 의미
+✅ (1) 원래 위치가 있다 — 맞아
+relative는 문서 흐름(normal flow) 안에 있어.
+그래서 “내가 원래 있어야 할 자리”가 계산돼.
+
+✅ (2) 자리(공간)를 그대로 차지한다 — 이것이 핵심
+relative로 움직여도 원래 자리의 공간은 남아있어.
+즉, 네가 20px 내려가도, 다른 요소들이 “그 빈자리로” 올라와서 채우지 않아.
+
+relative는 “보이는 위치만 이동”하고,
+레이아웃 상의 자리(공간 점유)는 그대로 유지해.
+
+✅ (3) “블록이라서 높이를 가진다”는 표현은 반만 맞아
+높이를 갖는 건 relative 때문이 아니라, display 타입 때문이야.
+
+div는 기본이 display: block이라서 폭/높이 흐름이 생기는 거고
+
+span은 기본이 display: inline이라서 “높이” 개념이 레이아웃에서 다르게 동작해
+
+즉,
+
+position: relative = 포지셔닝 방식
+
+display: block/inline = 박스 성격(줄바꿈/크기 계산 방식)
+
+둘이 다른 축이야.
+
+그래도 중요한 결론은:
+👉 position: relative를 줘도 요소는 여전히 원래 flow 안에 있기 때문에 “공간을 차지한다”
+이게 네가 말한 “블록처럼 높이를 가진다”의 실질 포인트야.
+
+3) top/left를 안 주면 relative는 뭐가 달라?
+이게 꿀 포인트.
+
+오프셋을 안 주면 화면상으로는 거의 static이랑 똑같아 보일 수 있어.
+
+근데 달라지는 게 딱 2개 있어:
+
+absolute 자식의 기준이 될 수 있음
+
+(경우에 따라) z-index가 기대한 대로 먹는 데 도움이 됨
+※ z-index는 포지션이 있어야(대체로 static이 아니어야) 의도대로 쓰는 경우가 많아
+
+실무에서 relative가 “많이 깔리는 이유”는 거의 1번 때문이야.
+
+4) relative가 “absolute 자식의 기준”이 되는 원리
+아까 너가 정리한 규칙 기억나지?
+
+absolute는 조상 중 position: static이 아닌 가장 가까운 조상을 기준으로 한다.
+
+그래서 부모(혹은 조상)에 relative를 주면:
+
+이 child는 뷰포트가 아니라 parent 기준으로 딱 붙어.
+
+그래서 relative는 실무에서 이런 느낌으로 쓰여:
+
+“나는 안 움직일 건데, 내 자식들이 나를 기준으로 움직이게 만들거야.”
+
+5) relative에 대한 흔한 오해 3개 정리
+오해 1) “relative는 부모 지정이다”
+❌ 부모 지정이 아니야
+✅ 내가 기준이 된다 (그리고 내 자식 absolute의 기준이 된다)
+
+오해 2) “relative면 레이아웃이 바뀐다”
+✅ 요소 자체는 flow 안에 남아서 공간을 차지하니까 “레이아웃의 자리”는 유지
+❗ 하지만 보이는 위치가 이동하면서 겹침(overlap) 이 생길 수는 있어
+
+오해 3) “relative면 높이가 생긴다”
+❌ 높이는 display/내용/height에 의해 결정
+✅ relative는 “자리 유지 + 오프셋 이동 방식”을 바꾸는 것
+
+
+*/
+
+.gotop {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    /* 
+        뷰포트를 기준으로 고정되어 있다. absolute와 비슷하게 떠있지만, 
+    */
+}

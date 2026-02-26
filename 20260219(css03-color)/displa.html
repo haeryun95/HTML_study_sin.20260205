@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>display</title>
+        <style>
+            div {
+                width: 300px;
+                height: 100px;
+                font-size: 1em;
+                color: #fff;
+                text-align: center;
+                margin-top: 10px;
+                border: 2px solid green;
+            }
+            .block-div {
+                /* display: block; */
+                background: red;
+                /* 
+                    div는 원래 block
+                    따라서 display를 따로 적을 필요가 없다.
+                */
+            }
+            .inline-div {
+                display: inline;
+                background-color: green;
+                /* 
+                    😀 인라인으로 변경하면 
+                    - 너비,높이가 먹지않음
+                    - 마진도 먹지 않음
+                */
+            }
+            .inline-block-div {
+                display: inline-block;
+                background-color: blue;
+                /* 
+                    인라인 요소의 성질을 받아서 
+                    공간이 없으면 개행이 된다.
+                */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="block-div">display:block</div>
+        <div class="inline-div">display:inline</div>
+        <div class="inline-block-div">display:inline-block</div>
+    </body>
+</html>

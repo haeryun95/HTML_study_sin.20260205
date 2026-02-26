@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+/* common */
+
+.container {
+    width: 300px;
+    border: 1px solid #c4c4c4;
+}
+a.readMore {
+    display: block;
+    /* 
+        인라인 요소는 너비높이 먹지않는다.
+    */
+    width: 100px;
+    height: 36px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #616161;
+}
+
+/* answer1 */
+
+/* .container {
+    position: relative;
+    padding: 20px;
+    margin: 50px;
+}
+
+a.readMore {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 10px);
+} */
+
+/* answer2 */
+
+/* .container {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+a.readMore {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 10px;
+} */
+
+/* 
+  margin은 width/height에는 포함되지 않지만,
+ absolute 요소의 ‘최종 위치’에는 영향을 준다.    
+*/
+
+/* answer3 */
+
+.container {
+    position: relative;
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 30px;
+    margin: 100px;
+}
+.container ul {
+}
+.container ul li {
+}
+.container .readMore {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    color: white;
+    background-color: #333;
+    text-align: center;
+    bottom: 100%;
+    right: 0;
+    bottom: calc(100% + 10px);
+}
+
+/* 
+    ❗ margin은 “크기”가 아니라 “거리”다
+    ❌ width / height → 박스 크기
+
+    ✅ margin → 다른 요소(또는 기준선)와의 간격
+
+    absolute 요소라고 해서 margin이 무시되지 않아.
+
+    box-sizing: border-box;
+    이걸 쓰면:
+
+    width 값 안에 padding + border가 포함됨
+
+    그래서 “padding이 콘텐츠에 포함된 것처럼” 느껴짐
+
+    하지만 개념적으로는 포함된 게 아님.
+
+    box-sizing은 계산 방식을 바꾸는 거지
+    content의 정의를 바꾸는 게 아냐
+    
+
+    4️⃣ box-sizing 기준으로 정확히 정리
+
+    🔹 content-box (기본값)
+    width = content
+    padding ❌
+    border ❌
+    margin ❌
+
+    🔹 border-box
+    width = content + padding + border
+    padding ✅ (계산에 포함)
+    border ✅ (계산에 포함)
+    margin ❌ (절대 안 포함)
+
+    ❗ 하지만 다시 말하지만
+    👉 이건 width 계산일 뿐, content 자체가 늘어난 게 아님
+
+*/
+
+/* 
+
+    relative를 쓰는이유
+
+    1. absolute의 기준을 잡기 위해
+    2. z-index 를 주기위해
+
+    즉, x나 y축의 이동을 위해서라면 잘 쓰지 않음
+*/

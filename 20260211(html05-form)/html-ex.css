@@ -1,0 +1,66 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    /* width: 400px; */
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.playlist_title {
+    margin-top: 20px;
+}
+.playlist_title span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffce52;
+}
+.playlist_cover {
+    width: 100%;
+    height: 250px;
+}
+/* img는 인라인 요소이기 때문에 display를 변경하거나*/
+/*vertical align을 이용해야함*/
+.playlist_cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* display: block; */
+    vertical-align: top;
+}
+/* 반응형 때문에 100%로 하는게 권장 */
+/* img에는 왠만하면 픽셀값을 주지말것! */
+.playlist_description {
+    padding: 24px;
+    color: #111;
+    /* border: 1px solid #ddd; */
+}
+.playlist_description h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.playlist_description p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    color: #6b7280;
+}
+.playlist_description button {
+    padding: 10px 24px;
+    font-size: 14px;
+    background-color: #ffce52;
+    border: 0;
+    font-weight: 600;
+    border-radius: 8px;
+}
+/* 일반적으로 밑으로 마진을 주는 방법으로 조절함*/
+/* #000(검정색) ===> #fff(흰색)  */
+/* 가독성 === 응집력을 생각해보자 글자 크기가 크다고 무조건 좋은건 아니다(단, 접근성은 좋아짐)*/
+/* 글자 사이즈 만큼 행간이 길어야함 */
+/* 자간은 잘 건들지 않는다. 타이틀에는 자주 씀!!! */
+/* 폰트 위계 -> 타이틀이 제일 높다 ===> 그래서 본문의 색상을 좀 연하게*/
+/* 버튼 글자 12~14정도*/

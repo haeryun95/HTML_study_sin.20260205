@@ -1,0 +1,101 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 선택자 (selector)의 종류 */
+/* 전체 선택자(*), 태그명, 클래스명, 아이디명 */
+
+#logo {
+    color: green;
+    font-size: 100px;
+}
+
+/* 아이디 명 >>>> 클래스 명 */
+/* 아이디 : 개인 / 클래스 : 무리 */
+
+.logo {
+    color: red;
+    font-size: 50px;
+}
+
+/* 인라인 스타일값이 있으면 적용되지 않음 */
+/* 모든 태그들이 부모 요소의 속성값 전부를 상속받는 것은 아니다. 예를 들어, a태그는 하이퍼링크가 있기 때문에 글자 색상은 직접 스타일링을 해야함 (크기는 상속됨)*/
+/* a {
+    color: red;
+} */
+/* !important >> 잘 안쓰는게 좋다 */
+h1 a {
+    color: pink;
+}
+
+header h1 #a_link {
+    color: #333;
+}
+/* 토탈점수 102 */
+h1 #a_link {
+    color: orange;
+}
+/* 토탈 점수 101 */
+header h1 a {
+    color: #333;
+}
+/* 토탈 점수 3 */
+#logo a {
+    color: green;
+}
+/* 토탈 점수 101 */
+
+/* 아이디 명 = 100 / 클래스 = 10 / 태그 = 1 ===> 토탈 점수로  */
+/*   
+* : 0점
+Tag : 1점
+Class : 10점
+Id : 100점
+Inline style : 1000점
+!important : 가장 우선순위가 높다.
+ */
+header p {
+    color: purple;
+}
+/* 후손 */
+header > p {
+    color: steelblue;
+}
+/* 직계자손 */
+p {
+    font-size: 22px;
+    color: gold;
+}
+/* -------------------------------------------------- */
+
+header div p {
+    background: gold;
+    color: greenyellow;
+}
+header .desc {
+    background: red;
+    color: greenyellow;
+}
+
+.desc {
+    background: blue;
+    color: darkslategray !important;
+}
+/*  주의할것은스타일의모든속성이부모요소에서자식요소로상속되는것은아니라는점
+(예, 글자 색은 상속되지만 배경색은상속되지않음) */
+
+section {
+    background-color: pink;
+}
+.content3 {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #999;
+}
+.content3 .box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #999;
+}
+/* div의 색상이 '투명' // 부모로 부터 상속되지 않음*/

@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+/* STYLE */
+nav.inline-test {
+    width: 540px;
+    margin: 30px auto;
+}
+nav.inline-test ul {
+    font-size: 0;
+}
+nav.inline-test ul li {
+    width: 100px;
+    height: 40px;
+    transition: 0.3s;
+    margin-right: 10px;
+    display: inline-block;
+    background-color: #333;
+}
+nav.inline-test ul li:last-child {
+    margin-right: 0;
+}
+nav.inline-test ul li:hover {
+    border-bottom: 5px solid gold;
+}
+nav.inline-test ul li a {
+    display: block;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+}
+
+/* float */
+
+nav.float-test {
+    width: 540px;
+    margin: 30px auto;
+}
+
+nav.float-test ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav.float-test ul li {
+    float: left;
+    width: 100px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #333;
+    transition: 0.3s;
+}
+
+nav.float-test ul li:last-child {
+    margin-right: 0;
+}
+
+nav.float-test ul li:hover {
+    border-bottom: 5px solid gold;
+}
+
+nav.float-test ul li a {
+    display: block;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+}
+/* =========================================
+   float 레이아웃 핵심 요약
+   -----------------------------------------
+   1. float는 "형제 요소"에 적용한다
+      → 보통 li에 float:left
+
+   2. float를 쓰면 부모 높이가 사라진다
+      → clearfix 필수
+
+   3. nav / ul에 float 주는 건 거의 안 쓴다
+      → 레이아웃 제어는 자식에게
+   ========================================= */
+
+/* flex */
+nav.flex-test {
+    width: 540px;
+    margin: 30px auto;
+}
+nav.flex-test ul {
+    display: flex;
+    gap: 10px;
+}
+nav.flex-test ul li {
+    width: 100px;
+    height: 40px;
+    transition: 0.3s;
+    background-color: #333;
+}
+nav.flex-test ul li:hover {
+    border-bottom: 5px solid gold;
+}
+nav.flex-test ul li a {
+    display: block;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+}

@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+img {
+    vertical-align: top;
+}
+
+/* common class */
+.clearFix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.quick-menu {
+    width: 750px;
+    margin: 50px auto;
+}
+.quick-menu li {
+    float: left;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #eee;
+    text-align: center;
+    background: url(../images/book-icon.png) no-repeat;
+    background-position: 20px center;
+    background-size: 31px auto;
+    padding-left: 40px;
+}

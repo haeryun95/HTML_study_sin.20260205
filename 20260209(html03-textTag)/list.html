@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>list tag</title>
+        <style>
+            * {
+                /* margin: 0; */
+                /* padding: 0; */
+            }
+            ul {
+                /* padding: 0; */
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>리스트(목록) 태그들</h1>
+        <h2>비순차 목록 - Unodered List</h2>
+        <ul>
+            <li>list item 01</li>
+            <li>list item 02</li>
+            <li>list item 03</li>
+            <li>list item 04</li>
+        </ul>
+        <!-- 무조건 ul 태그 안에 쓸 것 / 단독으로 li 쓸수없음/ list의 순서가 뒤바뀌어도 상관없는 비 순차적인 목록에서 사용-->
+        <!-- ul 태그에는 기본적으로 마진이 존재한다.-->
+        <!-- ul & li: 블록  요소-->
+        <div></div>
+        <!-- division 의 약자 / 영역을 나눌 때 사용 -->
+        <hr />
+        <h2>순차 목록 - Odered List</h2>
+        <ol>
+            <li>list item 01</li>
+            <li>list item 02</li>
+            <li>list item 03</li>
+            <li>list item 04</li>
+            <!-- 법조항이나 약관, 넘버링이 필요한 항목들에서 사용하는 태그 -->
+        </ol>
+        <!-- ol의 type에 따라 매겨지는 문자가 달라짐 -->
+        <ol type="I">
+            <li>list item 01</li>
+            <li>list item 02</li>
+            <li>list item 03</li>
+            <li>list item 04</li>
+        </ol>
+        <!-- ol태그에서 이어서 쓰고 싶으면 다음과 같이 start 속성을 사용하면 됨 -->
+        <ol type="1" start="2">
+            <li>list item 01</li>
+            <li>list item 02</li>
+            <li>list item 03</li>
+            <li>list item 04</li>
+        </ol>
+        <hr />
+
+        <h2>주의할 점 ====> 잘못 사용한 사례 01</h2>
+
+        <ul>
+            <li>List item 01</li>
+        </ul>
+
+        <ul>
+            <li>List item 02</li>
+        </ul>
+
+        <ul>
+            <li>List item 03</li>
+        </ul>
+
+        <ul>
+            <li>List item 04</li>
+        </ul>
+        <!-- 형식상 에러는 아니지만 위와 같이 사용하면 안됨 (단, 카테고리 4개에 목록 1개씩이 맞다면 맞는 구성임 / 카테고리 1개에 4개의 항목일 경우 위 코드는 에러)-->
+        <!-- 같은 카테고리일 경우에는 함께 쓸것 -->
+        <h2>주의할 점 ====> 잘못 사용한 사례 02</h2>
+
+        <h3>링크사이트</h3>
+        <ul>
+            <!-- 정상적인 list 사례 -->
+            <li><a href="http://www.daum.net" target="_blank">DAUM</a></li>
+            <li><a href="http://www.naver.com" target="_blank">NAVER</a></li>
+            <li><a href="http://www.youtube.com" target="_blank">YOUTUBE</a></li>
+            <!-- alt + 클릭 멀티 커서  -->
+            <!-- 비정상적인 리스트 사례 -->
+            <a href=""><li>다음과 같이 사용하면 안됩니다.</li></a>
+        </ul>
+        <!-- ul는 li만 -->
+        <hr />
+
+        <!-- 이삭토스트 네비게이션바 예제 -->
+
+        <ul>
+            <li>
+                <a href="https://www.isaac-toast.co.kr/about/about.php"> (주)이삭</a>
+            </li>
+            <li>
+                <a href="#">브랜드</a>
+                <ul>
+                    <li><a href="#">이삭토스트</a></li>
+                    <li><a href="#">CEO 인사말</a></li>
+                    <li><a href="#">연혁</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메뉴</a></li>
+            <li><a href="#">사회공헌</a></li>
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트&middot;뉴스</a></li>
+                    <li><a href="#">든든 딜리버리</a></li>
+                    <li><a href="#">기부 캠페인</a></li>
+                    <li><a href="#">고객 리뷰</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">고객게시판</a>
+                <ul>
+                    <li><a href="#">매장 칭찬하기</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">고객 문의</a></li>
+                    <li><a href="#">제휴/제안</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">가맹안내</a>
+                <ul>
+                    <li><a href="#">가맹 상담 신청</a></li>
+                    <li><a href="#">비용 및 절차</a></li>
+                    <li><a href="#">교육 프로그램</a></li>
+                    <li><a href="#">인테리어</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <hr />
+
+        <!-- 빙그레 네비게이션 바 navigation bar -->
+
+        <ul>
+            <li>
+                <a href="#">회사소개</a>
+                <ul>
+                    <li><a href="#">경영이념</a></li>
+                    <li><a href="#">사업분야</a></li>
+                    <li><a href="#">히스토리</a></li>
+                    <li><a href="#">CEO인사말</a></li>
+                    <li><a href="#">사업장 소개</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">제품소개</a>
+                <ul>
+                    <li><a href="#">전체보기</a></li>
+                    <li><a href="#">아이스크림</a></li>
+                    <li><a href="#">우유/치즈</a></li>
+                    <li><a href="#">발효유</a></li>
+                    <li><a href="#">커피</a></li>
+                    <li><a href="#">주스</a></li>
+                    <li><a href="#">음료</a></li>
+                    <li><a href="#">스낵/디저트</a></li>
+                    <li><a href="#">건강지향</a></li>
+                    <li><a href="#">수출제품</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">지속가능경영</a>
+                <ul>
+                    <li><a href="#">지속가능경영체계</a></li>
+                    <li><a href="#">ECO-Friendly</a></li>
+                    <li><a href="#">Shared Value</a></li>
+                    <li><a href="#">Global Integrity</a></li>
+                    <li><a href="#">보고서 및 정책</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">투자정보</a>
+                <ul>
+                    <li><a href="#">재무정보</a></li>
+                    <li><a href="#">주식정보</a></li>
+                    <li><a href="#">전자공고</a></li>
+                    <li><a href="#">공시정보</a></li>
+                    <li><a href="#">IR자료실</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">뉴스룸</a>
+                <ul>
+                    <li><a href="#">전체보기</a></li>
+                    <li><a href="#">새소식</a></li>
+                    <li><a href="#">보도자료</a></li>
+                    <li><a href="#">빙그레 스토리</a></li>
+                    <li><a href="#">미디어 라이브러리</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">고객센터</a>
+                <ul>
+                    <li><a href="#">고객상담</a></li>
+                    <li><a href="#">제품공급문의</a></li>
+                    <li><a href="#">사이버 신고센터</a></li>
+                    <li><a href="#">안전신문고</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+            </li>
+        </ul>
+        <hr />
+        <h2>정의목록 - Definition List</h2>
+        <dl>
+            <dt>Definition term - 용어정리1, 제목성격</dt>
+            <dd>Definition description - 용어설명</dd>
+            <dd>Definition description - 용어설명</dd>
+            <dd>Definition description - 용어설명</dd>
+            <dt>Definition term - 용어정리2, 제목성격</dt>
+            <dd>Definition description - 용어설명</dd>
+            <dd>Definition description - 용어설명</dd>
+            <dd>Definition description - 용어설명</dd>
+            <dt>Definition term - 용어정리3, 제목성격</dt>
+            <dd>Definition description - 용어설명</dd>
+            <dd>Definition description - 용어설명</dd>
+            <dd>Definition description - 용어설명</dd>
+            <dt>Definition term - 용어정리4, 제목성격</dt>
+            <dd>Definition description - 용어설명</dd>
+            <dd>Definition description - 용어설명</dd>
+            <dd>Definition description - 용어설명</dd>
+        </dl>
+
+        <hr />
+        <!-- ul로 변환했을 때 -->
+
+        <ul>
+            <li>
+                Definition term - 용어정리1, 제목성격
+                <ul>
+                    <li>Definition description - 용어설명</li>
+                    <li>Definition description - 용어설명</li>
+                    <li>Definition description - 용어설명</li>
+                    <li>Definition description - 용어설명</li>
+                </ul>
+            </li>
+            <li>
+                Definition term - 용어정리2, 제목성격
+                <ul>
+                    <li>Definition description - 용어설명</li>
+                    <li>Definition description - 용어설명</li>
+                    <li>Definition description - 용어설명</li>
+                    <li>Definition description - 용어설명</li>
+                </ul>
+            </li>
+            <li>
+                Definition term - 용어정리3, 제목성격
+                <ul>
+                    <li>Definition description - 용어설명</li>
+                    <li>Definition description - 용어설명</li>
+                    <li>Definition description - 용어설명</li>
+                    <li>Definition description - 용어설명</li>
+                </ul>
+            </li>
+            <li>
+                Definition term - 용어정리4, 제목성격
+                <ul>
+                    <li>Definition description - 용어설명</li>
+                    <li>Definition description - 용어설명</li>
+                    <li>Definition description - 용어설명</li>
+                    <li>Definition description - 용어설명</li>
+                </ul>
+            </li>
+        </ul>
+        <hr />
+
+        <!-- 풀무원 패밀리 사이트 예시 -->
+
+        <dl>
+            <dt>풀무원</dt>
+            <dd>뮤지엄김치간</dd>
+            <dd>#풀무원</dd>
+            <dd>풀무원채용</dd>
+            <dd>efresh 모니터</dd>
+            <dd>풀무원 재단</dd>
+        </dl>
+
+        <dl>
+            <dt>계열사</dt>
+            <dd>풀무원녹즙</dd>
+            <dd>풀무원푸드머스</dd>
+            <dd>풀무원푸드앤컬처</dd>
+            <dd>풀무원다논</dd>
+            <dd>풀무원샘물</dd>
+            <dd>풀무원건강생활</dd>
+            <dd>풀무원건강생활</dd>
+        </dl>
+        <!-- 띄우지 않을떄 -->
+        <dl>
+            <dt>풀무원</dt>
+            <dd>뮤지엄김치간</dd>
+            <dd>#풀무원</dd>
+            <dd>풀무원채용</dd>
+            <dd>efresh 모니터</dd>
+            <dd>풀무원 재단</dd>
+            <dt>계열사</dt>
+            <dd>풀무원녹즙</dd>
+            <dd>풀무원푸드머스</dd>
+            <dd>풀무원푸드앤컬처</dd>
+            <dd>풀무원다논</dd>
+            <dd>풀무원샘물</dd>
+            <dd>풀무원건강생활</dd>
+            <dd>풀무원건강생활</dd>
+        </dl>
+    </body>
+</html>

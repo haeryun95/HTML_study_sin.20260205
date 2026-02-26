@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+/* =========================
+   font
+   ========================= */
+@font-face {
+    font-family: "orbitron";
+    src: url(../font/Orbitron-Medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "orbitron";
+    src: url(../font/Orbitron-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* =========================
+   reset
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #0e0101;
+}
+
+img {
+    /* vertical-align: top; */
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #0e0101;
+}
+
+/* =========================
+   common
+   ========================= */
+.container {
+    width: 1420px;
+    margin: 20px auto;
+    /* padding: 40px 20px; */
+}
+.frame {
+    width: 220px;
+    height: 260px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* 안쪽 내용이 삐져나오지 않게 */
+}
+.clearFix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* =========================
+   small gallery layout
+   ========================= */
+
+/* small_gallery 영역 */
+.container .small_gallery {
+    width: 100%;
+}
+
+.container .small_gallery .list {
+    float: left;
+    width: 220px;
+    margin-right: 20px;
+}
+.container .small_gallery .list:last-child {
+    margin-right: 0;
+}
+.container .small_gallery .pic {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* ✅ 찌그러짐 방지 */
+}
+
+.container .small_gallery .pic_title {
+    margin-top: 12px;
+    font-family: "orbitron";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.container .small_gallery .pic_desc {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #333;
+
+    /* 말 줄임표 관련 CSS*/
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 보여줄 줄 수 */
+    -webkit-box-orient: vertical;
+}
+
+/* =========================
+   big gallery placeholder
+   ========================= */
+.container .big_gallery {
+    margin-top: 40px;
+    min-height: 300px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}

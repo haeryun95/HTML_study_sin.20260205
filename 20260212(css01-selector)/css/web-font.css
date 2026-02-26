@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import url("font.css");
+/* 📌 별도의 관리되는 폰트 CSS 파일을 불러옴 */
+
+/* ========================================= */
+/*                 💻  CSS                  */
+/* ========================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #33e;
+}
+
+.webFont01 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* 
+.webFont02 {
+    font-family: "poppins-regular", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.webFont03 {
+    font-family: "poppins-bold", cursive;
+    font-weight: 700;
+    font-style: normal;
+} */
+
+.webFont02 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.webFont03 {
+    font-family: "Poppins", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.webFont04 {
+    font-family: "Playwrite CU Guides", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.webFont05 {
+    font-family: "valentine", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.webFont06 {
+    font-family: OngleipParkDahyeon;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.webFont07 {
+    font-family: griun;
+    font-weight: 400;
+    font-style: normal;
+}

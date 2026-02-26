@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+img {
+    vertical-align: top;
+}
+
+/* common class */
+.clearFix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* depth 1 area */
+.depth1 {
+    width: 800px;
+    margin: 30px auto;
+    background-color: gold;
+    /* border: 1px solid red; */
+}
+.depth1 > li {
+    float: left;
+    margin: 0 50px;
+    position: relative;
+}
+.depth1 > li > a {
+    display: block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid green;
+}
+.depth1 > li:hover {
+    background-color: green;
+}
+.depth1 > li:hover a {
+    color: #fff;
+}
+.depth1 li .depth2 {
+    border: 1px solid blue;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    /*  === transform: translate(-50%, 0); */
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.depth1 > li:hover .depth2 {
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+}
+.depth1 li .depth2 li {
+}
+.depth1 li .depth2 li a {
+    display: block;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: green;
+    color: pink;
+    transition: 0.1s;
+}
+
+.depth1 li .depth2 li a:hover {
+    background-color: pink;
+    color: green;
+}

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form Tag</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                width: 70%;
+                border: 1px solid #c0b87a;
+                margin: 0 auto;
+                padding: 30px;
+            }
+            fieldset {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            input[type="submit"],
+            input[type="reset"] {
+                padding: 5px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>회원가입</h1>
+            <!-- action ==> endpoint (정보의 목적지) -->
+            <form action="#" method="get">
+                <!-- div로 묶는 이유 : input이 인라인 요소라 블록처럼 요소를 줄바꿈하려고 -->
+                <fieldset>
+                    <!-- 필드셋 태그로 감싸면 테두리가 생김 -->
+                    <legend>필수입력</legend>
+                    <!-- 필드셋과 레전드는 기능하는데 굳이 필요하진 않음 -->
+                    <div>
+                        <label for="user_name">이름 : </label>
+                        <input type="text" placeholder="이름 입력..." id="user_name" name="u_name" required />
+                        <!-- 둘다 인라인 요소 -->
+                    </div>
+                    <div>
+                        <label for="user_email">이메일</label>
+                        <input type="email" placeholder="이메일 입력..." id="user_email" name="u_email" required />
+                    </div>
+
+                    <div>
+                        <label for="user_password">비밀번호 : </label>
+                        <input type="password" id="user_password" placeholder="비밀번호..." name="u_pw" required />
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>부가입력</legend>
+                    <div>
+                        <label for="">거주지를 선택하세요.</label>
+                        <select name="u_city" id="city">
+                            <!-- 옵션의 값이 select의 name 값으로 들어감 -->
+                            <option value="seoul">서울시</option>
+                            <option value="경기도">경기도</option>
+                            <option value="제주도">제주도</option>
+                        </select>
+                    </div>
+                    <div>
+                        <div>
+                            <h4>성별을 선택해 주세요.</h4>
+                            <label for="men">남성</label>
+                            <input type="radio" id="men" name="gender" value="male" />
+                            <label for="women">여성</label>
+                            <input type="radio" id="women" name="gender" value="female" />
+                            <!-- 네임이 같아야 개별 선택 -->
+                        </div>
+                    </div>
+                    <div>
+                        <h4>관심사항체크</h4>
+                        <label for="html">HTML</label>
+                        <input type="checkbox" id="html" name="interest" value="HTML" />
+                        <label for="css">CSS</label>
+                        <input type="checkbox" id="css" name="interest" value="CSS" />
+                        <label for="javascript">JAVASCRIPT</label>
+                        <input type="checkbox" id="javascript" name="interest" value="JAVASCRIPT" />
+                    </div>
+                    <div>
+                        <label for="memo">메모</label>
+                        <textarea name="memo" id="memo" placeholder="남길 말씀이 있다면 여기에..." cols="30" rows="4"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>HTML5 새로운 타입</legend>
+                    <div>
+                        <label for="website">website</label>
+                        <input type="url" id="website" name="website" />
+                    </div>
+                    <div>
+                        <label for="birth">생년월일</label>
+                        <input type="date" id="birth" name="birth" />
+                    </div>
+                    <div>
+                        <label for="career">경력기간</label>
+                        <input type="number" id="career" name="career" min="0" max="30" step="2" value="2" />
+                        <!-- 스핏박스 : step ===> 단계 -->
+                        <!-- value ==> 초기값 설정도 됨 -->
+                    </div>
+                    <div>
+                        <label for="useremails">이메일 선택</label>
+                        <input type="text" id="useremails" name="useremails" />
+                        @
+                        <select name="email-site">
+                            <option value="직접입력">직접입력</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="daum.net">daum.net</option>
+                            <option value="gamil.com">gamil.com</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <input type="submit" value="회원가입" />
+                <input type="reset" value="취소" />
+                <!-- 이 두 인풋의 밸류는 버튼의 문장임 -->
+                <button type="submit">회원가입</button>
+                <button type="reset">취소</button>
+                <!-- button 으로 대체 가능-->
+            </form>
+        </div>
+        <!-- 버튼까지 폼태그에 포함시켜야함 -->
+        <!-- 입력되는 값(value)이 name 으로 저장됩니다. 그래서 id와 달라도 됨 -->
+    </body>
+</html>

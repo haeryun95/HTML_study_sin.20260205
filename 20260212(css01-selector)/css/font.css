@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+/* =========================================
+   📌  폰트의 경우
+   ========================================= */
+/* 
+
+폰트의 경우 별도의 CSS를 만들어서 관리하는게 좋다.
+그래서 따로 별개의 파일을 만드는 것
+
+*/
+
+/* =========================================
+   📌  웹 폰트 사용
+   ========================================= */
+
+/* poppins */
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+
+/* CU Guides */
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CU+Guides&display=swap");
+
+/* 눈누 */
+@font-face {
+    font-family: "OngleipParkDahyeon";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2") format("woff2");
+    font-weight: normal;
+    font-display: swap;
+}
+
+/* =========================================
+   📌  파일을 직접 가져오는 경우 - 1
+   ========================================= */
+
+/* @font-face {
+    font-family: "poppins-regular";
+    src: url("../font/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "poppins-bold";
+    src: url("../font/Poppins-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "valentine";
+    src: url("../font/Sparkling\ Valentine.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+} */
+
+/* =========================================
+   📌  파일을 직접 가져오는 경우 - 2
+   ========================================= */
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../font/Poppins-Regular.ttf") format("truetype");
+    /* otf 인경우 format(opentype) */
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../font/Poppins-Light.ttf") format("truetype");
+    /* otf 인경우 format(opentype) */
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../font/Poppins-Bold.ttf") format("truetype");
+    /* otf 인경우 format(opentype) */
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "11Street";
+    src: url("../font/11STREET_Gothic_light.ttf") format("truetype");
+    /* otf 인경우 format(opentype) */
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: "11Street";
+    src: url("../font/11STREET_Gothic_regular.ttf") format("truetype");
+    /* otf 인경우 format(opentype) */
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "11Street";
+    src: url("../font/11STREET_Gothic_bold.ttf") format("truetype");
+    /* otf 인경우 format(opentype) */
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Walbaum";
+    src: url("../font/Walbaum-Fraktur-Bold.ttf") format("truetype");
+    /* otf 인경우 format(opentype) */
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* font-family 가 같음*/
+/* 🌊  src  는 쉼표를 이용해서 계속 적을 수 있음*/
+/* 🌊  woff2 가 더 가볍기 때문에 먼저 불러옴*/
+/* 🌊  용량 적은 서체 부터 용량 큰 서체로 불러옴*/
+
+@font-face {
+    font-family: "valentine";
+    src:
+        url(../font/Sparkling\ Valentine.woff2) format(woff2),
+        url("../font/Sparkling\ Valentine.woff") format("woff"),
+        url("../font/Sparkling\ Valentine.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "griun";
+    src:
+        url(../font/Griun_PolHumanrights-Rg.woff2) format(woff2),
+        url("../font/Griun_PolHumanrights-Rg.woff") format("woff"),
+        url("../font/Griun_PolHumanrights-Rg.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* =========================================
+   📌  폰트 파일에 대해
+   ========================================= */
+
+/* 
+    ttf to woff2 : https://cloudconvert.com/ttf-to-woff2
+    
+    woff 와 woff2 파일이 존재 ==> 용량이 굉장이 가볍다!
+    원본에서 거의 1/3로 줄어든다.
+    
+ */

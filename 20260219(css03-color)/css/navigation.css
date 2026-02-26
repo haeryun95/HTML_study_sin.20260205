@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/* 
+    reset
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+ul {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    /* display: block; */
+}
+
+/* 
+    style
+*/
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #f2f2f2;
+}
+header .container {
+    width: 1200px;
+    margin: 0 auto;
+    /* padding: 25px 0; */
+    /* border: 1px solid red; */
+}
+
+/* 콘테이너의 역할은 다해서 경로에서 뺌*/
+
+header nav {
+    width: 480px;
+    margin: 0 auto;
+}
+header nav ul {
+    font-size: 0;
+}
+header nav ul li {
+    display: inline-block;
+    /* border: 1px solid seagreen; */
+    margin-right: 20px;
+    transition: 0.3s;
+    /* 
+        여기서 마진은 한곳으로만 주는게 좋다
+        (마지막 요소는 마진을 없애주는게 좋다.)
+    */
+}
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+/* 
+li 사이에 갭이 있는 이유 ---> 자간 때문에
+    자간을 지우기 위해 ul에 폰트 사이즈를 0주고 a태그에서 다시 폰트 사이즈를 줌
+*/
+header nav ul li:hover {
+    border-bottom: 5px solid gold;
+}
+
+header nav ul li a {
+    width: 100%;
+    height: 100%;
+    color: #333;
+    display: block;
+    font-size: 16px;
+    line-height: 100px;
+    text-align: center;
+}
+/* 
+  자간 ===> 글자 사이의 간격. li 태그에 inline 속성을 적용했기 때문에 글자 취급 => 글자 처럼 취급되어 자간이 생기는 것이다. 글자사이의 간격을 넓히고 싶으면 이 다음 마진이나 패딩을 넣으면 된다   
+*/
+
+/* 
+
+1. inline: inline은 인라인 요소로, 텍스트와 같이 한 줄에 배치되며, 줄 바꿈이 없이 나란히 흐릅니다. inline 요소는 width, height, margin-top, margin-bottom 등의 박스 모델 속성을 가질 수 없으며, 수평으로 최소한의 공간만 차지합니다.
+
+2. inline-block: inline-block은 인라인 박스와 블록 박스를 혼합한 특성을 가지고 있습니다. 요소는 인라인 요소처럼 한 줄에 배치되지만, width, height, margin, padding 등의 박스 모델 속성을 가질 수 있습니다. inline-block 요소는 여러 줄에 걸쳐 수평으로 배치될 수 있습니다.
+
+따라서 inline과 inline-block 사이의 주요 차이점은 박스 모델 속성을 사용할 수 있는지 여부입니다. inline은 크기와 여백을 지정할 수 없고, inline-block은 지정할 수 있습니다.
+
+일반적으로 inline 요소는 텍스트나 인라인 요소들을 배치하기 위해 사용되고, inline-block 요소는 텍스트와 함께 크기를 지정하고 레이아웃을 구성하기 위해 사용됩니다.
+
+inline 속성을 가진 요소는 다음과 같은 속성을 가질 수 있습니다:
+
+padding-left, padding-right
+margin-left, margin-right
+border-left, border-right
+background-color
+color
+font-size, font-family, font-weight, 등의 글꼴 관련 속성
+text-decoration, text-transform, text-align 등의 텍스트 관련 속성
+line-height
+vertical-align
+white-space
+display 속성을 제외한 대부분의 속성
+반면에 inline 속성을 가진 요소는 다음과 같은 속성을 가질 수 없습니다:
+
+width, height
+margin-top, margin-bottom
+padding-top, padding-bottom
+border-top, border-bottom
+display: block, display: inline-block
+float
+position과 관련된 속성들 (position: absolute, position: fixed, 등)
+overflow
+이러한 속성들은 inline 요소의 특성상 수평으로 흐르는 인라인 요소이기 때문에 적용되지 않습니다. 따라서 inline 요소에 위 속성들을 적용하려면, 해당 요소를 display: block 또는 display: inline-block으로 변경해야 합니다.
+
+
+*/
+
+/* 
+    유지 보수를 위해서 알아두는 편이 좋습니다. 
+
+*/

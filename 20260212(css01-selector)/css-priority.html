@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Priority</title>
+        <link rel="stylesheet" href="css/css-priority.css" />
+    </head>
+    <body>
+        <h1>child selector</h1>
+        <header>
+            <h1 id="logo" class="logo" style="font-size: 16px; color: aqua">
+                <a href="#" id="a_link">LOGO</a>
+                <span id="logo-text">text</span>
+                <div>lorem</div>
+            </h1>
+            <h2>Sub-title</h2>
+            <p>
+                ?Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, sequi impedit? Aliquid voluptatem debitis atque cum magnam natus modi optio eum
+                iure consequuntur tempore ipsum consectetur autem, iste nesciunt! Nulla?
+            </p>
+            <div>
+                <!-- p.desc+[tab] -->
+                <p class="desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore magni voluptates molestias assumenda dolores! Rem illum similique velit
+                    totam tenetur tempora odio aliquam, placeat, maiores quas excepturi repudiandae reprehenderit facere.
+                </p>
+            </div>
+        </header>
+        <hr />
+        <main>
+            <section class="content1">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto beatae tempora accusamus deserunt non aperiam repudiandae numquam soluta,
+                    quis, aliquid officiis a? Nam, tempore itaque quae dolorem cupiditate optio ipsa!
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, iure natus pariatur consequuntur molestiae debitis magnam odit iusto
+                    totam, esse quam numquam vel fugiat error veritatis porro nam, tenetur facere.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto beatae tempora accusamus deserunt non aperiam repudiandae numquam soluta,
+                    quis, aliquid officiis a? Nam, tempore itaque quae dolorem cupiditate optio ipsa!
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, iure natus pariatur consequuntur molestiae debitis magnam odit iusto
+                    totam, esse quam numquam vel fugiat error veritatis porro nam, tenetur facere.
+                </p>
+            </section>
+            <!-- section.content2>p.desc*2+[tab] -->
+            <section class="content2" id="section02">
+                <p class="desc">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, voluptatem ad veritatis ex cumque tempora consequatur, rem dolores, quos
+                    corporis eos. Dolorem non sint ut obcaecati aut omnis nemo eaque.
+                </p>
+                <p class="desc">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, esse omnis? Suscipit minima pariatur rerum excepturi, explicabo libero
+                    ipsa quo delectus harum iure corrupti a fugiat molestiae hic aliquid cupiditate.
+                </p>
+            </section>
+            <section class="content3">
+                <div class="box box1"></div>
+                <div class="box"></div>
+            </section>
+        </main>
+        <hr />
+        <footer>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum vel voluptatum libero, dicta rerum provident quam voluptas dolores cum, animi
+                sequi praesentium magnam et? Provident voluptatum quae doloremque obcaecati nam.
+            </p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>centering</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .container {
+                width: 600px;
+                height: 600px;
+                border: 2px solid red;
+                margin: 50px auto;
+                position: relative;
+            }
+            .container p {
+                width: 400px;
+                border: 2px solid green;
+                position: absolute;
+                /* top: calc(50% - 122px);
+                left: calc(50% - 200px); */
+
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
+                /* transform: translateY(-50%);
+                transform: translateX(-50%); */
+                /* p의 너비 절반, p의 높이 절반만큼 옮겨라 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda ad, magnam laboriosam animi vel unde sequi eveniet optio sint. Ut beatae
+                voluptates optio veritatis illum quasi. Voluptates doloremque consectetur commodi? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis, architecto sequi iusto dolor, beatae rerum nihil eaque fugiat eveniet harum pariatur? Iusto, possimus. Ipsam distinctio eos, iure sit
+                explicabo voluptates.
+            </p>
+        </div>
+    </body>
+</html>

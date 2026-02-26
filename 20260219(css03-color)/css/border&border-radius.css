@@ -1,0 +1,101 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: darkgreen;
+}
+div {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background-color: red;
+    margin: 10px;
+    float: left;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black;
+    /* 보더 색상의 디폴트는 해당 요소(부모)의 글자색 */
+    /* === border : 10px solid black */
+    /* 속성의 순서를 바꿔도 상관이 없다 */
+    /* border: solid 3px blue;  ==> 작동*/
+    /* 보편화 된 순서가 있다. == 약속 */
+}
+
+#dotted_box_div {
+    border-style: dotted;
+    border-color: green;
+}
+#double_box_div {
+    border-style: double;
+    border-color: blue;
+}
+#dashed_box_div {
+    border-style: dashed;
+    border-color: yellow;
+}
+#none_box_div {
+    border-style: none;
+    border: 0;
+}
+
+/* ////////////////////////////////////////// 
+    📌  border-radius                       
+/* ////////////////////////////////////////// */
+#radius_div {
+    border-radius: 0 0 0 0;
+}
+
+/* ============================================
+   📌 border-radius 
+   -  4곳에 곡률을 줘야 하기 때문에 시계방향으로 왼쪽 위 > 오른쪽 위 > 오른쪽 아래 > 왼쪽 아래 식으로 곡률이 주어짐 
+
+   -  박스모델의꼭짓점부분에원(반지름r)이있다고가정해서둥글게처리
+
+   ============================================ */
+#radius_div_0 {
+    border-radius: 50px 0 0 0;
+}
+
+#radius_div_1 {
+    border-radius: 0 50px 0 0;
+}
+#radius_div_2 {
+    border-radius: 0 0 50px 0;
+}
+#radius_div_3 {
+    border-radius: 0 0 0 50px;
+}
+/* ============================================
+   📌 border-radius 
+   -  수치가 두개 들어갈 때는 요소에 대각선을 그어서 왼쪽 대각선 먼저 카운트 
+   ============================================ */
+
+#radius_div_4 {
+    border-radius: 50px 0;
+}
+#radius_div_5 {
+    border-radius: 0 50px;
+}
+#radius_div_6 {
+    border-radius: 50px;
+}
+/* ============================================
+   📌 border-radius 
+   -  수치가 세개가 들어갈 경우 : 왼상 오른상왼하  오른하
+   ============================================ */
+#radius_div_7 {
+    border-radius: 50px 50px 100px;
+}
+#radius_div_8 {
+    border-radius: 50%;
+    /* border-radius: 150px; */
+}
+
+/* ============================================
+   📌 border-radius 
+   -  반지름이 요소 200px의 반인 100px 이기 때문에 지름이 200px이 됨
+   - 항상 원으로 만들고 싶으면 50%로 만들기
+   ============================================ */

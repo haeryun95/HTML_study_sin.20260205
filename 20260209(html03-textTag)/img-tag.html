@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>image tag</title>
+        <link rel="stylesheet" href="css/imageTag.css" />
+    </head>
+    <body>
+        <img src="images/img.jpg" alt="웰시코기 뒷태" />
+        <p>원본 사이즈 223 x 226</p>
+        <hr />
+        <!-- 비율 정비례해서 늘어남 -->
+        <!-- 이미지는 절대 왜곡 시키면 안됨!!! -->
+        <img src="images/img.jpg" alt="웰시코기 뒷태" width="200" />
+        <p>가로 200px</p>
+        <hr />
+        <img src="images/img.jpg" alt="웰시코기 뒷태" height="400" />
+        <p>세로 400px</p>
+        <hr />
+        <!-- 이미지 왜곡 -->
+        <img src="images/img.jpg" alt="웰시코기 뒷태" width="500" height="300" />
+        <p>가로 500px 세로 300px</p>
+        <hr />
+        <div class="img-box">
+            <img class="dog-img" src="images/img.jpg" alt="웰시코기 뒷태" />
+        </div>
+        <hr />
+        <img src="images/img.jpg" alt="웰시코기 뒷태" />
+        <hr />
+        <h1>multi media</h1>
+        <h2>오디오</h2>
+        <!-- 브라우저에서 지원 -->
+        <!-- autoplay ===> 오디오는 브라우저에서 처음 접속해도 자동재생안됨-->
+        <!-- preload ==> 미리 로딩 -->
+        <!-- <audio src="images/spring.mp3" controls="controls" autoplay="autoplay" muted="muted" preload="auto"></audio> -->
+        <!-- 태그와 태그속성이 같을 때 같은 단어만 써도됨 -->
+        <audio src="images/spring.mp3" controls autoplay muted preload="auto"></audio>
+
+        <hr />
+        <h2>비디오</h2>
+        <!-- webm ==> 용량적은 비디오 -->
+        <!-- webp ==> 용량적은 이미지 -->
+        <video src="images/salad.mp4" controls muted preload="auto" width="1000" height="562" poster="images/poster.PNG"></video>
+        <!-- 비디오는 소리가 없을 경우에만 오토플레이가 됨 -->
+        <!-- 썸네일 이미지 ===> poster ="이미지 경로"(단 autoplay 가 없을때) -->
+        <h2>영상파일의 브라우저 호환</h2>
+        <video class="video" controls autoplay loop muted>
+            <source src="images/salad.webm" />
+            <source src="images/salad.mp4" />
+            <!-- 브라우저 마다 호환되는 파일 소스가 다름 만약 첫 소스가 호환이 안되면 다음 소스 경로를 가져옴-->
+            <!-- 1. 웹 호환성 2. 트래픽 문제 -->
+        </video>
+        <hr />
+        <h2>YOUTUBE</h2>
+        <iframe
+            class="clip"
+            src="https://www.youtube.com/embed/2L5Q4wRmn4g?autoplay=1&mute=1&controls=0&loop=1&playlist=2L5Q4wRmn4g,uLX3FZmkF2w"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+        ></iframe>
+        <!-- 비디오 아이디 ===> 2L5Q4wRmn4g -->
+        <!--autoplay=1&mute=1 이런식으로 쿼리문을 작성하면됨-->
+        <!-- 매개변수 관련 링크 : https://developers.google.com/youtube/player_parameters?hl=ko -->
+
+        <iframe
+            class="yt_clip"
+            src="https://www.youtube.com/embed/M5QhKDc5V4Y?si=Mbv61GegqLXgyTsO&controls=0&playlist=M5QhKDc5V4Y&loop=1&autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+        ></iframe>
+
+        <hr />
+        <h2>VIMEO.COM</h2>
+        <!-- 클래스를 줄수도있다 -->
+        <iframe
+            title="vimeo-player"
+            src="https://player.vimeo.com/video/64542403?h=1d38a6c6de"
+            width="640"
+            height="360"
+            frameborder="0"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowfullscreen
+        ></iframe>
+        <iframe
+            src="https://player.vimeo.com/video/1146061720?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            width="1000"
+            height="750"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="emory - dirt (official video)"
+        ></iframe>
+
+        <hr />
+        <!-- 반응형 설정이 이미 되어있다!-->
+        <div style="padding: 75% 0 0 0; position: relative">
+            <iframe
+                src="https://player.vimeo.com/video/1146061720?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+                title="emory - dirt (official video)"
+            ></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+    </body>
+</html>

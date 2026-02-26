@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Color</title>
+        <style>
+            div {
+                font-size: 2em;
+                border: 1px solid #000;
+            }
+            div:nth-child(1) {
+                background-color: red;
+            }
+            div:nth-child(2) {
+                /* background-color: #ff0000; */
+                background-color: #ff000077;
+            }
+            div:nth-child(3) {
+                background-color: rgb(255, 0, 0);
+            }
+            div:nth-child(4) {
+                background-color: rgba(255, 0, 0, 1);
+            }
+            div:nth-child(5) {
+                background-color: hsl(0, 100%, 50%);
+                /* 눈이 너무 부시면 명도랑 채도를 손볼것 */
+                /* 너무 쨍한 색상은 잘 사용하지 않는다. */
+            }
+            div:nth-child(6) {
+                background-color: hsla(0, 100%, 50%, 0.5);
+            }
+            .color {
+                /* ============================================
+                📌 css 변수
+                - 대쉬 (--)를 사용한 변수 선언
+                - var()를 이용해 변수를 사용할 수 있다.
+                - 이러한 CSS 변수는 디자인을 할떄 시스템화 할때 사용가능
+                - 디자인 가이드에 따라 한번에 바꿀 수 있다.
+                - 가독성도 좋음
+                - 초기화 위쪽에 주로 씀
+                :root {--main-font-color: #000f22;} 이런식으로 전역 선언함
+                ============================================ */
+                --hue: 200;
+                --saturation: 100%;
+                --lightness: 50%;
+                /* ============================== */
+                width: 300px;
+                height: 300px;
+                background-color: hsl(var(--hue), var(--saturation), var(--lightness));
+                margin: 50px auto;
+            }
+            .color:hover {
+                --lightness: 30%;
+            }
+        </style>
+    </head>
+    <body>
+        <div>red</div>
+        <div>#ff0000</div>
+        <div>rgb(255,0,0)</div>
+        <div>rgba(255,0,0,1)</div>
+        <div>hsl(360,100%,50%)</div>
+        <div>hsla(360,100%,50%,1)</div>
+        <hr />
+        <div class="color"></div>
+    </body>
+</html>

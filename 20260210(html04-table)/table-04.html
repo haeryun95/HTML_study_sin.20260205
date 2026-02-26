@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                text-align: center;
+                border: 1px solid #a155b9;
+                background: #f9d1d1;
+                color: #0b1354;
+                font-size: 30px;
+            }
+            td,
+            th {
+                width: 50px;
+                height: 50px;
+                border: 1px solid #a155b9;
+            }
+            th {
+                border: 1px solid #f9d1d1;
+            }
+            thead {
+                background: #ff9fb7;
+                color: #f9d1d1;
+            }
+            .sunDay {
+                color: #f765a3;
+            }
+            .saturDay {
+                color: #155ba8;
+            }
+            .specialDay {
+                background: #ffa4b6;
+                color: #a155b9;
+            }
+        </style>
+        <!-- 클래스 명으로 컨트롤 하는게 가독성이 더 좋음  -->
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th class="sunDay">일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th class="saturDay">토</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="sunDay">1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td class="saturDay">7</td>
+                </tr>
+                <tr>
+                    <td class="sunDay">8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td class="saturDay">14</td>
+                </tr>
+                <tr>
+                    <td class="sunDay">15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td class="saturDay">21</td>
+                </tr>
+                <tr>
+                    <td class="sunDay">22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td class="specialDay">26</td>
+                    <td>27</td>
+                    <td class="saturDay">28</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
