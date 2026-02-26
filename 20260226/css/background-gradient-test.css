@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+ul {
+    list-style: none;
+}
+
+/* 스타일 */
+
+.card {
+    position: relative;
+    z-index: 0;
+    width: 560px;
+    height: 275px;
+    padding: 40px 30px;
+    background: #7a3939;
+    margin: 50px auto;
+    color: #fff;
+}
+
+.card h3 {
+    position: absolute;
+    z-index: 11;
+    width: 50%;
+    font-size: 2em;
+    margin-bottom: 16px;
+}
+.card p {
+    position: absolute;
+    z-index: 11;
+    width: 60%;
+    top: 40%;
+    font-size: 17px;
+}
+.card .gradient {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #000000a4, #00000000);
+}
+.pizza {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.pizza img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 같이 한 버전 */
+
+.card02 {
+    width: 560px;
+    height: 275px;
+    padding: 40px;
+    margin: 50px auto;
+    color: #fff;
+    background:
+        linear-gradient(to right, #000000a4 0%, #00000000 60%),
+        url(../images/pizza.png) no-repeat center/ cover;
+}
+
+.card02 h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.card02 p {
+    width: 60%;
+}
+
+/* 
+    1. 불필요한 요소가 많음 
+*/

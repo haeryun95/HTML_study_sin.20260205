@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+ul {
+    list-style: none;
+}
+
+div,
+h1,
+h2 {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.box {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+}
+.linear {
+    /* background-image: linear-gradient(방향, 색상 위치, 색상 위치, [색상 위치]...);
+    대괄호는 옵션(선택) */
+    background-image: linear-gradient(to bottom, #000 0%, #fff 100%);
+    background-image: linear-gradient(to bottom, #000 0px, #fff 200px);
+    background-image: linear-gradient(to right, #000 0px, #fff 200px);
+    background-image: linear-gradient(45deg, #000 0px, #fff 200px);
+    /* background-image: linear-gradient(90deg, #2989cc 0% 20%, #fff 30% 100%); */
+    background-image: linear-gradient(90deg, #2989cc 0%, #2989cc 20%, #fff 100%);
+    background-image: linear-gradient(90deg, #2989cc 0%, #2989cc 20%, #fff 20%, #fff 60%, skyblue 60%, skyblue 80%, yellow 80%, yellow 100%);
+    background-image: linear-gradient(#2989cc 0%, #2989cc 20%, #fff 20%, #fff 40%, #2989cc 40%, #2989cc 60%, #fff 60%, #fff 80%, #2989cc 80%, #2989cc 100%);
+    background-image: repeating-linear-gradient(#2989cc 0%, #2989cc 20%, #fff 20%, #fff 40%);
+}
+.flag {
+    position: relative;
+    background-image: repeating-linear-gradient(#c3173d 0%, #c3173d 10%, #fff 10%, #fff 20%);
+}
+
+.flag_star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100px;
+    background-color: rgb(23, 23, 165);
+    z-index: 10;
+}
+
+.radial {
+    /* background-image: radial-gradient(모양(원 or 타원) at 중심점의 위치, 색상 위치, 색상 위치, ...); 시작점을 우리가 정해줄 수 있음*/
+    /* 
+        타원 : ellipse, 원 = circle
+        타원형은 정사각형 범위 안에서는 원형이 됨
+    */
+    background-image: radial-gradient(ellipse at center center, #000 0%, #f2f 100%);
+}
+.repeatRadial {
+    /* background-image: radial-gradient(모양 크기(거리) at 중심점의 위치, 색상 위치, 색상 위치, ...); 시작점을 우리가 정해줄 수 있음*/
+    background-image: repeating-radial-gradient(circle closest-corner at 50px 50px, #000 0%, #000 10%, #f2f 10%, #f2f 20%);
+}
+.repeatRadial02 {
+    background-image: repeating-radial-gradient(circle farthest-corner at 50px 50px, #000 0%, #000 10%, #f2f 10%, #f2f 20%);
+}
+.japan_flag {
+    background-image: radial-gradient(circle at center center, red 0% 30%, #fff 30% 100%);
+}

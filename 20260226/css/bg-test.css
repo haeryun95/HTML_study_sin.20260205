@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+ul {
+    list-style: none;
+}
+
+/* style */
+
+section {
+    width: 100%;
+    background: #000;
+}
+section .container {
+    width: 980px;
+    margin: 0 auto;
+}
+section .container .video-wrap {
+    position: relative; /* 기준점 */
+}
+
+section .container .video-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 498px;
+
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.55) 12%,
+        rgba(0, 0, 0, 0) 28%,
+        rgba(0, 0, 0, 0) 72%,
+        rgba(0, 0, 0, 0.55) 88%,
+        rgba(0, 0, 0, 0.75) 100%
+    );
+
+    pointer-events: none; /* 비디오 클릭 방해 안 하게 */
+}
+section .container .video-wrap video {
+    width: 100%;
+    height: 498px;
+}
