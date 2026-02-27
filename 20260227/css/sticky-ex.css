@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/* 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+ul {
+    list-style: none;
+}
+img,
+video {
+    vertical-align: top;
+}
+
+/* 공통 클래스 */
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+.clearFix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.section {
+    padding: 70px 0;
+}
+
+/* 스타일링 */
+
+html {
+}
+body {
+    height: 2000px;
+}
+
+/* 헤더 영역 */
+
+header {
+    /* 포지션을 줬을 때 너비 높이 신경쓸것 */
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8a98ad9d;
+    box-shadow: 0px 1px 5px 0px rgba(60, 66, 87, 0.3);
+}
+header .container {
+    position: relative;
+    height: 85px;
+}
+header .logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+}
+header .logo a {
+}
+
+header .util {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+header .util li {
+    display: inline-block;
+    margin-left: 15px;
+}
+header .util li a {
+}
+
+header nav {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+header nav .menu {
+}
+header nav .menu li {
+    float: left;
+    margin-left: 35px;
+}
+header nav .menu li a {
+    font-size: 18px;
+    color: #333;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+/* 메인 영역 */
+/* 비주얼 영역 */
+.visual {
+    margin-top: 145px;
+}
+.visual .container {
+}
+.visual .photos {
+    width: 600px;
+    margin: 0 auto;
+}
+.visual .photos img {
+    width: 50%;
+    float: left;
+}
+.visual h2 {
+    text-align: center;
+    margin: 20px;
+}
+.visual p {
+    text-align: center;
+    margin-bottom: 20px;
+}

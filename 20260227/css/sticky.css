@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+ul {
+    list-style: none;
+}
+img,
+video {
+    vertical-align: top;
+}
+
+/* 공통 클래스 */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 스타일링 */
+body {
+    background-color: #fafaff;
+}
+
+header {
+    background-color: rgb(211, 187, 255);
+    height: 100px;
+}
+
+.header_bottom.red {
+    background-color: red;
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+}
+
+main {
+    padding: 50px 0;
+}
+.skeleton {
+    margin: 40px 0;
+}
+
+.blue {
+    background-color: #5195ff;
+    color: #f9f9f9;
+    padding: 24px;
+    position: sticky;
+    top: 0;
+}
