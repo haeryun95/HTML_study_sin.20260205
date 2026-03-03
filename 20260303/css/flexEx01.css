@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/* 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+ul {
+    list-style: none;
+}
+img,
+video {
+    vertical-align: top;
+}
+
+/* 스타일  */
+header {
+    background-color: #e0e0e0;
+}
+
+.container {
+    max-width: 1200px;
+    border: 5px dashed #ccc;
+    margin: 10px auto 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+/* 플렉스를 주기 위해서는 플렉스를 준 부모에 높이를 줘야함  */
+
+header .container ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 540px; */
+    gap: 10px;
+}
+
+header .container ul li a {
+    display: block;
+    width: 100px;
+    height: 40px;
+    background-color: pink;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* ////////////////// */
+
+.menu {
+    height: 80px;
+}
+.menu nav {
+    height: 100%;
+}
+.menu nav ul {
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.menu nav ul li {
+}
+.menu nav ul li a {
+    display: block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #e4d680;
+}
+/* 
+    align-items-vs-align-content 
+
+    align-items는 flex-container 안에서 전체 item의 배치를 어떻게 할 것이냐에 대한 속성이며
+    align-content는 flex-container에서 item의 줄 간격을 어떻게 배치할 것이냐에 대한 속성입니다.
+
+    즉, align-content 는 2줄 이상의 경우에 대해 적용 가능
+    https://www.inflearn.com/community/questions/752797/align-items-vs-align-content
+*/

@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+/* 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+ul {
+    list-style: none;
+}
+img,
+video {
+    vertical-align: top;
+}
+
+/* 공통 컴포넌트 */
+h2 {
+    text-align: center;
+}
+.container {
+    max-width: 1200px;
+    height: 600px;
+    border: 5px dashed #ccc;
+    margin: 10px auto 50px;
+}
+
+.clearFix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.box {
+    padding: 30px;
+    border-radius: 15px;
+    color: #333;
+}
+
+.red {
+    background-color: #e46d80;
+}
+.green {
+    background-color: #31b9d4;
+}
+.blue {
+    background-color: #5294dd;
+}
+.yellow {
+    background-color: #c5c50f;
+}
+
+/* flex는 단방향(가로 혹은 세로)으로 정렬할때 쓰인다. */
+/* 단방향 레이아웃을 구성할 요소의  부모 요소에 적용 -> 플렉스 선언은 부모요소에게*/
+/* flex 적용 및 방향설정 */
+.container01 {
+    display: flex;
+    /* 컨텐츠 가로축으로 배치(기본값)*/
+    flex-direction: row; /*디폴트 값*/
+
+    /* 컨텐츠를 세로축으로 배치*/
+    flex-direction: column;
+
+    /* 컨텐츠 가로축으로 역순 배치*/
+    flex-direction: row-reverse;
+
+    /* 컨텐츠를 세로축으로 역순 배치*/
+    flex-direction: column-reverse;
+}
+
+.container02 {
+    display: flex;
+    max-width: 420px;
+    /* 개행설정 : 컨텐츠 개행 가능하게 (기본값은 개행이 안됨) */
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+}
+/* 가로 정렬 */
+.container03 {
+    display: flex;
+    /* 콘텐츠(요소들) 가운데 정렬 */
+    justify-content: center;
+    /* 왼쪽 정렬(기본값) */
+    justify-content: flex-start;
+    /* 오른쪽 정렬 */
+    justify-content: flex-end;
+    /* content: flex-end 는 flex-direction: row-reverse 와는 달리 순서가 뒤집히지 않음*/
+
+    /* 여백을 균등하게 분할하여 정렬 
+        여백을 요소의 양 옆으로 준다 : around === 주변 
+    */
+    justify-content: space-around;
+
+    /* 여백을 '사이'에만 넣음 , 시작과 끝요소에는 여백X*/
+    justify-content: space-between;
+
+    /* 모든 사이사이의 여백이 균등하게 적용 */
+    justify-content: space-evenly;
+}
+
+/* 세로 정렬 */
+.container04 {
+    display: flex;
+    /* 세로 정렬의 기본값 (height: 100%) */
+    align-items: stretch;
+
+    /* 가운데 정렬 : 컨텐츠 높이만큼만 적용*/
+    align-items: center;
+
+    /* 컨텐츠의 위치를 상단으로 정렬 */
+    align-items: flex-start;
+    /* 컨텐츠의 위치를 상단으로 정렬 */
+    align-items: flex-end;
+}
+.container05 {
+    display: flex;
+    align-self: center;
+}
+.container05 .red {
+}
+.container05 .green {
+}
+.container05 .blue {
+}
+.container05 .yellow {
+}
+
+/* float */
+/* 플롯은 개행이 되지만, 플렉스는 기본적으로 개행이 되지않음 */
+.container-float {
+}
+.container-float .box {
+    float: left;
+    height: 100%;
+}
+
+/* position */
+.container-position {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.container-position .box {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
