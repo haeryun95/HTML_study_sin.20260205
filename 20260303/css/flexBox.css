@@ -121,12 +121,167 @@ h2 {
     align-self: center;
 }
 .container05 .red {
+    align-self: flex-start;
 }
 .container05 .green {
+    align-self: flex-end;
 }
 .container05 .blue {
+    align-self: center;
 }
 .container05 .yellow {
+    align-self: stretch;
+}
+
+/* align-contents */
+/* 
+    플렉스 박스 안에서 여러줄 (행-row)을 세로로 정렬하는 속성(예, 2줄이상)
+    flex-wrap : wrap 이 설정된 상태에서 실행
+*/
+
+.flex-start .box,
+.flex-end .box,
+.center .box,
+.space-between .box,
+.stretch .box {
+    width: 30%;
+    margin: 5px;
+    text-align: center;
+}
+
+/* align-contents/ flex-start */
+.container.flex-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+/* align-contents/ flex-end */
+.container.flex-end {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+/* align-contents/ center */
+.container.center {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+/* align-contents/ space-between */
+.container.space-between {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+/* align-contents/ stretch */
+.container.stretch {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+/* order  배치할 요소의 순서를 변경*/
+
+.container06 {
+    display: flex;
+    justify-content: space-between;
+}
+.container06 .box:nth-child(1) {
+    order: 3;
+}
+.container06 .box:nth-child(2) {
+    order: 4;
+}
+.container06 .box:nth-child(3) {
+    order: 2;
+}
+.container06 .box:nth-child(4) {
+    order: 1;
+}
+
+/* flex-grow :
+    박스 너비 늘리는 성질
+    기본값으로 0, 음수값 적용불가
+    0값을 설정하면 아이템 너비가 늘어나지 않는다.
+*/
+
+.container07 {
+    display: flex;
+    border: 0;
+    box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 1);
+}
+.container07 .box {
+    width: 100px;
+    flex-grow: 1; /* 디폴트값 : 0(비활성화) / 늘어나는 비율 === 1/n 씩 균등하게 늘어남*/
+}
+.container07 .box:nth-child(2) {
+    flex-grow: 2;
+}
+.container07 .box:nth-child(3) {
+    flex-grow: 3;
+}
+/* 
+    남은 여백을 비율 만큼 나눠서 원래 너비에 더함
+
+    flex-grow의 값은 남은 여백 각각의 item 들이 가져가는 비율의 의미한다
+*/
+
+/* 
+    flex-shrink: 
+    박스 너비를 줄이는 성질
+*/
+/* 기본값으로 1, 음수값은 적용불가, 0값을 설정하면 아이템너비가 축소되지 않음 */
+/* flex-grow의 값은 남은 여백을 각각의 item들이 가져가는 비율을 의미한다. */
+/* container 너비 800px에서 600px까지 줄이면 200px의 부족분만큼 아이템너비가 shrink 배수에 비례해서 줄어듦
+ex) 200px/(1+0+1+2)=50px  flex-shrink:1이면 50px*1만큼 너비가 줄어듦 */
+
+.container08 {
+    display: flex;
+    box-sizing: content-box;
+}
+.container08 .box {
+    width: 200px;
+    flex-shrink: 1;
+    /*기본적으로 활성화 되어있음*/
+    /* flex-shrink: 0; */
+}
+.container08 .box:nth-child(1) {
+    flex-shrink: 1;
+}
+.container08 .box:nth-child(2) {
+    flex-shrink: 0;
+}
+.container08 .box:nth-child(3) {
+    flex-shrink: 1;
+}
+.container08 .box:nth-child(4) {
+    flex-shrink: 2;
+}
+
+/* flex-basis:
+    박스 너비를 지정하여 단위를 지정할 수 있다.
+*/
+
+.container09 {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row; */
+    flex-direction: column;
+    /* column > 적용시 기준 축에 따라 너비 혹은 높이 의 수치가 될 수 있다.  
+                width 는 너비 그 자체
+    */
+}
+.container09 .box {
+    /* width: 200px; */
+    flex-basis: 200px;
+    flex-shrink: 0;
+    /* 
+        각각의 박스의 너비가 200px 이된다
+        flex-grow는 여기서 의미가 X
+        flex-basis에 우선권이 있기 때문
+    */
+    /* flex: 1 1 auto;  */
+    /* grow shrink basis */
 }
 
 /* float */
