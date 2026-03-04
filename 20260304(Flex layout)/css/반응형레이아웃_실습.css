@@ -31,6 +31,7 @@ img {
     /* border: 1px solid #352f59; */
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .no2 {
     background-color: #9e99bf;
 }
@@ -38,10 +39,15 @@ img {
     클래스를 줘서 관리하는게 더 쉽다.
 */
 =======
+=======
+>>>>>>> d37f47d ([feat] climb 제작중)
 .item:nth-child(1),
 .item:nth-child(4) {
     background-color: #9e99bf;
 }
+<<<<<<< HEAD
+>>>>>>> d37f47d ([feat] climb 제작중)
+=======
 >>>>>>> d37f47d ([feat] climb 제작중)
 .text {
     text-align: center;
@@ -55,6 +61,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
 <<<<<<< HEAD
     text-transform: uppercase;
 }
@@ -71,16 +78,27 @@ img {
 .header .container h1 {
     padding: 20px;
 >>>>>>> d37f47d ([feat] climb 제작중)
+=======
+}
+.header .container h1 {
+    padding: 20px;
+>>>>>>> d37f47d ([feat] climb 제작중)
     font-size: 2rem;
     background-color: #f0f0f2;
 }
 .header .container .menu {
     display: flex;
 <<<<<<< HEAD
+<<<<<<< HEAD
     gap: 40px;
 }
 .header .container .menu li {
     width: 50%;
+=======
+    gap: 20px;
+}
+.header .container .menu li {
+>>>>>>> d37f47d ([feat] climb 제작중)
 =======
     gap: 20px;
 }
@@ -94,20 +112,27 @@ img {
 .main {
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .content .container {
     display: flex;
 }
 .content .container ul {
 =======
+=======
+>>>>>>> d37f47d ([feat] climb 제작중)
 .main .container {
     display: flex;
 }
 .main .container .flexBox {
+<<<<<<< HEAD
+>>>>>>> d37f47d ([feat] climb 제작중)
+=======
 >>>>>>> d37f47d ([feat] climb 제작중)
     display: flex;
     flex-wrap: wrap;
     width: calc(100% * 2 / 3);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 .content .container ul li {
 }
@@ -116,11 +141,16 @@ img {
     width: calc(100% * 1 / 3);
     text-transform: uppercase;
 =======
+=======
+>>>>>>> d37f47d ([feat] climb 제작중)
 .main .container .flexBox .item {
 }
 .main .container .side {
     background-color: #bfbdf2;
     width: calc(100% * 1 / 3);
+<<<<<<< HEAD
+>>>>>>> d37f47d ([feat] climb 제작중)
+=======
 >>>>>>> d37f47d ([feat] climb 제작중)
 }
 
@@ -128,6 +158,7 @@ img {
 .footer {
 }
 .footer .container {
+<<<<<<< HEAD
 <<<<<<< HEAD
     text-transform: uppercase;
     background-color: #352f59;
@@ -258,8 +289,13 @@ img {
     }
 }
 =======
+=======
+>>>>>>> d37f47d ([feat] climb 제작중)
     background-color: #352f59;
     padding: 40px 0;
     color: white;
 }
+<<<<<<< HEAD
+>>>>>>> d37f47d ([feat] climb 제작중)
+=======
 >>>>>>> d37f47d ([feat] climb 제작중)
