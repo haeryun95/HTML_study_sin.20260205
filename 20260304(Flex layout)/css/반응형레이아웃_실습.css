@@ -32,6 +32,7 @@ img {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .no2 {
     background-color: #9e99bf;
 }
@@ -41,11 +42,16 @@ img {
 =======
 =======
 >>>>>>> d37f47d ([feat] climb 제작중)
+=======
+>>>>>>> d37f47d ([feat] climb 제작중)
 .item:nth-child(1),
 .item:nth-child(4) {
     background-color: #9e99bf;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d37f47d ([feat] climb 제작중)
+=======
 >>>>>>> d37f47d ([feat] climb 제작중)
 =======
 >>>>>>> d37f47d ([feat] climb 제작중)
@@ -61,6 +67,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     text-transform: uppercase;
@@ -83,6 +90,11 @@ img {
 .header .container h1 {
     padding: 20px;
 >>>>>>> d37f47d ([feat] climb 제작중)
+=======
+}
+.header .container h1 {
+    padding: 20px;
+>>>>>>> d37f47d ([feat] climb 제작중)
     font-size: 2rem;
     background-color: #f0f0f2;
 }
@@ -90,10 +102,16 @@ img {
     display: flex;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     gap: 40px;
 }
 .header .container .menu li {
     width: 50%;
+=======
+    gap: 20px;
+}
+.header .container .menu li {
+>>>>>>> d37f47d ([feat] climb 제작중)
 =======
     gap: 20px;
 }
@@ -113,6 +131,7 @@ img {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .content .container {
     display: flex;
 }
@@ -120,11 +139,16 @@ img {
 =======
 =======
 >>>>>>> d37f47d ([feat] climb 제작중)
+=======
+>>>>>>> d37f47d ([feat] climb 제작중)
 .main .container {
     display: flex;
 }
 .main .container .flexBox {
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d37f47d ([feat] climb 제작중)
+=======
 >>>>>>> d37f47d ([feat] climb 제작중)
 =======
 >>>>>>> d37f47d ([feat] climb 제작중)
@@ -132,6 +156,7 @@ img {
     flex-wrap: wrap;
     width: calc(100% * 2 / 3);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .content .container ul li {
@@ -143,12 +168,17 @@ img {
 =======
 =======
 >>>>>>> d37f47d ([feat] climb 제작중)
+=======
+>>>>>>> d37f47d ([feat] climb 제작중)
 .main .container .flexBox .item {
 }
 .main .container .side {
     background-color: #bfbdf2;
     width: calc(100% * 1 / 3);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d37f47d ([feat] climb 제작중)
+=======
 >>>>>>> d37f47d ([feat] climb 제작중)
 =======
 >>>>>>> d37f47d ([feat] climb 제작중)
@@ -158,6 +188,7 @@ img {
 .footer {
 }
 .footer .container {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     text-transform: uppercase;
@@ -291,11 +322,16 @@ img {
 =======
 =======
 >>>>>>> d37f47d ([feat] climb 제작중)
+=======
+>>>>>>> d37f47d ([feat] climb 제작중)
     background-color: #352f59;
     padding: 40px 0;
     color: white;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d37f47d ([feat] climb 제작중)
+=======
 >>>>>>> d37f47d ([feat] climb 제작중)
 =======
 >>>>>>> d37f47d ([feat] climb 제작중)
