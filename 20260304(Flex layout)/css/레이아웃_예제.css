@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/* 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+ul {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+/* 
+    해당 CSS에서는 높이를 주지않을 것
+*/
+
+/* 공통 스타일 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 스타일링 */
+
+/* =====================header */
+.header {
+}
+.header .container {
+    padding: 3rem 0;
+    background-color: #a8acbf;
+    /* color: #fff; */
+}
+/* ====================main */
+main {
+}
+.content {
+}
+.content .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.content .container .main {
+    width: 50%;
+    background-color: #bf1515;
+    color: #fff;
+    padding: 10rem 0;
+}
+.content .container .side {
+    width: 50%;
+    background-color: #d9411e;
+    padding: 10rem 0;
+}
+/* ====================footer */
+.footer {
+}
+.footer .container {
+    background-color: #401410;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+@media screen and (max-width: 640px) {
+    .content .container .main,
+    .content .container .side {
+        width: 100%;
+    }
+}
+/* 
+      * : 0점
+    Tag : 1점
+    Class : 10점
+    Id : 100점
+    Inline style : 1000점
+    !important : 가장 우선순위가 높다.
+*/

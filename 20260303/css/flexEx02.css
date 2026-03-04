@@ -58,10 +58,29 @@ body {
 /* 플렉스 나오면 자식의 너비를 생각 */
 .playlists .playlist {
     width: calc(33.333% - 8px);
+    /* 갭 12px 2개, 요소 3개-> 24/3 -> 8  */
+    /* 높이는 웬만하면 주지 말것 : 
+        서로다른 이미지의 높이를 맞출 때 등 일부 외에는 사용하지 말것
+    */
 }
 .playlists .playlist .playlist_thumb_wrap {
     width: 100%;
-    height: 350px;
+    /* height: 350px; */
+    /* 너비에 따라 자연스럽게 높이도 변하는 세팅이 존재 */
+    aspect-ratio: 1/1;
+    /* 정사각형, 비율 */
+    /* 너비만 있으면 높이는 너비 대비 비율로 변경 */
+
+    /* 고전적인 방법
+        1. .playlists .playlist 에 width:300px;
+        2. .playlist_thumb_wrap 에 padding-top:100%; 
+            --> 부모 요소 너비의 100% : padding은 부모 너비 기준
+            --> position: relative; 도 준다
+        3. .thumb에 position: absolute; 를 줌(+ top: 0 ; left: 0;)
+
+        ==> 즉, 부모 요소에 padding을 넣고, 그 여백을 position으로 이동시킴
+        비디오도 위와 같은 속성을 적용가능하다
+    */
 }
 
 .playlists .playlist .playlist_thumb_wrap .thumb {
@@ -85,7 +104,26 @@ body {
 @media screen and (max-width: 1180px) {
     .container {
         width: 96%;
+        /* 괜히 마진 패딩 계산해서 넣지말고 위와같이 퍼센트로 설정하면 편하다 */
+    }
+    /* 앞으로 위와 같이 해당 코드를 넣을 떈 복붙 ㄱㄱ 
+        스타일에 상관없는 코드는 삭제
+    */
+}
+@media screen and (max-width: 840px) {
+    .playlists .playlist {
+        width: calc(50% - 6px);
+        /* 갭 12px 1개, 요소 2개-> 12/2 -> 6  */
     }
 }
 @media screen and (max-width: 480px) {
+    .playlists .playlist {
+        width: 100%;
+        /* 갭 12px 1개, 요소 2개-> 12/2 -> 6  */
+    }
 }
+
+/* 
+    클래스 명을 적지않을 경우 우선순위에서 밀려 다른 미디어쿼리가 적용이 됨
+    항상 우선순위를 고려할것
+*/
