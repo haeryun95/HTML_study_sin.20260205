@@ -77,12 +77,12 @@ img {
 .content .container {
     display: flex;
 }
-.content .container .flexBox {
+.content .container ul {
     display: flex;
     flex-wrap: wrap;
     width: calc(100% * 2 / 3);
 }
-.content .container .flexBox .item {
+.content .container ul li {
 }
 .content .container .side {
     background-color: #bfbdf2;
@@ -104,7 +104,7 @@ img {
 /* 반응형*/
 
 @media screen and (max-width: 768px) {
-    .header .container {
+    /* .header .container {
         flex-wrap: wrap;
         height: auto;
     }
@@ -149,14 +149,76 @@ img {
         width: 100%;
         text-align: center;
     }
-    .content .container .flexBox .item:nth-child(3) {
+    /* .content .container .flexBox li:nth-child(3) {
         background-color: #dddcf2;
     }
-    .content .container .flexBox .item:nth-child(4) {
+    .content .container .flexBox li:nth-child(4) {
+        background-color: #9e99bf;
+    } 
+    .content .container .flexBox .no2:nth-child(1) {
+        background-color: #dddcf2;
+    }
+    .content .container .flexBox .no1:nth-child(2) {
         background-color: #9e99bf;
     }
     .content .container .side {
         width: 100%;
         padding: 160px 0;
+    }
+    */
+
+    /* ////////////////////////////////////////////// */
+
+    /* ============헤더 */
+    .header {
+    }
+    .header .container {
+    }
+    .header .container h1 a {
+    }
+    .header .container .menu {
+    }
+    .header .container .menu li {
+    }
+    .header .container .menu li a {
+    }
+    /* ============메인 */
+    .main {
+    }
+    .content .container {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .content .container ul {
+        width: 100%;
+    }
+    .content .container ul li {
+        width: 100%;
+        padding: 80px 0;
+    }
+    .content .container ul .no2:nth-child(4) {
+        background-color: #3212ff;
+    }
+    /* .content .container ul .no1:nth-of-type(4) {
+        background-color: #3212ff;
+    } */
+    /* .content .container ul li:nth-child(odd) {
+        background-color: #dddcf2;
+    }
+    .content .container ul li:nth-child(even) {
+        background-color: #9e99bf;
+    } */
+    /* .content .container ul li:nth-child(2n+1 , 2n , 3n+2), 3n+1 {
+    background-color: #dddcf2;} */
+
+    .content .container .side {
+        width: 100%;
+        padding: 160px 0;
+    }
+    /* ============푸터 */
+    .footer {
+    }
+    .footer .container {
     }
 }

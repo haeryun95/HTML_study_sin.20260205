@@ -1,0 +1,292 @@
+@charset "utf-8";
+@import url(font.css);
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pretendard";
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: #0d0d0d;
+}
+ul {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+/* common class */
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+.section:not(.section:nth-child(1)) {
+    padding: 10px 0;
+    background-color: #f2f2f2;
+}
+.divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px auto;
+}
+/* style css */
+
+/* ============= Header */
+header {
+    /* border: 1px solid red; */
+    background-color: #fff;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1.logo {
+}
+header h1.logo a {
+    font-size: 2rem;
+    width: 160px;
+    display: block;
+    font-weight: 900;
+    line-height: 50px;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header nav {
+}
+header nav ul.pc-menu {
+    gap: 20px;
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul.pc-menu li {
+}
+header nav ul.pc-menu li a {
+    width: 100%;
+    font-size: 0.8em;
+    display: block;
+    padding: 20px 0;
+    color: #616161;
+    line-height: 50px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+header nav ul.pc-menu li:hover a {
+    color: #0d0d0d;
+    text-decoration: underline;
+}
+
+header .mb-menu-btn {
+    display: none;
+    width: 30px;
+}
+header .mb-menu-btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #0d0d0d;
+    border-radius: 5px;
+}
+header .mb-menu-btn span:not(span:nth-child(3)) {
+    margin-bottom: 7px;
+}
+
+/* ============= Main */
+/* 📌 비주얼 영역 */
+main section.visual {
+    width: 100%;
+    /* height: 600px; */
+    /* 비율에 따라 줄어들게 하기 위해 아래 줄 추가*/
+    aspect-ratio: 1/0.7;
+    max-height: 600px;
+}
+main section.visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 📌콘텐츠 영역 */
+main section.contents {
+}
+main .contents .container {
+}
+
+.contents .content01 {
+    display: flex;
+}
+
+.content01 .leftBox {
+    width: 30%;
+}
+
+.content01 .leftBox .side {
+    background-color: #0d0d0d;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 400px;
+}
+
+.content01 .rightBox {
+    width: 70%;
+}
+.content01 .rightBox .banner {
+    display: flex;
+    flex-wrap: wrap;
+}
+.content01 .rightBox .banner li {
+    width: 50%;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 200px;
+}
+.content01 .rightBox .banner li:nth-child(3n + 1) {
+    background-color: #eee;
+}
+
+.contents .content02 {
+    text-align: center;
+    padding: 5rem 0;
+    color: #59573e;
+}
+.content02 h3 {
+    font-size: 3rem;
+}
+.content02 span {
+    width: 500px;
+}
+.content02 p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-top: 1rem;
+}
+
+/* ============= Footer */
+footer {
+    padding: 2rem;
+    gap: 40px;
+}
+footer ul.footerMenu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+footer ul.footerMenu li {
+    width: 100px;
+    text-align: center;
+}
+footer ul.footerMenu li a {
+}
+footer span {
+    background-color: #59573e;
+    margin: 2rem auto 3rem;
+}
+footer address {
+    text-align: center;
+    font-style: normal;
+}
+footer address.footerDesc p {
+}
+
+/* =========================== */
+/*        MEDIA QUERY          */
+/* =========================== */
+
+/* 
+    컨테이너가 1000px 이기 때문에 브레이크 포인틀르 아래처럼 잡음
+*/
+
+@media screen and (max-width: 1040px) {
+    /* common */
+    .container {
+        width: 96%;
+    }
+
+    /* ============= Header */
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 96%;
+    }
+    /* ============= Header */
+    header nav {
+        display: none;
+    }
+    header .mb-menu-btn {
+        display: block;
+    }
+
+    /* ============= Main */
+
+    /* 📌콘텐츠 영역 */
+    .contents .content01 {
+        flex-direction: column-reverse;
+        /* 
+            혹은 .side에 order:2 를 해도된다.
+        */
+    }
+    .content01 .leftBox {
+        width: 100%;
+    }
+    .content01 .rightBox {
+        width: 100%;
+    }
+    .content01 .rightBox .banner {
+        flex-wrap: wrap;
+    }
+    .content01 .rightBox .banner li {
+        width: 100%;
+    }
+    .content01 .rightBox .banner li:nth-child(odd) {
+        background-color: #ccc;
+    }
+    .content01 .rightBox .banner li:nth-child(even) {
+        background-color: #eee;
+    }
+    .content02 h3 {
+        font-size: 2rem;
+    }
+    .content02 span {
+        width: 400px;
+    }
+    footer ul.footerMenu {
+        flex-wrap: wrap;
+        width: 300px;
+        margin: 0 auto;
+    }
+    footer span {
+        margin: 1.5rem auto 2rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .content02 span {
+        width: 300px;
+    }
+    .content02 span {
+        width: 300px;
+    }
+    footer span {
+        width: 300px;
+    }
+}
+
+/* 
+    💖 작업 가이드
+    기초공사 html > 부분 css 완성 > 다시 html > 다시 css ...
+
+    이런식으로 번갈아가면서 작업해야합니다.
+
+*/

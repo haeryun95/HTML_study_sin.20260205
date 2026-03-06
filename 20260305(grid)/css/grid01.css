@@ -1,0 +1,112 @@
+@charset "utf-8";
+@import url(font.css);
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pretendard";
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: #0d0d0d;
+}
+ul {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+/* common */
+
+.content {
+    margin: 50px 0;
+    width: 100%;
+    height: auto;
+}
+.red {
+    background-color: #e46d70;
+}
+.green {
+    background-color: #33b8d7;
+}
+.blue {
+    background-color: #52a5de;
+}
+.purple {
+    background-color: #8684ff;
+}
+.orange {
+    background-color: #f27575;
+}
+
+/* 
+    2차원으로 만들려는 열/행을 정의해야 한다. 
+
+    flex - 1차원적 단방향 배치 - 가로 혹은 세로
+    grid - 2차원적인 배치 -행과 열
+
+    열(width)의 개수 및 너비지정: grid-template-columns
+    행(height)의 개수 및 너비지정: grid-template-rows
+
+*/
+
+.content .content-wrap {
+    max-width: 1200px;
+    min-height: 800px;
+    margin: 0 auto;
+    display: grid;
+    /* grid-template-columns: 300px 500px 200px 200px; 
+    ===> 값을 고정된 픽셀 값으로 주지말 것 */
+    /* grid-template-rows: 200px 400px 200px 200px; */
+    /* grid-template-rows: auto ; ===> 디폴트값 */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* 격자만들기 */
+}
+.content .content-wrap .content-item {
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .content .content-wrap {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        /* 격자만들기 */
+    }
+}
+@media screen and (max-width: 768px) {
+    .content .content-wrap {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        /* 격자만들기 _ 숫자만 조정하면 됨*/
+    }
+}
+
+body {
+    background-color: beige;
+}
+.container {
+    margin-top: 100px;
+    border: 5px solid #ccc;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 300px 100px;
+    grid-template:
+        200px 300px 100px/
+        1fr 1fr 1fr;
+    grid-template:
+        1fr 1fr 1fr /
+        minmax(100px, 300px) minmax(100px, 200px) 1fr;
+
+    /* 
+        grid-template: 행/열
+        minmax : 최소최대 
+     */
+
+    grid-template: repeat(4, minmax(250px, 1fr)) / repeat(4, minmax(200px, 1fr));
+}
