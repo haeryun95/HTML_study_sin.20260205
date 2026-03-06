@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Layout</title>
+        <style>
+            /* reset */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Pretendard";
+            }
+            body {
+                background-color: #f7f8f9;
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: #0d0d0d;
+            }
+            ul {
+                list-style: none;
+            }
+            img {
+                vertical-align: top;
+            }
+            :root {
+                --container: 980px;
+                --line: #ddd;
+                --hover1: #ffddf1;
+                --hover2: #ff82f9;
+                --bg: #ffffff;
+                --side: #666;
+                --main: #efefef;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font-family:
+                    system-ui,
+                    -apple-system,
+                    Segoe UI,
+                    Roboto,
+                    "Pretendard",
+                    Arial,
+                    sans-serif;
+                background: var(--bg);
+                color: #111;
+            }
+
+            /* -------------------------
+      Header
+    -------------------------- */
+            header {
+                border-bottom: 1px solid var(--line);
+                background: #fff;
+            }
+
+            .header-inner {
+                max-width: var(--container);
+                margin: 0 auto;
+                padding: 14px 16px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+            }
+
+            .logo {
+                font-weight: 800;
+                letter-spacing: 1px;
+                font-size: 22px;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            nav ul {
+                display: flex;
+            }
+
+            .item {
+                display: inline-block;
+                padding: 10px 18px;
+                color: #333;
+                text-decoration: none;
+                font-size: 13px;
+                transition: background 0.15s ease;
+            }
+
+            .item:hover {
+                background: linear-gradient(var(--hover1), var(--hover2));
+            }
+
+            /* -------------------------
+      Main Layout
+    -------------------------- */
+            main {
+                max-width: var(--container);
+                margin: 0 auto;
+                padding: 36px 16px 24px;
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+                padding: 10px 0 26px;
+            }
+
+            .section {
+                width: min(900px, 100%);
+                display: grid;
+                grid-template-columns: 1fr 1.6fr 1fr;
+                gap: 0;
+                min-height: 240px;
+            }
+
+            .box {
+                display: grid;
+                place-items: center;
+                font-weight: 600;
+                color: #222;
+                border: 0;
+            }
+
+            .side {
+                background: var(--side);
+                color: rgba(0, 0, 0, 0.55);
+            }
+
+            .center {
+                background: var(--main);
+                color: rgba(0, 0, 0, 0.55);
+            }
+
+            .divider {
+                max-width: var(--container);
+                margin: 30px auto 0;
+                border-top: 1px solid var(--line);
+            }
+
+            /* -------------------------
+      Footer
+    -------------------------- */
+            footer {
+                max-width: var(--container);
+                margin: 0 auto;
+                padding: 34px 16px 60px;
+                text-align: center;
+                color: rgba(0, 0, 0, 0.55);
+                font-weight: 600;
+            }
+
+            @media (max-width: 768px) {
+                .header-inner {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 12px;
+                }
+
+                nav {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                .section {
+                    grid-template-columns: 1fr;
+                    min-height: auto;
+                }
+
+                .box {
+                    height: 160px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="header-inner">
+                <div class="logo">LOGO</div>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a class="item" href="#">pc-nav</a>
+                        </li>
+                        <li>
+                            <a class="item" href="#">pc-nav</a>
+                        </li>
+                        <li>
+                            <a class="item" href="#">pc-nav</a>
+                        </li>
+                        <li>
+                            <a class="item" href="#">pc-nav</a>
+                        </li>
+                        <li>
+                            <a class="item" href="#">pc-nav</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <section class="section">
+                    <div class="box side">SIDE01</div>
+                    <div class="box center">MAIN</div>
+                    <div class="box side">SIDE02</div>
+                </section>
+            </div>
+
+            <div class="divider"></div>
+        </main>
+
+        <footer>FOOTER</footer>
+    </body>
+</html>
