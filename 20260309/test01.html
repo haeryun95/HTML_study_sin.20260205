@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/test01.css" />
+    </head>
+    <body>
+        <!-- Slider main container -->
+        <div class="swiper mySwiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide pink">Slide 1</div>
+                <div class="swiper-slide aqua">Slide 2</div>
+                <div class="swiper-slide gold">Slide 3</div>
+                <div class="swiper-slide pink">Slide 1</div>
+                <div class="swiper-slide aqua">Slide 2</div>
+                <div class="swiper-slide gold">Slide 3</div>
+                <div class="swiper-slide pink">Slide 1</div>
+                <div class="swiper-slide aqua">Slide 2</div>
+                <div class="swiper-slide gold">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+        <div class="swiper mySwiper02">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide pink">Slide 1</div>
+                <div class="swiper-slide aqua">Slide 2</div>
+                <div class="swiper-slide gold">Slide 3</div>
+                <div class="swiper-slide pink">Slide 1</div>
+                <div class="swiper-slide aqua">Slide 2</div>
+                <div class="swiper-slide gold">Slide 3</div>
+                <div class="swiper-slide pink">Slide 1</div>
+                <div class="swiper-slide aqua">Slide 2</div>
+                <div class="swiper-slide gold">Slide 3</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+        <div class="swiper mySwiper03">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="images/PC_BigBanner_.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/PC_BigBanner_개와고양이의시간.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/PC_BigBanner_띵조페스티벌(4).jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/PC_BigBanner_모네워홀(2).jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/PC_BigBanner_사운드베리페스타.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/PC_BigBanner_창덕궁약다방.jpg" alt="" />
+                </div>
+            </div>
+            <!-- this is  pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- this is navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </body>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 10,
+            },
+            loop: true,
+            // direction: "vertical",
+            pagination: { el: ".swiper-pagination", type: "fraction" },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // navigation: {
+            //     nextEl: ".swiper-button-next",
+            //     prevEl: ".swiper-button-prev",
+            // },
+        });
+        var swiper = new Swiper(".mySwiper02", {
+            slidesPerView: 1,
+            // spaceBetween: 30,
+            autoplay: {
+                delay: 1000,
+            },
+            loop: true,
+            direction: "vertical",
+            pagination: { el: ".swiper-pagination" },
+            navigation: false,
+            // navigation: {
+            //     nextEl: ".swiper-button-next",
+            //     prevEl: ".swiper-button-prev",
+            // },
+        });
+        var swiper2 = new Swiper(".mySwiper03", {
+            // autoplay: {
+            //     delay: 1000,
+            // },
+            loop: true,
+            grabCursor: true,
+            effect: "creative",
+            speed: 1000,
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ["-120%", 0, -500],
+                },
+                next: {
+                    shadow: true,
+                    translate: ["120%", 0, -500],
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <!--📌 link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+        <!-- 📌 material icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <!-- 📌 css -->
+        <link rel="stylesheet" href="css/slider01.css" />
+        <!-- 📌Swiper script -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="leftBox">
+                <h2>놓치기 아쉬운</h2>
+                <p class="subTitle">알뜰 물품</p>
+                <span>-</span>
+                <p class="desc">가격인하 물품을 <br />지금바로 이용해 보세요</p>
+                <button class="more"><a href="">더보기</a></button>
+
+                <div class="slider-controls">
+                    <div class="slider-arrow-prev"></div>
+                    <div class="slider-pagination"></div>
+                    <div class="slider-arrow-next"></div>
+                </div>
+            </div>
+            <div class="rightBox">
+                <!-- Slider main container -->
+                <div class="swiper swiperList">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+
+                    <div class="favorite-slide-control">
+                        <div class="slider-arrow-prev slider-arrow"><span class="material-icons">west</span></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="slider-arrow-next slider-arrow"><span class="material-icons">east</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/slider01.js"></script>
+    </body>
+</html>

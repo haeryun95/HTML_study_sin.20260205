@@ -1,0 +1,50 @@
+:root {
+    /* =========================
+     Base Colors
+  ========================= */
+
+    --color-bg-main: #f4efe6; /* 전체 배경 (빈티지 아이보리) */
+    --color-bg-sub: #e8dfcf; /* 카드 / 섹션 배경 */
+    --color-bg-soft: #faf6ee; /* 밝은 배경 */
+
+    /* =========================
+     Text Colors
+  ========================= */
+
+    --color-text-main: #3b322c; /* 기본 텍스트 (브라운 차콜) */
+    --color-text-sub: #6b5f55; /* 서브 텍스트 */
+    --color-text-light: #9a8f84; /* 연한 텍스트 */
+
+    /* =========================
+     Primary / Accent
+  ========================= */
+
+    --color-primary: #8c6a4d; /* 빈티지 브라운 */
+    --color-primary-soft: #b89a7a; /* 밝은 브라운 */
+
+    --color-accent: #c97c5d; /* 브릭 오렌지 */
+    --color-accent-soft: #e3a78d;
+
+    /* =========================
+     Vintage Palette
+  ========================= */
+
+    --color-olive: #7a8450; /* 올리브 */
+    --color-mustard: #c2a24d; /* 머스타드 */
+    --color-dusty-blue: #6e7f8c; /* 더스티 블루 */
+    --color-sage: #a3b18a; /* 세이지 그린 */
+
+    /* =========================
+     Border / UI
+  ========================= */
+
+    --color-border: #d6cbbd;
+    --color-border-dark: #b8aa98;
+
+    /* =========================
+     Shadow
+  ========================= */
+
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-vintage: 0 6px 18px rgba(0, 0, 0, 0.12);
+}

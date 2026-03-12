@@ -1,0 +1,72 @@
+@charset "utf-8";
+@import "font.css";
+@import "var.css";
+@import "reset.css";
+
+/* 💖 style */
+.swiper.swiperList {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.swiper.swiperList .swiper-slide {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 20px;
+}
+
+/* 🧀 스와이퍼 컨트롤 */
+.favorite-slide-control {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 2.5rem;
+    /* --swiper-pagination-bullet-width: 15px;
+    --swiper-pagination-bullet-height: 15px;
+    --swiper-pagination-bullet-inactive-color: #ff5050;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-color: green; */
+}
+.favorite-slide-control .slider-arrow {
+    font-size: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 2px solid orange;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.favorite-slide-control .slider-arrow span {
+    color: orange;
+    font-size: 24px;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+.favorite-slide-control .slider-arrow-next {
+}
+.favorite-slide-control .slider-arrow-prev {
+}
+.favorite-slide-control .swiper-pagination {
+    position: relative;
+    bottom: 0;
+    width: auto;
+    margin: 6px;
+}
+.favorite-slide-control .swiper-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background-color: orange;
+    opacity: 0.5;
+    vertical-align: -15px;
+}
+.favorite-slide-control .swiper-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 30px;
+    border-radius: 30px;
+}

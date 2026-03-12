@@ -1,0 +1,72 @@
+@charset "utf-8";
+@import url(font.css);
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pretendard";
+}
+body {
+    background-color: #f7f8f9;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #0d0d0d;
+}
+ul {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+/* common */
+
+/* style */
+.swiper {
+    width: 100%;
+    height: 600px;
+}
+.swiper-slide.pink {
+    background-color: pink;
+}
+.swiper-slide.aqua {
+    background-color: aquamarine;
+}
+.swiper-slide.gold {
+    background-color: gold;
+}
+
+.mySwiper02 {
+    --swiper-pagination-bullet-size: 50px;
+}
+.mySwiper02 .swiper-pagination {
+    width: 50px;
+    background-color: red;
+}
+.mySwiper .swiper-pagination-bullet {
+    width: 50px;
+    height: 50px;
+}
+/* 스와이퍼 03 */
+.mySwiper03 {
+    --swiper-navigation-sides-offset: 4%;
+    margin: 120px auto;
+    width: 100%;
+    height: 50vh;
+}
+
+.mySwiper03 .swiper-wrapper {
+    transition: 0.5s ease-in;
+    width: 100%;
+    height: 100%;
+}
+.mySwiper03 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

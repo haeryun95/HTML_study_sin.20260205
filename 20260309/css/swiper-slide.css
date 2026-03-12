@@ -1,0 +1,41 @@
+@charset "utf-8";
+@import url(font.css);
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pretendard";
+}
+body {
+    background-color: #f7f8f9;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #0d0d0d;
+}
+ul {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+/* style */
+.swiper {
+    margin: 0 100px;
+    --swiper-navigation-size: 44px;
+    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-sides-offset: 0;
+}
+.swiper .swiper-wrapper {
+    width: 90%;
+}
+.swiper-slide {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
