@@ -1,0 +1,83 @@
+/* header영역 */
+@media screen and (max-width: 1350px) {
+    .header nav {
+        margin-right: 25px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .header {
+        height: 94px;
+    }
+    .header::before {
+        top: 94px;
+    }
+    /* logo */
+    .header .logo a {
+        width: 200px;
+    }
+
+    /* nav */
+    .header nav .mainMenu > li {
+        padding: 0 8px;
+    }
+    .header nav .mainMenu > li > a {
+        font-size: 18px;
+        padding: 36px 12px 37px;
+    }
+    .header nav .mainMenu > li .submenu {
+        padding: 20px 0;
+    }
+    .header nav .mainMenu > li .submenu li {
+        padding: 0 0 10px;
+    }
+    .header nav .mainMenu > li .submenu li a {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .header {
+        height: 73px;
+    }
+    .header::before {
+        display: none;
+    }
+    .header .container {
+        padding: 0 3%;
+        height: 100%;
+    }
+    /* logo */
+    .header .logo a {
+        width: 180px;
+    }
+    /* nav */
+    .header nav {
+        display: none;
+    }
+    /* menBtn - 햄버거버튼 */
+    .header .menuBtn {
+        display: block;
+    }
+}
+@media screen and (max-width: 680px) {
+    .header {
+        height: 60px;
+    }
+    .header .container {
+        padding: 0 4%;
+    }
+    /* logo */
+    .header .logo a {
+        width: 150px;
+    }
+    /* menBtn - 햄버거버튼 */
+    .header .menuBtn {
+        width: 20px;
+        height: 20px;
+    }
+    .header .menuBtn span:nth-child(2) {
+        top: 9px;
+    }
+    .header .menuBtn span:nth-child(3) {
+        top: 16px;
+    }
+}

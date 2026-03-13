@@ -1,0 +1,188 @@
+@charset "utf-8";
+@import url("font.css");
+/* css변수들 */
+:root {
+    --engFont: "Lexend", "Noto Sans KR", sans-serif;
+    --koFont: "NEXON Lv1 Gothic OTF", "Noto Sans KR", sans-serif;
+    --mainColor: #ff281e;
+    --subColor: #ffe68c;
+    --brownColor: #301900;
+    --colorBlack: #222;
+    --grayBg: #f0ecd2;
+    --borderR: 15px;
+}
+/* ====== 초기화 ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+img {
+    display: block;
+}
+/* ====== 공통클래스 ====== */
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+html {
+    font-family:
+        "Pretendard",
+        "NEXON Lv1 Gothic OTF",
+        "Noto Sans KR",
+        "Lexend",
+        Malgun Gothic,
+        "Malgun Gothic",
+        sans-serif;
+}
+/* ====== header영역 ====== */
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 112px;
+    overflow: hidden;
+    background-color: #fff;
+    z-index: 999;
+    /* border: 1px solid red; */
+    transition: all 0.4s;
+}
+.header::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    top: 112px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.4s;
+}
+.header.down::before {
+    opacity: 1;
+}
+.header.down {
+    height: 340px;
+}
+.header .container {
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 100%; */
+}
+/* logo */
+.header .logo {
+}
+.header .logo a {
+    display: block;
+    width: 240px;
+}
+.header .logo a img {
+    width: 100%;
+}
+/* nav */
+.header nav {
+}
+.header nav .mainMenu {
+    font-size: 0;
+}
+.header nav .mainMenu > li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 21px;
+    position: relative;
+}
+.header nav .mainMenu > li > a {
+    display: block;
+    font-size: 20px;
+    padding: 44px 16px;
+    line-height: 1.2;
+    letter-spacing: -0.466667px;
+    /* border-bottom: 5px solid transparent;  */
+    transition: all 0.4s;
+    position: relative;
+}
+.header nav .mainMenu > li:hover > a {
+    color: var(--mainColor);
+    /* border-bottom: 5px solid var(--mainColor); */
+}
+.header nav .mainMenu > li > a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--mainColor);
+    /* opacity: 0; */
+    transition: all 0.3s linear;
+}
+.header nav .mainMenu > li:hover > a::before {
+    /* opacity: 1; */
+    width: 100%;
+}
+.header nav .mainMenu > li .submenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    padding: 22px 0;
+    text-align: center;
+}
+.header nav .mainMenu > li .submenu li {
+    padding: 0 0 12px;
+}
+.header nav .mainMenu > li .submenu li a {
+    font-size: 16px;
+    display: block;
+    color: #777;
+    letter-spacing: -0.466667px;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+.header nav .mainMenu > li .submenu li:hover a {
+    font-weight: 700;
+    color: var(--mainColor);
+}
+/* menBtn - 햄버거버튼 */
+.header .menuBtn {
+    display: none;
+    width: 22px;
+    height: 22px;
+    position: relative;
+}
+.header .menuBtn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #222;
+    position: absolute;
+    left: 0;
+}
+.header .menuBtn span:nth-child(1) {
+    top: 2px;
+}
+.header .menuBtn span:nth-child(2) {
+    top: 11px;
+}
+.header .menuBtn span:nth-child(3) {
+    top: 20px;
+}
+
+/* ====== main영역 ====== */
+/* ====== footer영역 ====== */
+/* ======  ====== */

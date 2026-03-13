@@ -1,6 +1,6 @@
 const swiper = new Swiper(".swiperList", {
     loop: true,
-    autoplay: true,
+    // autoplay: true,
     grabCursor: true,
     slidesPerView: 3,
     spaceBetween: 14,

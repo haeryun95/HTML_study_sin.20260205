@@ -1,0 +1,10 @@
+:root {
+    --engFont: "Lexend", "Noto Sans KR", sans-serif;
+    --koFont: "NEXON Lv1 Gothic OTF", "Noto Sans KR", sans-serif;
+    --mainColor: #ff281e;
+    --subColor: #ffe68c;
+    --brownColor: #301900;
+    --colorBlack: #222;
+    --grayBg: #f0ecd2;
+    --borderR: 15px;
+}

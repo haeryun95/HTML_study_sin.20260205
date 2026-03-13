@@ -88,6 +88,18 @@ section {
     cursor: pointer;
 }
 
+.slider-controls .slider-arrow-next .eastIcon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/swiperArrN.png) no-repeat;
+    background-size: cover;
+}
+
+.slider-controls .slider-arrow-next .eastIcon:hover {
+    background-position: 0 -20px;
+}
+
 .slider-controls .slider-pagination {
     position: static;
     width: auto;
@@ -189,4 +201,13 @@ section {
 .swiper-slide .priceBox .cart {
     color: #ccc;
     margin-left: 20px;
+}
+.swiper-slide .priceBox .shopping_cart {
+    width: 30px;
+    height: 30px;
+    background: url(../images/btnCartList.png) no-repeat;
+    background-size: cover;
+}
+.swiper-slide .priceBox .shopping_cart:hover {
+    background-position: 0 -30px;
 }

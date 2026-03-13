@@ -1,0 +1,173 @@
+@charset "utf-8";
+@import "font.css";
+@import "var.css";
+@import "reset.css";
+
+/* COMMON STYLE */
+body {
+    font-family: "NexonLv1Gothic";
+}
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+/* STYLE */
+/*  =======================================
+    📌 HEADER
+==========================================*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 130px;
+    /* background-color: #f3f3f3; */
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* align-items: center; */
+    height: 100%;
+}
+
+/* .header::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #dddddd;
+    position: absolute;
+    top: 112px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.4s;
+} */
+
+.header.down {
+    height: 600px;
+}
+
+.header.down::before {
+    opacity: 1;
+}
+
+/* logo */
+header .container .logo {
+    margin: 20px auto 10px;
+}
+
+header .container .logo a {
+    display: block;
+    text-align: center;
+    width: 182px;
+}
+
+header .container .logo a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* gnb */
+header nav.header_gnb {
+}
+
+header nav.header_gnb .mainMenu {
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav.header_gnb .mainMenu > li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 21px;
+    font-weight: 600;
+    border-bottom: 5px solid transparent;
+    position: relative;
+}
+
+header nav.header_gnb .mainMenu > li > a {
+    display: block;
+    font-size: 20px;
+    padding: 10px 8px;
+    line-height: 1.2;
+    letter-spacing: -0.466667px;
+    color: #222222;
+    border-bottom: 3px solid transparent;
+}
+
+header nav.header_gnb .mainMenu > li > a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 5Spx;
+    transform: translateX(-50%);
+    transition: all 0.2s linear;
+    border-bottom: 3px solid transparent;
+}
+
+header nav.header_gnb .mainMenu > li:hover > a {
+    border-bottom: 5px solid transparent;
+    color: #1f3f8f;
+}
+
+header nav.header_gnb .mainMenu > li:hover > a::before {
+    width: 100%;
+    border-bottom: 3px solid #1f3f8f;
+}
+
+header nav.header_gnb .mainMenu .subMenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 999;
+    width: 100%;
+    padding: 22px 0;
+    text-align: center;
+}
+
+header nav.header_gnb .mainMenu .subMenu li {
+    padding: 0 0 12px;
+}
+
+header nav.header_gnb .mainMenu .subMenu li a {
+    font-size: 16px;
+    color: #777777;
+    line-height: 1.5;
+    letter-spacing: 0.466667px;
+    word-break: keep-all;
+    transition:
+        color 0.2s ease,
+        font-weight 0.2s ease;
+}
+
+header nav.header_gnb .mainMenu .subMenu li a:hover {
+    font-weight: 700;
+    color: #1f3f8f;
+}
+
+/* hamburger */
+header .container .menuBtn {
+    display: none;
+}
+
+header .container .menuBtn span {
+}
+/*  =======================================
+    📌 MAIN 
+==========================================*/
+
+/*  =======================================
+    📌 FOOTER 
+==========================================*/
