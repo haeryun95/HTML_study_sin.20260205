@@ -1,3 +1,37 @@
+/* mobile-menu영역 */
+@media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 980px) {
+}
+@media screen and (max-width: 680px) {
+    .mb-menu {
+        padding: 20px 4%;
+    }
+    .mb-menu .mb-menu-title {
+        padding-bottom: 15px;
+    }
+    .mb-menu .mb-menu-title .mb-logo a {
+        width: 150px;
+    }
+    .mb-menu .mb-main-menu > li .mb-menu-list {
+        padding: 12px 0;
+        font-size: 18px;
+    }
+    .mb-menu .mb-main-menu > li .mb-menu-list.mb-li-arrow span {
+        font-size: 25px;
+    }
+    .mb-menu .mb-main-menu > li .mb-submenu {
+        /* display: none; */
+        padding-bottom: 15px;
+    }
+    .mb-menu .mb-main-menu > li .mb-submenu li {
+        padding: 6px 0;
+    }
+    .mb-menu .mb-main-menu > li .mb-submenu li a {
+        font-size: 14px;
+    }
+}
+
 /* header영역 */
 @media screen and (max-width: 1350px) {
     .header nav {
@@ -80,26 +114,4 @@
     .header .menuBtn span:nth-child(3) {
         top: 16px;
     }
-    .mb-menu {
-        padding: 20px 4%;
-    }
-    .mb-menu .mb-menu-title .mb-logo a {
-        width: 150px;
-    }
-    .mb-menu .mb-main-menu > li .mb-menu-list.mb-li-arrow span {
-        font-size: 25px;
-        opacity: 1;
-    }
-    .mb-menu .mb-main-menu > li .mb-subMenu {
-        padding-bottom: 15px;
-        /* display: none; */
-    }
-    .mb-menu .mb-main-menu > li .mb-subMenu li {
-        padding: 6px 0;
-    }
-    .mb-menu .mb-main-menu > li .mb-subMenu li a {
-        font-size: 14px;
-    }
 }
-
-/*  미디어  */

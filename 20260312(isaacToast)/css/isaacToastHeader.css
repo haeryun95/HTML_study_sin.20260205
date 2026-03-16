@@ -1,32 +1,8 @@
 @charset "utf-8";
-@import url("font.css");
-/* css변수들 */
-:root {
-    --engFont: "Lexend", "Noto Sans KR", sans-serif;
-    --koFont: "NEXON Lv1 Gothic OTF", "Noto Sans KR", sans-serif;
-    --mainColor: #ff281e;
-    --subColor: #ffe68c;
-    --brownColor: #301900;
-    --colorBlack: #222;
-    --grayBg: #f0ecd2;
-    --borderR: 15px;
-}
-/* ====== 초기화 ====== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-ul {
-    list-style: none;
-}
-a {
-    text-decoration: none;
-    color: #333;
-}
-img {
-    display: block;
-}
+@import "font.css";
+@import "reset.css";
+@import "var.css";
+
 /* ====== 공통클래스 ====== */
 .container {
     max-width: 1400px;

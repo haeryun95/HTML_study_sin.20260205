@@ -1,0 +1,18 @@
+/* ====== 공통클래스 ====== */
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+html {
+    line-height: 1.7;
+    font-family:
+        "Pretendard",
+        "NEXON Lv1 Gothic OTF",
+        "Noto Sans KR",
+        "Lexend",
+        Malgun Gothic,
+        "Malgun Gothic",
+        sans-serif;
+}
