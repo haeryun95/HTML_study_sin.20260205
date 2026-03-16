@@ -1,31 +1,31 @@
 @charset "utf-8";
-@import url("font.css");
+@import url('font.css');
 /* css변수들 */
 :root {
-    --engFont: "Lexend", "Noto Sans KR", sans-serif;
-    --koFont: "NEXON Lv1 Gothic OTF", "Noto Sans KR", sans-serif;
-    --mainColor: #ff281e;
-    --subColor: #ffe68c;
+    --engFont: 'Lexend', 'Noto Sans KR', sans-serif;
+    --koFont: 'NEXON Lv1 Gothic OTF', 'Noto Sans KR', sans-serif;
+    --mainColor: #FF281E;
+    --subColor: #FFE68C;
     --brownColor: #301900;
     --colorBlack: #222;
-    --grayBg: #f0ecd2;
+    --grayBg: #F0ECD2;
     --borderR: 15px;
 }
 /* ====== 초기화 ====== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
-a {
-    text-decoration: none;
-    color: #333;
+a {    
+  text-decoration: none;
+  color: #333;
 }
 img {
-    display: block;
+  display: block;
 }
 /* ====== 공통클래스 ====== */
 .container {
@@ -35,41 +35,35 @@ img {
     padding: 0 25px;
 }
 html {
-    font-family:
-        "Pretendard",
-        "NEXON Lv1 Gothic OTF",
-        "Noto Sans KR",
-        "Lexend",
-        Malgun Gothic,
-        "Malgun Gothic",
-        sans-serif;
-    line-height: 1.7;
+    line-height:1.7;
+    font-family: 'Pretendard', 'NEXON Lv1 Gothic OTF', 'Noto Sans KR', 'Lexend', Malgun Gothic, 'Malgun Gothic', sans-serif; 
 }
-/* ====== 모바일 영역 ====== */
+/* ====== mobile-menu영역 ====== */
 .mb-menu {
     position: fixed;
     top: 0;
-    /* right: -340px; */
+    /* right: -320px;    */
     /* width: 320px; */
+    right: -100%;   
     width: 100%;
-    /* right: -100%; */
     height: 100%;
     background-color: #fff;
     z-index: 1000;
-    padding: 20px 3%;
-    transition: all 0.5s ease-in;
     overflow-y: auto;
+    padding: 25px 3%;
+    transition: all .2s ease-in;
 }
-.mb-menu .active {
+.mb-menu.active {
     right: 0;
 }
 .mb-menu .mb-menu-title {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     padding-bottom: 25px;
 }
 .mb-menu .mb-menu-title .mb-logo {
+   
 }
 .mb-menu .mb-menu-title .mb-logo a {
     display: block;
@@ -78,56 +72,56 @@ html {
 .mb-menu .mb-menu-title .mb-logo a img {
     width: 100%;
 }
-
-.mb-menu .mb-bnt-close {
+.mb-menu .mb-btn-close {
     display: block;
+    width: 30px;
+    height: 30px;
+    margin-top:-5px;
 }
-.mb-menu .mb-bnt-close span {
+.mb-menu .mb-btn-close span {
     font-size: 30px;
     color: #222;
 }
-
-.mb-menu .mb-main-menu {
-}
-.mb-menu .mb-main-menu > li {
-}
+/* mb-menu */
+.mb-menu .mb-main-menu {}
+.mb-menu .mb-main-menu > li {}
 .mb-menu .mb-main-menu > li .mb-menu-list {
     display: block;
-    padding: 15px 0;
+    padding: 15px 0; 
     font-size: 20px;
+    font-weight: bold;
     color: #222;
-    font-weight: 700;
-    letter-spacing: 0.4px;
+    letter-spacing: -0.4px;
     position: relative;
 }
-.mb-menu .mb-main-menu > li .mb-menu-list.mb-li-arrow {
-}
-.mb-menu .mb-main-menu > li .mb-menu-list.mb-li-arrow span {
+.mb-menu .mb-main-menu > li .mb-menu-list.mb-li-arrow {}
+.mb-menu .mb-main-menu > li .mb-menu-list.mb-li-arrow  span {
     position: absolute;
-    top: 50%;
     right: 0;
+    top: 50%;
     transform: translateY(-50%);
+    color: #222;
     opacity: 0.7;
     font-size: 30px;
-    transition: all 0.3s linear;
+    transition: all .3s linear;
 }
-.mb-menu .mb-main-menu > li .mb-menu-list.mb-li-arrow.active span {
+.mb-menu .mb-main-menu > li .mb-menu-list.mb-li-arrow.active  span {
     transform: translateY(-50%) rotate(180deg);
+    opacity: 1;
     color: var(--mainColor);
 }
-
-.mb-menu .mb-main-menu > li .mb-subMenu {
-    padding-bottom: 20px;
+.mb-menu .mb-main-menu > li .mb-submenu {
     display: none;
+    padding-bottom: 20px;
 }
-.mb-menu .mb-main-menu > li .mb-subMenu li {
+.mb-menu .mb-main-menu > li .mb-submenu li {
     padding: 8px 0;
     line-height: 1.2;
 }
-.mb-menu .mb-main-menu > li .mb-subMenu li a {
+.mb-menu .mb-main-menu > li .mb-submenu li a {
     font-size: 16px;
+    letter-spacing: -0.466667px;
     line-height: 1.2;
-    letter-spacing: 0.47px;
 }
 /* ====== header영역 ====== */
 .header {
@@ -138,12 +132,13 @@ html {
     height: 112px;
     overflow: hidden;
     background-color: #fff;
-    z-index: 999;
+    z-index: 999;    
     /* border: 1px solid red; */
-    transition: all 0.4s;
+    transition: all .4s;
+    
 }
 .header::before {
-    content: "";
+    content:'';
     display: block;
     width: 100%;
     height: 1px;
@@ -152,7 +147,7 @@ html {
     top: 112px;
     left: 0;
     opacity: 0;
-    transition: all 0.4s;
+    transition: all .4s;
 }
 .header.down::before {
     opacity: 1;
@@ -168,19 +163,17 @@ html {
     /* height: 100%; */
 }
 /* logo */
-.header .logo {
-}
+.header .logo {}
 .header .logo a {
     display: block;
     width: 240px;
 }
 .header .logo a img {
-    width: 100%;
+    width: 100%;    
 }
 /* nav */
-.header nav {
-}
-.header nav .mainMenu {
+.header nav {}
+.header nav .mainMenu {   
     font-size: 0;
 }
 .header nav .mainMenu > li {
@@ -188,6 +181,7 @@ html {
     vertical-align: top;
     padding: 0 21px;
     position: relative;
+    
 }
 .header nav .mainMenu > li > a {
     display: block;
@@ -204,7 +198,7 @@ html {
     /* border-bottom: 5px solid var(--mainColor); */
 }
 .header nav .mainMenu > li > a::before {
-    content: "";
+    content:'';
     display: block;
     position: absolute;
     left: 50%;
@@ -214,38 +208,40 @@ html {
     height: 3px;
     background-color: var(--mainColor);
     /* opacity: 0; */
-    transition: all 0.3s linear;
+    transition: all .3s linear;
+
 }
 .header nav .mainMenu > li:hover > a::before {
     /* opacity: 1; */
     width: 100%;
 }
-.header nav .mainMenu > li .subMenu {
+.header nav .mainMenu > li .submenu {
     position: absolute;
     left: 0;
     top: 100%;
     width: 100%;
     padding: 22px 0;
-    text-align: center;
+    text-align:center;
+
 }
-.header nav .mainMenu > li .subMenu li {
+.header nav .mainMenu > li .submenu li {
     padding: 0 0 12px;
 }
-.header nav .mainMenu > li .subMenu li a {
+.header nav .mainMenu > li .submenu li a {
     font-size: 16px;
     display: block;
     color: #777;
     letter-spacing: -0.466667px;
     line-height: 1.5;
-    word-break: keep-all;
+    word-break: keep-all;    
 }
-.header nav .mainMenu > li .subMenu li:hover a {
+.header nav .mainMenu > li .submenu li:hover a {
     font-weight: 700;
     color: var(--mainColor);
 }
 /* menBtn - 햄버거버튼 */
 .header .menuBtn {
-    display: none;
+    display:none;
     width: 22px;
     height: 22px;
     position: relative;
@@ -254,12 +250,12 @@ html {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #222;
+    background-color: #222;        
     position: absolute;
     left: 0;
 }
 .header .menuBtn span:nth-child(1) {
-    top: 2px;
+    top: 2px;    
 }
 .header .menuBtn span:nth-child(2) {
     top: 11px;

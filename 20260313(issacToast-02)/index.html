@@ -1,48 +1,134 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <!-- 📌 CSS -->
-        <link rel="stylesheet" href="css/isaacToastHeader.css" />
-        <!-- 📌 반응형 CSS -->
-        <link rel="stylesheet" href="css/isaacToastHeader_responsible.css" />
+        <title>isaacToast-header</title>
+        <!-- Material ICON -->
+        <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!-- swiper css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="css/responsive.css" />
     </head>
     <body>
-        <div class="wrap">
-            <!-- ✨ HEADER -->
+        <div id="wrap">
+            <!-- mobile menu -->
+            <div class="mb-menu">
+                <div class="mb-menu-title">
+                    <h2 class="mb-logo">
+                        <a href="index.html">
+                            <img src="images/logo.svg" alt="" />
+                        </a>
+                    </h2>
+                    <a href="#" class="mb-btn-close">
+                        <span class="material-symbols-outlined">close</span>
+                    </a>
+                </div>
+                <ul class="mb-main-menu">
+                    <li>
+                        <a href="#" class="mb-menu-list">(주)이삭</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mb-menu-list mb-li-arrow">
+                            브랜드
+                            <span class="material-symbols-outlined">stat_minus_1</span>
+                        </a>
+                        <ul class="mb-submenu">
+                            <li><a href="#">이삭토스트</a></li>
+                            <li><a href="#">CEO 인사말</a></li>
+                            <li><a href="#">연혁</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="mb-menu-list">메뉴</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mb-menu-list">사회공헌</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mb-menu-list mb-li-arrow">
+                            커뮤니티
+                            <span class="material-symbols-outlined">stat_minus_1</span>
+                        </a>
+                        <ul class="mb-submenu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이벤트뉴스</a></li>
+                            <li><a href="#">기부 캠페인</a></li>
+                            <li><a href="#">고객 리뷰</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="mb-menu-list mb-li-arrow">
+                            고객게시판
+                            <span class="material-symbols-outlined">stat_minus_1</span>
+                        </a>
+                        <ul class="mb-submenu">
+                            <li><a href="#">매장 칭찬하기</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">고객 문의</a></li>
+                            <li><a href="#">제휴/제안</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="mb-menu-list mb-li-arrow">
+                            가맹안내
+                            <span class="material-symbols-outlined">stat_minus_1</span>
+                        </a>
+                        <ul class="mb-submenu">
+                            <li><a href="#">가맹 상담 신청</a></li>
+                            <li><a href="#">비용 및 절차</a></li>
+                            <li><a href="#">교육프로그램</a></li>
+                            <li><a href="#">인테리어</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- // mobile menu -->
+
+            <!-- header -->
             <header class="header">
                 <div class="container">
                     <h1 class="logo">
-                        <a href="#"> <img src="images/logo.svg" alt="#" /></a>
+                        <a href="#">
+                            <img src="images/logo.svg" alt="" />
+                        </a>
                     </h1>
-                    <nav class="header_gnb">
+                    <nav>
                         <ul class="mainMenu">
-                            <li><a href="#">(주)이삭</a></li>
+                            <li>
+                                <a href="#">(주)이삭</a>
+                                <!-- <ul></ul> -->
+                            </li>
                             <li>
                                 <a href="#">브랜드</a>
-                                <ul class="subMenu">
+                                <ul class="submenu">
                                     <li><a href="#">이삭토스트</a></li>
                                     <li><a href="#">CEO 인사말</a></li>
                                     <li><a href="#">연혁</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">메뉴</a></li>
-                            <li><a href="#">사회공헌</a></li>
+                            <li>
+                                <a href="#">메뉴</a>
+                            </li>
+                            <li>
+                                <a href="#">사회공헌</a>
+                            </li>
                             <li>
                                 <a href="#">커뮤니티</a>
-                                <ul class="subMenu">
+                                <ul class="submenu">
                                     <li><a href="#">공지사항</a></li>
-                                    <li><a href="#">이벤트 뉴스</a></li>
-                                    <li><a href="#">든든 딜리버리</a></li>
+                                    <li><a href="#">이벤트뉴스</a></li>
                                     <li><a href="#">기부 캠페인</a></li>
                                     <li><a href="#">고객 리뷰</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#">고객게시판</a>
-                                <ul class="subMenu">
+                                <ul class="submenu">
                                     <li><a href="#">매장 칭찬하기</a></li>
                                     <li><a href="#">FAQ</a></li>
                                     <li><a href="#">고객 문의</a></li>
@@ -51,7 +137,7 @@
                             </li>
                             <li>
                                 <a href="#">가맹안내</a>
-                                <ul class="subMenu">
+                                <ul class="submenu">
                                     <li><a href="#">가맹 상담 신청</a></li>
                                     <li><a href="#">비용 및 절차</a></li>
                                     <li><a href="#">교육프로그램</a></li>
@@ -67,19 +153,111 @@
                     </a>
                 </div>
             </header>
-            <!-- ✨ END HEADER -->
-
-            <!-- ✨ MAIN -->
-            <main></main>
-            <!-- ✨ END MAIN -->
-
-            <!-- ✨ FOOTER -->
+            <!-- //header -->
+            <!-- main -->
+            <main>
+                <!-- visual -->
+                <section class="visual">
+                    <div class="swiper sw-visual">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="bg pc">
+                                    <h2>
+                                        <img src="images/새우_글씨.png" alt="새우 토스트 2종" />
+                                    </h2>
+                                    <img src="images/새우 (1).png" alt="새우 토스트 2종" />
+                                </div>
+                                <div class="bg m">
+                                    <h2>
+                                        <img src="images/새우_글씨_모바일.png" alt="" />
+                                    </h2>
+                                    <img src="images/새우 (2).png" alt="" />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg pc">
+                                    <h2>
+                                        <img src="images/프랜치_글씨.png" alt="새우 토스트 2종" />
+                                    </h2>
+                                    <img src="images/프랜치 (1).jpg" alt="새우 토스트 2종" />
+                                </div>
+                                <div class="bg m">
+                                    <h2>
+                                        <img src="images/프랜치_글씨_모바일.png" alt="" />
+                                    </h2>
+                                    <img src="images/프랜치 (2).jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg pc">
+                                    <h2>
+                                        <img src="images/에그_글씨.png" alt="새우 토스트 2종" />
+                                    </h2>
+                                    <img src="images/에그 (1).jpg" alt="새우 토스트 2종" />
+                                </div>
+                                <div class="bg m">
+                                    <h2>
+                                        <img src="images/에그_글씨_모바일.png" alt="" />
+                                    </h2>
+                                    <img src="images/에그 (2).jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg pc">
+                                    <h2>
+                                        <img src="images/스크램블_글씨.png" alt="새우 토스트 2종" />
+                                    </h2>
+                                    <img src="images/스크램블 (1).jpg" alt="새우 토스트 2종" />
+                                </div>
+                                <div class="bg m">
+                                    <h2>
+                                        <img src="images/스크램블_글씨_모바일.png" alt="" />
+                                    </h2>
+                                    <img src="images/스크램블 (2).jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg pc">
+                                    <h2>
+                                        <img src="images/브리오슈_글씨.png" alt="새우 토스트 2종" />
+                                    </h2>
+                                    <img src="images/브리오슈 (1).jpg" alt="새우 토스트 2종" />
+                                </div>
+                                <div class="bg m">
+                                    <h2>
+                                        <img src="images/브리오슈_글씨_모바일.png" alt="" />
+                                    </h2>
+                                    <img src="images/브리오슈 (2).jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg pc">
+                                    <h2>
+                                        <img src="images/브리오슈_글씨.png" alt="새우 토스트 2종" />
+                                    </h2>
+                                    <img src="images/브리오슈 (1).jpg" alt="새우 토스트 2종" />
+                                </div>
+                                <div class="bg m">
+                                    <h2>
+                                        <img src="images/브리오슈_글씨_모바일.png" alt="" />
+                                    </h2>
+                                    <img src="images/브리오슈 (2).jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!-- //main -->
+            <!-- footer -->
             <footer class="footer"></footer>
-            <!-- ✨ END FOOTER -->
+            <!-- //footer -->
         </div>
+        <!-- jQuery Lib -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <!-- swiper -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <!-- JS -->
+        <script src="js/script.js"></script>
     </body>
-    <!-- 😎 제이쿼리 라이브러리 -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- 👏 js -->
-    <script src="js/script.js"></script>
 </html>
