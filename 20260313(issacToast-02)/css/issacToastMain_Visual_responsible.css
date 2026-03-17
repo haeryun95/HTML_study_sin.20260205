@@ -1,0 +1,53 @@
+/* 비주얼 영역 */
+
+@media screen and (max-width: 1280px) {
+    /* pagination */
+    .visual .swiper-pagination {
+        top: 116px;
+    }
+    .visual .swiper-pagination .swiper-pagination-bullet {
+    }
+}
+@media screen and (max-width: 980px) {
+    /* pagination */
+    .visual .swiper-pagination {
+        top: 80px;
+        padding: 0 3%;
+    }
+    .visual .swiper-pagination .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        margin: 0 10px 0 0;
+    }
+    /* brand btn */
+    .visual .go-brand-btn a span {
+        bottom: 10px;
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 680px) {
+    .visual {
+        height: 800px;
+    }
+    /* bg-pc */
+    .visual .sw-visual .swiper-slide .visual-bg-pc {
+        display: none;
+    }
+    /* bg-m */
+    .visual .sw-visual .swiper-slide .visual-bg-m {
+        display: block;
+    }
+    /* pagination */
+    .visual .swiper-pagination {
+        top: 78px;
+    }
+    /* brand btn */
+    .visual .go-brand-btn a span {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .visual {
+        height: 600px;
+    }
+}

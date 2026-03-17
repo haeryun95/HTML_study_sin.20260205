@@ -1,0 +1,66 @@
+/*  브랜드 영역 */
+
+.brand {
+    width: 100%;
+}
+.brand .container {
+    text-align: center;
+}
+.brand .brand-img {
+    max-width: 527px;
+    margin: 0 auto;
+}
+.brand .brand-img img {
+    width: 100%;
+}
+.brand .brand-desc {
+}
+.brand .brand-desc h4 {
+    padding: 30px 0 14px;
+}
+.brand .brand-desc .txt {
+    font-size: 1rem;
+    letter-spacing: -0.677777px;
+}
+.brand .brand-btn {
+    padding: 50px 0 0;
+}
+.brand .brand-btn .moreBtn {
+    display: inline-block;
+    width: 200px;
+    height: 56px;
+    border-radius: 56px;
+    text-align: left;
+    padding: 0 30px;
+    border: 2px solid #222;
+    transition: all 0.3s linear;
+}
+.brand .brand-btn .moreBtn:hover {
+    border: 2px solid var(--mainColor);
+    background: var(--mainColor);
+}
+.brand .brand-btn .moreBtn:hover span {
+    color: #fff;
+}
+.brand .brand-btn .moreBtn:hover svg {
+    fill: #fff;
+}
+.brand .brand-btn .moreBtn span {
+    display: block;
+    width: 100%;
+    line-height: 56px;
+    color: #222;
+    letter-spacing: -0.466667px;
+    font-size: 1rem;
+    transition: all 0.3s linear;
+    position: relative;
+}
+.brand .brand-btn .moreBtn span svg {
+    width: 20px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s linear;
+    fill: #222;
+}

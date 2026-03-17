@@ -4,11 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>isaacToast-header</title>
+
         <!-- Material ICON -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
         <!-- swiper css -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
         <!-- CSS -->
         <link rel="stylesheet" href="css/index.css" />
     </head>
@@ -16,16 +19,17 @@
         <div id="wrap">
             <!-- mobile menu -->
             <div class="mb-menu">
-                <div class="mb-menu-title">
+                <div class="mb-menu-title container">
                     <h2 class="mb-logo">
                         <a href="index.html">
-                            <img src="images/logo.svg" alt="" />
+                            <img src="images/logo.svg" alt="이삭토스트 로고" />
                         </a>
                     </h2>
-                    <a href="#" class="mb-btn-close">
+                    <a href="#" class="mb-btn-close" aria-label="모바일 메뉴 닫기">
                         <span class="material-symbols-outlined">close</span>
                     </a>
                 </div>
+
                 <ul class="mb-main-menu">
                     <li>
                         <a href="#" class="mb-menu-list">(주)이삭</a>
@@ -91,15 +95,15 @@
             <header class="header">
                 <div class="container">
                     <h1 class="logo">
-                        <a href="#">
-                            <img src="images/logo.svg" alt="" />
+                        <a href="index.html">
+                            <img src="images/logo.svg" alt="이삭토스트 로고" />
                         </a>
                     </h1>
+
                     <nav>
                         <ul class="mainMenu">
                             <li>
                                 <a href="#">(주)이삭</a>
-                                <!-- <ul></ul> -->
                             </li>
                             <li>
                                 <a href="#">브랜드</a>
@@ -144,7 +148,8 @@
                             </li>
                         </ul>
                     </nav>
-                    <a href="#" class="menuBtn">
+
+                    <a href="#" class="menuBtn" aria-label="모바일 메뉴 열기">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -152,6 +157,7 @@
                 </div>
             </header>
             <!-- //header -->
+
             <!-- main -->
             <main>
                 <!-- visual -->
@@ -159,109 +165,611 @@
                     <div class="swiper sw-visual">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="bg pc">
-                                    <h2>
+                                <div class="bg visual-bg-pc">
+                                    <h2 class="container">
                                         <img src="images/새우_글씨.png" alt="새우 토스트 2종" />
                                     </h2>
-                                    <img src="images/새우 (1).png" alt="새우 토스트 2종" />
+                                    <img src="images/새우 (1).png" alt="새우 토스트 2종 이미지" />
                                 </div>
-                                <div class="bg m">
-                                    <h2>
-                                        <img src="images/새우_글씨_모바일.png" alt="" />
+                                <div class="bg visual-bg-m">
+                                    <h2 class="container">
+                                        <img src="images/새우_글씨_모바일.png" alt="새우 토스트 2종" />
                                     </h2>
-                                    <img src="images/새우 (2).png" alt="" />
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="bg pc">
-                                    <h2>
-                                        <img src="images/프랜치_글씨.png" alt="새우 토스트 2종" />
-                                    </h2>
-                                    <img src="images/프랜치 (1).jpg" alt="새우 토스트 2종" />
-                                </div>
-                                <div class="bg m">
-                                    <h2>
-                                        <img src="images/프랜치_글씨_모바일.png" alt="" />
-                                    </h2>
-                                    <img src="images/프랜치 (2).jpg" alt="" />
+                                    <img src="images/새우 (2).png" alt="새우 토스트 2종 모바일 이미지" />
                                 </div>
                             </div>
+
                             <div class="swiper-slide">
-                                <div class="bg pc">
-                                    <h2>
-                                        <img src="images/에그_글씨.png" alt="새우 토스트 2종" />
+                                <div class="bg visual-bg-pc">
+                                    <h2 class="container">
+                                        <img src="images/프랜치_글씨.png" alt="프렌치 토스트" />
                                     </h2>
-                                    <img src="images/에그 (1).jpg" alt="새우 토스트 2종" />
+                                    <img src="images/프랜치 (1).jpg" alt="프렌치 토스트 이미지" />
                                 </div>
-                                <div class="bg m">
-                                    <h2>
-                                        <img src="images/에그_글씨_모바일.png" alt="" />
+                                <div class="bg visual-bg-m">
+                                    <h2 class="container">
+                                        <img src="images/프랜치_글씨_모바일.png" alt="프렌치 토스트" />
                                     </h2>
-                                    <img src="images/에그 (2).jpg" alt="" />
+                                    <img src="images/프랜치 (2).jpg" alt="프렌치 토스트 모바일 이미지" />
                                 </div>
                             </div>
+
                             <div class="swiper-slide">
-                                <div class="bg pc">
-                                    <h2>
-                                        <img src="images/스크램블_글씨.png" alt="새우 토스트 2종" />
+                                <div class="bg visual-bg-pc">
+                                    <h2 class="container">
+                                        <img src="images/에그_글씨.png" alt="에그 토스트" />
                                     </h2>
-                                    <img src="images/스크램블 (1).jpg" alt="새우 토스트 2종" />
+                                    <img src="images/에그 (1).jpg" alt="에그 토스트 이미지" />
                                 </div>
-                                <div class="bg m">
-                                    <h2>
-                                        <img src="images/스크램블_글씨_모바일.png" alt="" />
+                                <div class="bg visual-bg-m">
+                                    <h2 class="container">
+                                        <img src="images/에그_글씨_모바일.png" alt="에그 토스트" />
                                     </h2>
-                                    <img src="images/스크램블 (2).jpg" alt="" />
+                                    <img src="images/에그 (2).jpg" alt="에그 토스트 모바일 이미지" />
                                 </div>
                             </div>
+
                             <div class="swiper-slide">
-                                <div class="bg pc">
-                                    <h2>
-                                        <img src="images/브리오슈_글씨.png" alt="새우 토스트 2종" />
+                                <div class="bg visual-bg-pc">
+                                    <h2 class="container">
+                                        <img src="images/스크램블_글씨.png" alt="스크램블 토스트" />
                                     </h2>
-                                    <img src="images/브리오슈 (1).jpg" alt="새우 토스트 2종" />
+                                    <img src="images/스크램블 (2).jpg" alt="스크램블 토스트 이미지" />
                                 </div>
-                                <div class="bg m">
-                                    <h2>
-                                        <img src="images/브리오슈_글씨_모바일.png" alt="" />
+                                <div class="bg visual-bg-m">
+                                    <h2 class="container">
+                                        <img src="images/스크램블_글씨_모바일.png" alt="스크램블 토스트" />
                                     </h2>
-                                    <img src="images/브리오슈 (2).jpg" alt="" />
+                                    <img src="images/스크램블 (1).jpg" alt="스크램블 토스트 모바일 이미지" />
                                 </div>
                             </div>
+
                             <div class="swiper-slide">
-                                <div class="bg pc">
-                                    <h2>
-                                        <img src="images/브리오슈_글씨.png" alt="새우 토스트 2종" />
+                                <div class="bg visual-bg-pc">
+                                    <h2 class="container">
+                                        <img src="images/브리오슈_글씨.png" alt="브리오슈 토스트" />
                                     </h2>
-                                    <img src="images/브리오슈 (1).jpg" alt="새우 토스트 2종" />
+                                    <img src="images/브리오슈 (1).jpg" alt="브리오슈 토스트 이미지" />
                                 </div>
-                                <div class="bg m">
-                                    <h2>
-                                        <img src="images/브리오슈_글씨_모바일.png" alt="" />
+                                <div class="bg visual-bg-m">
+                                    <h2 class="container">
+                                        <img src="images/브리오슈_글씨_모바일.png" alt="브리오슈 토스트" />
                                     </h2>
-                                    <img src="images/브리오슈 (2).jpg" alt="" />
+                                    <img src="images/브리오슈 (2).jpg" alt="브리오슈 토스트 모바일 이미지" />
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="bg visual-bg-pc">
+                                    <h2 class="container">
+                                        <img src="images/계란_글씨.png" alt="계란 토스트" />
+                                    </h2>
+                                    <img src="images/계란 (2).jpg" alt="계란 토스트 이미지" />
+                                </div>
+                                <div class="bg visual-bg-m">
+                                    <h2 class="container">
+                                        <img src="images/계란_글씨_모바일.png" alt="계란 토스트" />
+                                    </h2>
+                                    <img src="images/계란 (1).jpg" alt="계란 토스트 모바일 이미지" />
                                 </div>
                             </div>
                         </div>
+
                         <div class="swiper-pagination container"></div>
                     </div>
+
                     <div class="go-brand-btn">
                         <a href="#">
                             SCROLL DOWN
-                            <span class="material-symbols-outlined"> stat_minus_1 </span>
+                            <span class="material-symbols-outlined">expand_more</span>
                         </a>
                     </div>
                 </section>
+
+                <!-- brand -->
+                <section class="brand section">
+                    <div class="container">
+                        <div class="brand-img">
+                            <img src="images/brand_2307050208522.svg" alt="" />
+                        </div>
+                        <div class="brand-desc">
+                            <h4>이삭토스트와 함계한 달콤한 기억이 있나요?</h4>
+                            <p class="txt">
+                                한 손에 담긴 든든한 한 끼, 한 입에 퍼지는 미소<br />
+                                오늘도 한 손에 담긴 따듯한 토스트로 마음을 전하고 나누며 고객님을 맞이할 준비를 합니다.<br />
+                                어김없이 따듯한 토스트가 기다리는 곳, 이삭토스트입니다.
+                            </p>
+                        </div>
+                        <div class="brand-btn">
+                            <a href="#" class="moreBtn">
+                                <span>
+                                    브랜드 스토리
+                                    <svg viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13 13.9997L11.6 12.5997L16.2 7.99969H0V5.99969H16.2L11.6 1.39969L13 -0.000305176L20 6.99969L13 13.9997Z"
+                                        ></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- menu -->
+                <section class="menu section">
+                    <div class="container">
+                        <div class="menu-title">
+                            <div class="menu-img">
+                                <img src="images/icon.svg" alt=" " />
+                            </div>
+                            <h3>Issac Toast Menu</h3>
+                        </div>
+                        <div class="menu-tab-btns">
+                            <ul>
+                                <li><a href="#toast">토스트</a></li>
+                                <li><a href="#set">세트메뉴</a></li>
+                                <li><a href="#side">사이드</a></li>
+                                <li><a href="#drink">음료</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-tab-contents">
+                            <div class="menu-tab-contents">
+                                <div id="toast">
+                                    <div class="swiper sw-menu toast-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-new-icon">
+                                                        <img src="images/new.svg" alt="new" />
+                                                    </div>
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/toast_shrimp_special.png" alt="새우 스페셜" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>새우 스페셜</h5>
+                                                        <p>Shrimp Special</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-new-icon">
+                                                        <img src="images/new.svg" alt="new" />
+                                                    </div>
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/toast_real_chili_shrimp.png" alt="리얼 칠리 새우" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>리얼 칠리 새우</h5>
+                                                        <p>Real Chili Shrimp</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/toast_soy_crunch_chicken.png" alt="소이 크런치 치킨" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>소이 크런치 치킨</h5>
+                                                        <p>Soy Crunch Chicken</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/toast_real_seasoned_chicken.png" alt="리얼 양념치킨" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>리얼 양념치킨</h5>
+                                                        <p>Real Seasoned Spicy Chicken</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-new-icon">
+                                                        <img src="images/new.svg" alt="new" />
+                                                    </div>
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/toast_french_cream_brioche.png" alt="프렌치 크림 브리오슈" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>프렌치 크림 브리오슈</h5>
+                                                        <p>French Cream Brioche</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-new-icon">
+                                                        <img src="images/new.svg" alt="new" />
+                                                    </div>
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/toast_apple_cream_brioche.png" alt="애플 크림 브리오슈" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>애플 크림 브리오슈</h5>
+                                                        <p>Apple Cream Brioche</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/toast_french_ham_cheese.png" alt="프렌치 햄치즈" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>프렌치 햄치즈</h5>
+                                                        <p>French Ham Cheese</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/toast_ham_cheese.png" alt="햄치즈 토스트" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>햄치즈 토스트</h5>
+                                                        <p>Ham Cheese</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/toast_ham_special.png" alt="햄 스페셜 토스트" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>햄 스페셜 토스트</h5>
+                                                        <p>Ham Special</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/toast_bacon_best.png" alt="베이컨 베스트" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>베이컨 베스트</h5>
+                                                        <p>Bacon Best</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/toast_grilled_bulgalbi.png" alt="그릴드 불갈비" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>그릴드 불갈비</h5>
+                                                        <p>Grilled Bulgalbi</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/toast_bacon_potato_pizza.png" alt="베이컨 포테이토 피자" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>베이컨 포테이토 피자</h5>
+                                                        <p>Bacon Potato Pizza</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/toast_ham_cheese_potato.png" alt="햄치즈 포테이토" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>햄치즈 포테이토</h5>
+                                                        <p>Ham Cheese Potato</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-button-prev toast-prev"></div>
+                                        <div class="swiper-button-next toast-next"></div>
+                                    </div>
+                                    <div class="btn-prev">
+                                        <img src="images/arrow_p_w.svg" alt="이전버튼" />
+                                    </div>
+                                    <div class="btn-next">
+                                        <img src="images/arrow_n_w.svg" alt="다음버튼" />
+                                    </div>
+                                </div>
+
+                                <div id="set">
+                                    <div class="swiper sw-menu set-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-new-icon">
+                                                        <img src="images/new.svg" alt="new" />
+                                                    </div>
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/set_shrimp_special.png" alt="새우 스페셜 세트" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>새우 스페셜 세트</h5>
+                                                        <p>Shrimp Special Set</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-new-icon">
+                                                        <img src="images/new.svg" alt="new" />
+                                                    </div>
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/set_real_chili_shrimp.png" alt="리얼 칠리 새우 세트" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>리얼 칠리 새우 세트</h5>
+                                                        <p>Real Chili Shrimp Set</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/set_soy_crunch_chicken.png" alt="소이 크런치 치킨 세트" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>소이 크런치 치킨 세트</h5>
+                                                        <p>Soy Crunch Chicken Set</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/set_real_seasoned_chicken.png" alt="리얼 양념치킨 세트" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>리얼 양념치킨 세트</h5>
+                                                        <p>Real Seasoned Spicy Chicken Set</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-new-icon">
+                                                        <img src="images/new.svg" alt="new" />
+                                                    </div>
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/set_french_cream_brioche.png" alt="프렌치 크림 브리오슈 세트" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>프렌치 크림 브리오슈 세트</h5>
+                                                        <p>French Cream Brioche Set</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-new-icon">
+                                                        <img src="images/new.svg" alt="new" />
+                                                    </div>
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/set_apple_cream_brioche.png" alt="애플 크림 브리오슈 세트" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>애플 크림 브리오슈 세트</h5>
+                                                        <p>Apple Cream Brioche Set</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/set_fried_egg_ham_cheese.png" alt="계란후라이 햄치즈 세트" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>계란후라이 햄치즈 세트</h5>
+                                                        <p>Fried Egg Ham Cheese Set</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/set_fried_egg_special.png" alt="계란후라이 스페셜 세트" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>계란후라이 스페셜 세트</h5>
+                                                        <p>Fried Egg Special Set</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/set_ham_cheese.png" alt="햄치즈 토스트 세트" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>햄치즈 토스트 세트</h5>
+                                                        <p>Ham Cheese Set</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-button-prev set-prev"></div>
+                                        <div class="swiper-button-next set-next"></div>
+                                    </div>
+                                </div>
+
+                                <div id="side">
+                                    <div class="swiper sw-menu side-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-new-icon">
+                                                        <img src="images/new.svg" alt="new" />
+                                                    </div>
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/side_coleslaw.png" alt="코울슬로" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>코울슬로</h5>
+                                                        <p>Coleslaw</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/side_onion_potato_pop.png" alt="어니언 포테이토 팝" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>어니언 포테이토 팝</h5>
+                                                        <p>Onion Potato Pop</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/side_cheese_pop.png" alt="치즈 팝" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>치즈 팝</h5>
+                                                        <p>Cheese Pop</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/side_potato_pop.png" alt="포테이토 팝" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>포테이토 팝</h5>
+                                                        <p>Potato Pop</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-button-prev side-prev"></div>
+                                        <div class="swiper-button-next side-next"></div>
+                                    </div>
+                                </div>
+
+                                <div id="drink">
+                                    <div class="swiper sw-menu drink-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/drink_americano.png" alt="아메리카노" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>아메리카노</h5>
+                                                        <p>Americano</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/drink_iced_tea.png" alt="아이스티" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>아이스티</h5>
+                                                        <p>Iced Tea</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/drink_cider.png" alt="사이다 / 제로 사이다" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>사이다 / 제로 사이다</h5>
+                                                        <p>Cider / Zero Cider</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="swiper-slide">
+                                                <a href="#">
+                                                    <div class="menu-slide-img">
+                                                        <img src="images/drink_coke.png" alt="콜라 / 제로 콜라" />
+                                                    </div>
+                                                    <div class="menu-slide-desc">
+                                                        <h5>콜라 / 제로 콜라</h5>
+                                                        <p>Coke / Zero Coke</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-button-prev drink-prev"></div>
+                                        <div class="swiper-button-next drink-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- news -->
+                <section class="news section">
+                    <div class="container"></div>
+                </section>
+
+                <!-- banner -->
+                <section class="banner">
+                    <div class="container"></div>
+                </section>
             </main>
             <!-- //main -->
+
             <!-- footer -->
             <footer class="footer"></footer>
             <!-- //footer -->
         </div>
+
         <!-- jQuery Lib -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
         <!-- swiper -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
         <!-- JS -->
         <script src="js/script.js"></script>
     </body>

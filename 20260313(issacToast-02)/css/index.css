@@ -6,9 +6,35 @@
 @import "common.css";
 
 /* header */
-@import "isaacToastHeader.css";
-@import "isaacToastHeader_responsible";
+@import "issacToastHeader.css";
+@import "issacToastHeader_responsible.css";
 
 /* main */
-@import "issacToastMain.css";
-@import "issacToastMain_responsible.css";
+/* ================================= */
+
+@import "issacToastMain_Visual.css";
+@import "issacToastMain_Visual_responsible.css";
+
+/* ================================= */
+
+@import "issacToastMain_Brand.css";
+@import "issacToastMain_Brand_responsible.css";
+
+/* ================================= */
+
+@import "issacToastMain_Menu.css";
+@import "issacToastMain_Menu_responsible.css";
+
+/* ================================= */
+
+@import "issacToastMain_News.css";
+@import "issacToastMain_News_responsible.css";
+
+/* ================================= */
+
+@import "issacToastMain_Banner.css";
+@import "issacToastMain_Banner_responsible.css";
+
+/* footer */
+@import "issacToastFooter.css";
+@import "issacToastFooter_responsible.css";
