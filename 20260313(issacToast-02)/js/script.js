@@ -26,23 +26,50 @@ const menuSwiper = new Swiper(".sw-menu", {
         delay: 6000,
         disableOnInteraction: false,
     },
-    slidePrtView: 4,
+    slidesPerView: 4,
     navigation: {
-        prevEl: ".btn-prev",
-        nextEl: ".btn-next",
+        prevEl: ".menu-tab-contents .btn-prev",
+        nextEl: ".menu-tab-contents .btn-next",
     },
     breakpoints: {
         1281: {
             //1281 픽셀 이상일 때
-            slidePrtView: 4,
+            slidesPerView: 4,
         },
         681: {
             //681 픽셀 이상일 때
-            slidePrtView: 4,
+            slidesPerView: 4,
         },
         361: {
             //361 픽셀 이상일 때
-            slidePrtView: 4,
+            slidesPerView: 4,
+        },
+    },
+});
+const newsSwiper = new Swiper(".sw-news", {
+    loop: true,
+    speed: 1000,
+    autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+    },
+    slidesPerView: 3,
+    navigation: {
+        prevEl: ".news-tab-contents .btn-prev",
+        nextEl: ".news-tab-contents .btn-next",
+    },
+    breakpoints: {
+        1281: {
+            //1281 픽셀 이상일 때
+            slidesPerView: 3,
+        },
+        681: {
+            //681 픽셀 이상일 때
+            slidesPerView: 2,
+        },
+        361: {
+            //361 픽셀 이상일 때
+            slidesPerView: 1,
         },
     },
 });
