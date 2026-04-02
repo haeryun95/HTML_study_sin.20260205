@@ -4,32 +4,110 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>isaacToast-header</title>
-
         <!-- Material ICON -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-        <!-- swiper css -->
+        <!-- Siwper CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-
         <!-- CSS -->
-        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="css/responsive.css" />
     </head>
     <body>
         <div id="wrap">
+            <!-- popup menu -->
+            <div class="popup-zone">
+                <div class="popup-box">
+                    <div class="swiper sw-popup">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/20230717121042_stazsveu.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/20241218092346_mfuhvcqt.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/20241224160528_rgnoyrdb.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="images/20250425143559_aidutzwy.jpg" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="popup-btn-prev">이전</div>
+                        <div class="popup-btn-next">다음</div>
+                    </div>
+                    <div class="sw-control">
+                        <div class="sw-paging"></div>
+                    </div>
+                    <ul class="popup-close">
+                        <li>
+                            <input type="button" id="popup_close01" value="24시간동안 열지않음" />
+                        </li>
+                        <li>
+                            <input type="button" id="popup_close02" value="모두닫기" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- // popup menu -->
+            <!-- quick menu -->
+            <div class="quick-menu">
+                <ul>
+                    <li class="top-btn">
+                        <a href="#" class="ls0">
+                            <span></span>
+                            TOP
+                        </a>
+                    </li>
+                    <li class="instagram">
+                        <a href="#">
+                            <span></span>
+                            인스타그램
+                        </a>
+                    </li>
+                    <li class="inquiry">
+                        <a href="#">
+                            <span></span>
+                            고객문의
+                        </a>
+                    </li>
+                    <li class="proposal">
+                        <a href="#">
+                            <span></span>
+                            제휴/제안
+                        </a>
+                    </li>
+                    <li class="consultation">
+                        <a href="#">
+                            <span></span>
+                            가맹문의<br />
+                            1833-9299
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- // quick menu -->
             <!-- mobile menu -->
             <div class="mb-menu">
-                <div class="mb-menu-title container">
+                <div class="mb-menu-title">
                     <h2 class="mb-logo">
                         <a href="index.html">
-                            <img src="images/logo.svg" alt="이삭토스트 로고" />
+                            <img src="images/logo.svg" alt="" />
                         </a>
                     </h2>
-                    <a href="#" class="mb-btn-close" aria-label="모바일 메뉴 닫기">
+                    <a href="#" class="mb-btn-close">
                         <span class="material-symbols-outlined">close</span>
                     </a>
                 </div>
-
                 <ul class="mb-main-menu">
                     <li>
                         <a href="#" class="mb-menu-list">(주)이삭</a>
@@ -90,20 +168,19 @@
                 </ul>
             </div>
             <!-- // mobile menu -->
-
             <!-- header -->
             <header class="header">
                 <div class="container">
                     <h1 class="logo">
-                        <a href="index.html">
-                            <img src="images/logo.svg" alt="이삭토스트 로고" />
+                        <a href="#">
+                            <img src="images/logo.svg" alt="" />
                         </a>
                     </h1>
-
                     <nav>
                         <ul class="mainMenu">
                             <li>
                                 <a href="#">(주)이삭</a>
+                                <!-- <ul></ul> -->
                             </li>
                             <li>
                                 <a href="#">브랜드</a>
@@ -148,8 +225,7 @@
                             </li>
                         </ul>
                     </nav>
-
-                    <a href="#" class="menuBtn" aria-label="모바일 메뉴 열기">
+                    <a href="#" class="menuBtn">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -157,7 +233,6 @@
                 </div>
             </header>
             <!-- //header -->
-
             <!-- main -->
             <main>
                 <!-- visual -->
@@ -165,99 +240,92 @@
                     <div class="swiper sw-visual">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="bg visual-bg-pc">
+                                <div class="visual-bg-pc">
                                     <h2 class="container">
-                                        <img src="images/새우_글씨.png" alt="새우 토스트 2종" />
+                                        <img src="images/S2603090904034_1.png" alt="새우 토스트 2종" />
                                     </h2>
-                                    <img src="images/새우 (1).png" alt="새우 토스트 2종 이미지" />
+                                    <img src="images/S2603091202127_2.png" alt="새우 토스트 2종" />
                                 </div>
-                                <div class="bg visual-bg-m">
+                                <div class="visual-bg-mb">
                                     <h2 class="container">
-                                        <img src="images/새우_글씨_모바일.png" alt="새우 토스트 2종" />
+                                        <img src="images/S2603090904034_3.png" alt="새우 토스트 2종" />
                                     </h2>
-                                    <img src="images/새우 (2).png" alt="새우 토스트 2종 모바일 이미지" />
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="bg visual-bg-pc">
-                                    <h2 class="container">
-                                        <img src="images/프랜치_글씨.png" alt="프렌치 토스트" />
-                                    </h2>
-                                    <img src="images/프랜치 (1).jpg" alt="프렌치 토스트 이미지" />
-                                </div>
-                                <div class="bg visual-bg-m">
-                                    <h2 class="container">
-                                        <img src="images/프랜치_글씨_모바일.png" alt="프렌치 토스트" />
-                                    </h2>
-                                    <img src="images/프랜치 (2).jpg" alt="프렌치 토스트 모바일 이미지" />
+                                    <img src="images/S2603090904034_4.png" alt="새우 토스트 2종" />
                                 </div>
                             </div>
-
                             <div class="swiper-slide">
-                                <div class="bg visual-bg-pc">
+                                <div class="visual-bg-pc">
                                     <h2 class="container">
-                                        <img src="images/에그_글씨.png" alt="에그 토스트" />
+                                        <img src="images/S2510310514185_1.png" alt="브리오슈" />
                                     </h2>
-                                    <img src="images/에그 (1).jpg" alt="에그 토스트 이미지" />
+                                    <img src="images/S2510310514185_2.jpg" alt="브리오슈" />
                                 </div>
-                                <div class="bg visual-bg-m">
+                                <div class="visual-bg-mb">
                                     <h2 class="container">
-                                        <img src="images/에그_글씨_모바일.png" alt="에그 토스트" />
+                                        <img src="images/S2510310514185_3.png" alt="브리오슈" />
                                     </h2>
-                                    <img src="images/에그 (2).jpg" alt="에그 토스트 모바일 이미지" />
+                                    <img src="images/S2510310514185_4.jpg" alt="브리오슈" />
                                 </div>
                             </div>
-
                             <div class="swiper-slide">
-                                <div class="bg visual-bg-pc">
+                                <div class="visual-bg-pc">
                                     <h2 class="container">
-                                        <img src="images/스크램블_글씨.png" alt="스크램블 토스트" />
+                                        <img src="images/S2504250148496_1.png" alt="계란 후라이 토스트" />
                                     </h2>
-                                    <img src="images/스크램블 (2).jpg" alt="스크램블 토스트 이미지" />
+                                    <img src="images/S2506050258456_2.jpg" alt="계란 후라이 토스트" />
                                 </div>
-                                <div class="bg visual-bg-m">
+                                <div class="visual-bg-mb">
                                     <h2 class="container">
-                                        <img src="images/스크램블_글씨_모바일.png" alt="스크램블 토스트" />
+                                        <img src="images/S2504250148496_3.png" alt="계란 후라이 토스트" />
                                     </h2>
-                                    <img src="images/스크램블 (1).jpg" alt="스크램블 토스트 모바일 이미지" />
+                                    <img src="images/S2504250148496_4.jpg" alt="계란 후라이 토스트" />
                                 </div>
                             </div>
-
                             <div class="swiper-slide">
-                                <div class="bg visual-bg-pc">
+                                <div class="visual-bg-pc">
                                     <h2 class="container">
-                                        <img src="images/브리오슈_글씨.png" alt="브리오슈 토스트" />
+                                        <img src="images/S2404220836243_1.png" alt="프렌치 토스트 2종" />
                                     </h2>
-                                    <img src="images/브리오슈 (1).jpg" alt="브리오슈 토스트 이미지" />
+                                    <img src="images/S2404220836243_2.jpg" alt="프렌치 토스트 2종" />
                                 </div>
-                                <div class="bg visual-bg-m">
+                                <div class="visual-bg-mb">
                                     <h2 class="container">
-                                        <img src="images/브리오슈_글씨_모바일.png" alt="브리오슈 토스트" />
+                                        <img src="images/S2404220836243_3.png" alt="프렌치 토스트 2종" />
                                     </h2>
-                                    <img src="images/브리오슈 (2).jpg" alt="브리오슈 토스트 모바일 이미지" />
+                                    <img src="images/S2404220836243_4.jpg" alt="프렌치 토스트 2종" />
                                 </div>
                             </div>
-
                             <div class="swiper-slide">
-                                <div class="bg visual-bg-pc">
+                                <div class="visual-bg-pc">
                                     <h2 class="container">
-                                        <img src="images/계란_글씨.png" alt="계란 토스트" />
+                                        <img src="images/S2504250148496_1.png" alt="계란 후라이 토스트" />
                                     </h2>
-                                    <img src="images/계란 (2).jpg" alt="계란 토스트 이미지" />
+                                    <img src="images/S2506050258456_2.jpg" alt="계란 후라이 토스트" />
                                 </div>
-                                <div class="bg visual-bg-m">
+                                <div class="visual-bg-mb">
                                     <h2 class="container">
-                                        <img src="images/계란_글씨_모바일.png" alt="계란 토스트" />
+                                        <img src="images/S2504250148496_3.png" alt="계란 후라이 토스트" />
                                     </h2>
-                                    <img src="images/계란 (1).jpg" alt="계란 토스트 모바일 이미지" />
+                                    <img src="images/S2504250148496_4.jpg" alt="계란 후라이 토스트" />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="visual-bg-pc">
+                                    <h2 class="container">
+                                        <img src="images/S2504250148496_1.png" alt="계란 후라이 토스트" />
+                                    </h2>
+                                    <img src="images/S2506050258456_2.jpg" alt="계란 후라이 토스트" />
+                                </div>
+                                <div class="visual-bg-mb">
+                                    <h2 class="container">
+                                        <img src="images/S2504250148496_3.png" alt="계란 후라이 토스트" />
+                                    </h2>
+                                    <img src="images/S2504250148496_4.jpg" alt="계란 후라이 토스트" />
                                 </div>
                             </div>
                         </div>
-
-                        <div class="swiper-pagination container"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
-
                     <div class="go-brand-btn">
                         <a href="#">
                             SCROLL DOWN
@@ -265,7 +333,6 @@
                         </a>
                     </div>
                 </section>
-
                 <!-- brand -->
                 <section class="brand section">
                     <div class="container">
@@ -273,7 +340,7 @@
                             <img src="images/brand_2307050208522.svg" alt="" />
                         </div>
                         <div class="brand-desc">
-                            <h4>이삭토스트와 함계한 달콤한 기억이 있나요?</h4>
+                            <h4>이삭토스트와 함께한 달콤한 기억이 있나요?</h4>
                             <p class="txt">
                                 한 손에 담긴 든든한 한 끼, 한 입에 퍼지는 미소<br />
                                 오늘도 한 손에 담긴 따듯한 토스트로 마음을 전하고 나누며 고객님을 맞이할 준비를 합니다.<br />
@@ -283,7 +350,7 @@
                         <div class="brand-btn">
                             <a href="#" class="moreBtn">
                                 <span>
-                                    브랜드 스토리
+                                    브랜드스토리
                                     <svg viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M13 13.9997L11.6 12.5997L16.2 7.99969H0V5.99969H16.2L11.6 1.39969L13 -0.000305176L20 6.99969L13 13.9997Z"
@@ -294,7 +361,6 @@
                         </div>
                     </div>
                 </section>
-
                 <!-- menu -->
                 <section class="menu section">
                     <div class="container">
@@ -528,7 +594,6 @@
                         </div>
                     </div>
                 </section>
-
                 <!-- news -->
                 <section class="news section">
                     <div class="container">
@@ -800,7 +865,6 @@
                         </div>
                     </div>
                 </section>
-
                 <!-- banner -->
                 <section class="banner">
                     <div class="container">
@@ -836,7 +900,6 @@
                 </section>
             </main>
             <!-- //main -->
-
             <!-- footer -->
             <footer class="footer">
                 <div class="container">
@@ -848,59 +911,72 @@
                         </ul>
                     </div>
                     <div class="footer-bottom">
-                        <h2 class="footer-logo"><img src="images/foot_logo.svg" alt=" " /></h2>
+                        <h2 class="footer-logo">
+                            <a herf="#"><img src="images/foot_logo.svg" alt="" /></a>
+                        </h2>
                         <div class="footer-info">
                             <ul>
                                 <li>
-                                    <strong class="issac">(주)이삭</strong>
-                                    <strong>사업자등록번호 : 305-81-70958</strong>
+                                    <strong class="isaac">(주)이삭</strong>
+                                    <strong class="ls0">사업자등록번호 : 305-81-70958</strong>
                                     <strong>대표 : 김하경</strong>
                                 </li>
-                                <li>
-                                    <strong class="footer-contract">가맹문의</strong>
-                                    <span class="ls0">
-                                        <img src="images/call_icon.svg" />
-                                        <b>1833-9288</b>
+                                <li class="contact">
+                                    <strong>가맹문의</strong>
+                                    <span class="franchise-call">
+                                        <img src="images/call_icon.svg" alt="" />
+                                        <b>1833-9299</b>
                                     </span>
                                 </li>
-                                <li>
-                                    <strong class="footer-contract">서울사업본부</strong>
+                                <li class="contact">
+                                    <strong>서울사업본부</strong>
                                     <span> 서울특별시 송파구 오금로 141 </span>
                                     <span class="ls0">
-                                        <img src="images/call_icon.svg" />
+                                        <img src="images/call_icon.svg" alt="" />
                                         02-6959-1086
                                     </span>
                                 </li>
-                                <li>
-                                    <strong class="footer-contract">대전사무실</strong>
+                                <li class="contact">
+                                    <strong>대전사무실</strong>
                                     <span> 대전광역시 중구 산서로 53번길 11 </span>
                                     <span class="ls0">
-                                        <img src="images/call_icon.svg" />
+                                        <img src="images/call_icon.svg" alt="" />
                                         042-274-3060
                                     </span>
                                 </li>
-                                <li>
-                                    <strong class="footer-contract">대구사무실</strong>
+                                <li class="contact">
+                                    <strong>대구사무실</strong>
                                     <span> 대구광역시 수성구 동대구로 376 범어숲화성파크드림S 상가 225호 </span>
-                                    <span class="ls0">
-                                        <img src="images/call_icon.svg" />
+                                    <span>
+                                        <img src="images/call_icon.svg" alt="" />
                                         053-746-3060
                                     </span>
                                 </li>
                             </ul>
-
-                            <p class="footer-copyright">COPYRIGHT © ISAAC. ALL RIGHTS RESERVED. <span>Designed by Threeway</span></p>
+                            <p class="copyright">
+                                COPYRIGHT &copy; ISAAC. ALL RIGHTS RESERVED.
+                                <span
+                                    >Designed by
+                                    <a href="#">Treeway</a>
+                                </span>
+                            </p>
                         </div>
-                        <div class="footer-sns">
+                        <div class="sns">
                             <ul>
                                 <li>
-                                    <a href="#"><img src="images/facebook_sns.svg" alt="" /></a>
+                                    <a href="#">
+                                        <img src="images/facebook_sns.svg" alt="" />
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="images/instagram_sns.svg" alt="" /></a>
+                                    <a href="#">
+                                        <img src="images/instagram_sns.svg" alt="" />
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="images/blog_sns.svg" alt="" /></a>
+                                    <a href="#">
+                                        <img src="images/blog_sns.svg" alt="" />
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -909,13 +985,10 @@
             </footer>
             <!-- //footer -->
         </div>
-
         <!-- jQuery Lib -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-        <!-- swiper -->
+        <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
         <!-- JS -->
         <script src="js/script.js"></script>
     </body>
