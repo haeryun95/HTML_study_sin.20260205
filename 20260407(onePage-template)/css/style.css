@@ -1,0 +1,146 @@
+@charset 'uft-8';
+
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* VAR */
+:root {
+    --color-white: #fff;
+    --color-black: #141415;
+    --color-primary: #f24e1e;
+    --color-primary-light: #d98854;
+    --color-accent: #29f5a6;
+    --color-background: #333;
+    --transition: all 300ms ease-in-out;
+}
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+button {
+    background: none;
+    border-radius: 0;
+    border: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #eaeaea;
+    color: #333;
+}
+
+/* Common */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section {
+    padding: 50px 0;
+    height: 800px;
+}
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+    margin-bottom: 10px;
+}
+
+/* Styles */
+
+/* =================================================
+        HEADER 헤더 
+====================================================*/
+header {
+    position: fixed;
+    width: 100%;
+    height: 114px;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #ccc;
+    z-index: 997;
+}
+header .container {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 로고 */
+header .logo {
+}
+header .logo a {
+}
+
+/* 네비게이션 */
+header nav {
+}
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+header nav ul li {
+}
+header nav ul li a {
+}
+header nav ul li.on a {
+    color: #000;
+    font-weight: 600;
+}
+/* =================================================
+        MAIN 메인 
+====================================================*/
+main {
+    margin-top: 114px;
+}
+
+#about {
+    background-color: #fafafa;
+}
+#work {
+    background-color: #eee;
+}
+#contact {
+    background-color: #ccc;
+}
+/* =================================================
+        FOOTER 푸터 
+====================================================*/
+
+footer {
+}
+footer .container {
+    padding: 30px;
+    text-align: center;
+    font-size: 14px;
+}
