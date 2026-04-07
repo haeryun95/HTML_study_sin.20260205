@@ -1,0 +1,81 @@
+@charset 'uft-8';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border-radius: 0;
+    border: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* style */
+
+.top-section,
+.bottom-section {
+    padding: 0 150px;
+}
+
+/* top - section */
+section.top-section {
+}
+
+/* youtube section */
+section.youtube {
+    width: 100%;
+    height: 900px;
+    background-color: #4169e124;
+    position: relative;
+}
+section.youtube .youtube-area {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background-color: rgba(65, 255, 150, 0.4);
+}
+section.youtube .youtube-area::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    /* 16:9 영상 비율 요소 크기를 만들기 */
+    padding-top: 56.25%;
+}
+section.youtube .youtube-area #player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+section.youtube .youtube-area iframe {
+    width: 100%;
+    height: 100%;
+}
+section.youtube .youtube-cover {
+}
+
+/* bottom - section */
+section.bottom-section {
+}
