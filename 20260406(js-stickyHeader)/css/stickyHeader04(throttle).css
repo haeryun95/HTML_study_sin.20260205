@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,ol {
+    list-style:none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+header {
+    padding: 0 2em;
+    position: fixed;
+    top: 0em;
+    width: 100%;
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+    height: 6em;     
+    transition: .4s ease-in;
+}
+header.shrink {
+    top: -6em;
+}
+
+nav ul {
+    float: right;
+
+}
+nav ul li {
+    display: inline;
+    margin-left: 1em;
+    line-height: 6em;
+}
+nav ul li a {}
+
+#logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* container */
+.container {
+    margin: 10em auto 0;
+    width: 75%;
+    text-align:center;
+}
+.container main p {
+    height: 50em;
+}
