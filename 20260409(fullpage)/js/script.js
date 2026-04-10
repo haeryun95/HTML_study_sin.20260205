@@ -57,7 +57,6 @@ $(document).ready(function () {
         let scrollUpDown = e.originalEvent.wheelDelta;
         if (!fullPageActive) return;
         if (scrolling) return;
-
         scrolling = true;
 
         if (scrollUpDown < 0) {
@@ -74,6 +73,7 @@ $(document).ready(function () {
                 //음수가 되면 안됨
             }
         }
+        sectionColor();
         $("html,body").animate(
             {
                 scrollTop: sectionPos[sectionIndex],
@@ -102,6 +102,7 @@ $(document).ready(function () {
         readSectionPosFn();
         if (fullPageActive) {
             //활성화 상태이면 위치 재조정
+            sectionColor();
             $("html,body").animate(
                 {
                     scrollTop: sectionPos[sectionIndex],
@@ -122,4 +123,53 @@ $(document).ready(function () {
         window.clearTimeout(resizeTimer);
         resizeTimer = window.setTimeout(resizeFn, 300);
     });
+
+    //풀페이지 기능이 비 활성화 영역(1000px 미만)에서 sectionPos값을 읽어와서 sectionIndex값을 계속 추적함
+    $(window).scroll(function () {
+        if (fullPageActive) return; //풀페이지 활성화 영역에서는 리턴
+        let scrollPos = $(window).scrollTop();
+        scrollPos = Math.ceil(scrollPos);
+        for (let i = sectionTotal - 1; i >= 0; i--) {
+            let tempMax = sectionPos[i];
+            if (scrollPos >= tempMax) {
+                sectionIndex = i;
+                break;
+            }
+        }
+    });
+
+    //섹션 메뉴 이동 가능
+    const sectionLink = $(".section-menu li a");
+    sectionLink.each(function (index, item) {
+        $(item).click(function (e) {
+            e.preventDefault();
+            moveSection(index);
+        });
+    });
+
+    //메뉴 클릭시 해당 섹션으로 이동하는 기능
+    function moveSection(_index) {
+        //보여질 섹션 번호를 지정
+        sectionIndex = _index;
+        sectionColor();
+        $("html, body").animate(
+            {
+                scrollTop: sectionPos[sectionIndex],
+            },
+            sectionSpeed,
+            function () {
+                scrolling = false;
+            },
+        );
+    }
+
+    function sectionColor() {
+        //물방울 / 레이블
+        sectionLink.removeClass("active");
+        sectionLink.eq(sectionIndex).addClass("active");
+        //파랑 물방울/레이블
+        sectionLink.removeClass("blue");
+        if (sectionIndex !== 0 && sectionIndex !== 2 && sectionIndex !== 4 && sectionIndex !== 6) sectionLink.addClass("blue");
+    }
+    sectionColor();
 });

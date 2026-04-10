@@ -1,1 +1,7 @@
 @charset 'uft-8';
+
+@media screen and (max-width: 999px) {
+    html {
+        overflow-y: auto;
+    }
+}
