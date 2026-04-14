@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+body {
+    color: #fff;
+    font-family: "nexonLv1Gothic";
+    font-weight: 300;
+    background-color: #111;
+}
+
+#parallax-title {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 1000;
+}
+#parallax-title h1 {
+    font-size: 30px;
+    border-bottom: 2px dashed #fff;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    font-weight: 400;
+    display: inline-block;
+    color: hsl(120, 86%, 27%);
+}
+#parallax-title p {
+    font-size: 16px;
+}
+#parallax-title ul {
+    margin-top: 10px;
+}
+#parallax-title ul li {
+    display: inline;
+}
+#parallax-title ul li a {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px dashed #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+#parallax-title ul li.active a {
+    background-color: hsl(120, 86%, 27%);
+    color: #fff;
+}
+
+/* parallax-content */
+#parallax-cont {
+    overflow: hidden;
+}
+.parallax-item {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parallax-item:nth-child(2n) {
+    background-color: #222;
+}
+.parallax-item-num {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 5vw;
+    line-height: 1;
+}
+.parallax-item-img {
+    width: 20vw;
+    height: 20vw;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+}
+.parallax-item:nth-child(1) .parallax-item-img {
+    background-image: url(../img/images14.jpg);
+}
+.parallax-item:nth-child(2) .parallax-item-img {
+    background-image: url(../img/images15.jpg);
+}
+.parallax-item:nth-child(3) .parallax-item-img {
+    background-image: url(../img/images03.jpg);
+}
+.parallax-item:nth-child(4) .parallax-item-img {
+    background-image: url(../img/images04.jpg);
+}
+.parallax-item:nth-child(5) .parallax-item-img {
+    background-image: url(../img/images05.jpg);
+}
+.parallax-item:nth-child(6) .parallax-item-img {
+    background-image: url(../img/images06.jpg);
+}
+.parallax-item:nth-child(7) .parallax-item-img {
+    background-image: url(../img/images07.jpg);
+}
+.parallax-item:nth-child(8) .parallax-item-img {
+    background-image: url(../img/images08.jpg);
+}
+.parallax-item:nth-child(9) .parallax-item-img {
+    background-image: url(../img/images09.jpg);
+}
+.parallax-item .parallax-item-img.active {
+    filter: hue-rotate(100deg);
+}

@@ -1,0 +1,90 @@
+@charset 'uft-8';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumar+One+Outline&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border-radius: 0;
+    border: 0;
+}
+
+img {
+    display: block;
+    width: 40%;
+    object-fit: cover;
+}
+
+/* //////////////////// */
+body {
+    font-family: "Roboto";
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav .logo {
+}
+nav .logo a {
+}
+
+nav ul {
+    display: flex;
+}
+nav ul li {
+    margin-left: 3rem;
+}
+nav ul li a {
+}
+
+section.sidebar {
+    width: 30%;
+    height: 100vh;
+    background-color: rgb(206, 6, 6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+section.content-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.content-container img {
+}
+section.content-container .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transform: rotate(-90deg);
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+section.content-container .content h1 {
+    font-family: "Kumar One Outline";
+}
+section.content-container .content p {
+}
