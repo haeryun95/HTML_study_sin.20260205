@@ -92,4 +92,107 @@ document.addEventListener("DOMContentLoaded", (event) => {
         pin: true,
         anticipatePin: 1,
     });
+
+    //05 텍스트 애니메이션
+
+    const ani5 = gsap.timeline();
+    ani5.from("#section05 .t1", { xPercent: 300 });
+    ani5.from("#section05 .t2", { xPercent: -300 });
+    ani5.from("#section05 .t3", { xPercent: 300 });
+    ani5.from("#section05 .t4", { xPercent: -300 });
+
+    ScrollTrigger.create({
+        animation: ani5,
+        trigger: "#section05",
+        start: "top top",
+        end: "+=2000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+    });
+
+    //06 텍스트 확대
+    const ani6 = gsap.timeline();
+    ani6.to("#section06 .parallax-item-text", {
+        scale: 40,
+    });
+    ani6.to("#section06 .parallax-item-text", {
+        autoAlpha: 0,
+    });
+    ScrollTrigger.create({
+        animation: ani6,
+        trigger: "#section06",
+        start: "top top",
+        end: "+=4000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+    });
+
+    //07 텍스트 제자리 애니메이션
+    const ani7 = gsap.timeline();
+    ani7.from("#section07 .t1", { autoAlpha: 0, duration: 1, y: 50 }, "+=1");
+    ani7.from("#section07 .t2", { autoAlpha: 0, duration: 1, y: 50 }, "+=1");
+    ani7.from("#section07 .t3", { autoAlpha: 0, duration: 1, y: 50 }, "+=1");
+    ani7.from("#section07 .t4", { autoAlpha: 0, duration: 1, y: 50 }, "+=1");
+    ani7.from("#section07 .t5", { autoAlpha: 0, duration: 1, y: 50 }, "+=1");
+    ani7.from("#section07 .t6", { autoAlpha: 0, duration: 1, y: 50 }, "+=1");
+    ani7.from("#section07 .t7", { autoAlpha: 0, duration: 1, y: 50 }, "+=1");
+    ani7.from("#section07 .t8", { autoAlpha: 0, duration: 1, y: 50, scale: 2 }, "+=1");
+
+    ScrollTrigger.create({
+        animation: ani7,
+        trigger: "#section07",
+        start: "top top",
+        end: "+=6000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+    });
+
+    //08 텍스트 애니메이션
+    const ani8 = gsap.timeline();
+    ani8.from("#section08 .t1", { x: innerWidth * 1 });
+    ani8.from("#section08 .t2", { x: innerWidth * -1 });
+    ani8.from("#section08 .t3", { x: innerWidth * 1 });
+    ani8.from("#section08 .i1", { y: innerHeight * 1, rotate: 360, scale: 5.5 });
+
+    ScrollTrigger.create({
+        animation: ani8,
+        trigger: "#section08",
+        start: "top top",
+        end: "+=6000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+    });
+
+    //09 이미지 확대
+    const ani9 = gsap.timeline();
+    ani9.to("#section09 .parallax-item-img", { scale: 13 });
+    ani9.to("#section09 .parallax-item-img", { autoAlpha: 0 });
+
+    ScrollTrigger.create({
+        animation: ani9,
+        trigger: "#section09",
+        start: "top top",
+        end: "+=4000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+    });
+
+    //10 가로 스크롤
+    let item = gsap.utils.toArray("#section10 .parallax-item-img");
+    //gsap은 유사배열(노드리스트)를 지원하지않는다.
+    gsap.to(item, {
+        x: `${-innerWidth - 400}`, //중요
+        scrollTrigger: {
+            trigger: "#section10",
+            start: "top top",
+            end: `+=${item.length * 500}`, //속도와 관련
+            scrub: true,
+            pin: true,
+        },
+    });
 });
