@@ -1,0 +1,86 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+address,
+em,
+i {
+    font-style: normal;
+}
+button {
+    background: none;
+    border: none;
+    outline: none;
+}
+img {
+    vertical-align: top;
+}
+
+/* 공통클래스 */
+.en {
+    font-weight: 600;
+}
+.en2 {
+    font-weight: 400;
+}
+.section {
+    padding: 50px 0;
+}
+.inner {
+    width: 80%;
+    margin: 0 auto;
+}
+img {
+    filter: brightness(75%);
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 0.85vw;
+    font-weight: 400;
+}
+#wrap {
+    position: relative;
+    background-color: #111606;
+    padding-bottom: 200px;
+}
+/* visual영역 */
+.visual {
+    position: relative;
+}
+.visual img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.visual h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 32%;
+    line-height: 1;
+    letter-spacing: -1px;
+    width: 65%;
+    font-size: 9vw;
+    color: #fff;
+    /* opacity: 0; */
+}
+.visual h1 span {
+    display: block;
+    font-size: 5vw;
+    letter-spacing: -2px;
+    -webkit-text-stroke: 2px #b1dd40;
+    color: transparent;
+}
