@@ -1,0 +1,282 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+    --animate-snow-1: animate-snow-1 5s infinite ease-in-out;
+    --animate-snow-2: animate-snow-2 5s infinite ease-in-out;
+
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(210, 80%, 54%);
+    --first-color-alt: hsl(210, 80%, 50%);
+    --title-color: hsl(210, 24%, 90%);
+    --text-color: hsl(210, 16%, 70%);
+    --white-color: #fff;
+    --body-color: hsl(210, 32%, 4%);
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --second-font: "Dancing Script", cursive;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+    :root {
+        --biggest-font-size: 5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+/* 초기화 */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+/* 공통클래스 */
+h1,
+h2,
+h3 {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+.section {
+    padding-block: 5rem 1rem;
+}
+.section-title {
+    font-size: var(--h1-font-size);
+    font-family: var(--second-font);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+}
+.header .container {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* logo */
+.header .logo {
+}
+.header .logo a {
+    display: flex;
+    color: var(--white-color);
+    align-items: center;
+    font-family: var(--second-font);
+    font-size: var(--h2-font-size);
+    justify-content: space-between;
+}
+.header .logo a img {
+    width: 30px;
+    transform: rotate(-10deg);
+}
+/* nav */
+.header .nav_menu {
+}
+.header .nav_menu .nav_list {
+    display: flex;
+    gap: 2rem;
+}
+.header .nav_menu .nav_list .nav_item {
+}
+.header .nav_menu .nav_list .nav_item .nav_link {
+    color: var(--white-color);
+    font-weight: var(--font-medium);
+}
+.header .nav_menu .nav_list .nav_item .nav_link:hover {
+    color: var(--first-color);
+}
+
+/* toggle btn */
+.header .nav_toggle {
+    display: flex;
+    color: var(--white-color);
+    font-size: 1.25rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* home */
+
+.home {
+    height: 660px;
+    padding-top: 7rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, hsl(210, 88%, 20%), hsl(210, 79%, 58%));
+}
+.home .home_title {
+    font-family: var(--second-font);
+    font-size: var(--biggest-font-size);
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--white-color);
+}
+.home img {
+    position: absolute;
+}
+.home .home_moon {
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 8.5rem;
+    width: 300px;
+}
+.home .home_trineo {
+    bottom: 14.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 250px;
+}
+.home .home_mountain_3 {
+    bottom: 6rem;
+}
+.home .home_mountain_2 {
+    bottom: 3rem;
+}
+.home .home_pine {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 250px;
+    bottom: 4rem;
+}
+.home .home_village {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 260px;
+    bottom: 4rem;
+}
+.home .home_snow {
+    bottom: 0;
+}
+.home .home_mountain_1 {
+    bottom: 0;
+}
+
+@media screen and (min-width: 767px) {
+    .home {
+        height: 800px;
+    }
+    .home .home_mountain_3,
+    .home .home_mountain_2,
+    .home .home_mountain_1 {
+        width: 100%;
+    }
+    .home .home_village {
+        width: 460px;
+    }
+    .home .home_pine {
+        width: 400px;
+        bottom: 7rem;
+    }
+    .home .home_moon {
+        width: 440px;
+        bottom: 12rem;
+    }
+    .home .home_trineo {
+        bottom: 20rem;
+        width: 500px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .home {
+        height: 980px;
+    }
+    .home .home_mountain_3,
+    .home .home_mountain_2,
+    .home .home_mountain_1 {
+        width: 100%;
+    }
+    .home .home_village {
+        width: 720px;
+        bottom: 4rem;
+    }
+    .home .home_pine {
+        width: 450px;
+        bottom: 12.5rem;
+    }
+    .home .home_moon {
+        width: 600px;
+        bottom: 14rem;
+    }
+    .home .home_trineo {
+        bottom: 28rem;
+        width: 500px;
+    }
+}
+@media screen and (min-width: 1700px) {
+    .home {
+        max-width: 1280px;
+        height: 990px;
+        margin: 0 auto;
+    }
+    .dummy {
+        padding: 100vh 0;
+    }
+}
