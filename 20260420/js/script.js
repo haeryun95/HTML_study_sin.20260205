@@ -58,4 +58,32 @@ document.addEventListener("DOMContentLoaded", function () {
         .fromTo("#card03", { scale: 1 }, { scale: 0.9 }, ">");
 
     //timeline
+    let cursorImgBox = document.querySelector(".cursor .img-box");
+    let workLinks = document.querySelectorAll(".design-timeline a:first-child");
+
+    //커서 이동시 이미지 박스 함께 이동
+    document.addEventListener("mousemove", (e) => {
+        cursorImgBox.style.top = `${e.clientY}px`;
+        cursorImgBox.style.left = `${e.clientX}px`;
+        cursorImgBox.animate(
+            {
+                top: `${e.clientY}px`,
+                left: `${e.clientX}px`,
+            },
+            2000,
+        );
+    });
+    workLinks.forEach((item) => {
+        imageUrl = item.getAttribute("data-img");
+        console.log("imageUrl::: ", imageUrl);
+        let cursorImg = document.querySelector(`${imageUrl}`);
+        item.addEventListener("mouseover", () => {
+            cursorImgBox.classList.add("on");
+            cursorImg.classList.add("on");
+        });
+        item.addEventListener("mouseout", () => {
+            cursorImgBox.classList.remove("on");
+            cursorImg.classList.remove("on");
+        });
+    });
 });
