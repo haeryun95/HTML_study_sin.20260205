@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+.visual {
+}
+.visual .type {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 97;
+    width: 70%;
+    text-align: center;
+}
+
+.visual .type #animatingString {
+    color: #fff;
+    font-size: 2.5em;
+    line-height: 65px;
+    text-align: center;
+    display: block;
+}
+.visual .type #animatingString em {
+    font-weight: bold;
+    font-style: normal;
+    color: #dda31b;
+}
+.visual .type a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    width: 150px;
+    line-height: 50px;
+    border-radius: 5px;
+    border: 1px solid rgb(221, 221, 221);
+    text-align: center;
+    background-color: #fff;
+    transition:
+        box-shadow 0.5s,
+        color 0.5s;
+}
+
+.visual .type a:hover {
+    box-shadow:
+        -85px 0 0 0 inset #dda31b,
+        85px 0 0 0 inset #dda31b;
+    color: #fff;
+}
+
+.visual .wave {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* ======================
+반응형 
+=========================*/
+
+@media screen and (max-width: 1240px) {
+    .visual .type {
+        width: 80%;
+    }
+    .visual .type #animatingString {
+        font-size: 3.333vw;
+        line-height: 6vw;
+    }
+}
+@media screen and (max-width: 640px) {
+    .visual .type {
+        width: 100%;
+    }
+    .visual .type #animatingString {
+        font-size: 3.9vw;
+        line-height: 6vw;
+    }
+    .visual .type a {
+        width: 120px;
+        line-height: 35px;
+        font-size: 2.7vw;
+    }
+}
+@media screen and (max-width: 480px) {
+    .visual .type #animatingString {
+        font-size: 4.5vw;
+    }
+}

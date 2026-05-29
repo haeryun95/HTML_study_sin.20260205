@@ -9,19 +9,13 @@
         <!-- common css -->
         <link rel="stylesheet" href="css/common.css" />
         <!-- css -->
-        <link rel="stylesheet" href="css/mian.css" />
+        <link rel="stylesheet" href="css/about.css" />
         <!-- 제이쿼리 -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <!-- wavify.js plugin -->
-        <script defer src="./js/TweenMax.min.js"></script>
-        <script defer src="./js/wavify.js"></script>
-        <script defer src="./js/jquery.wavify.js"></script>
-        <!-- 타이핑 라이브러리 -->
-        <script defer src="./js/typed.umd.js"></script>
         <!-- 커먼 -->
         <script defer src="js/common.js"></script>
         <!-- 커스텀 -->
-        <script defer src="js/main.js"></script>
+        <script defer src="js/about.js"></script>
     </head>
     <body>
         <!-- mobile btn -->
@@ -38,10 +32,10 @@
                 <p>웹 디자이너 김정숙</p>
             </div>
             <ul>
-                <li class="on">
+                <li>
                     <a href="index.html"><i class="fa-solid fa-house-chimney"></i>홈</a>
                 </li>
-                <li>
+                <li class="on">
                     <a href="about.html"><i class="fa-solid fa-user"></i>프로필</a>
                 </li>
                 <li>
@@ -70,8 +64,8 @@
                 </h1>
                 <nav>
                     <ul>
-                        <li class="on"><a href="index.html">홈</a></li>
-                        <li><a href="about.html">프로필</a></li>
+                        <li><a href="index.html">홈</a></li>
+                        <li class="on"><a href="about.html">프로필</a></li>
                         <li><a href="web-work.html">웹퍼블리싱</a></li>
                         <li><a href="design-work.html">디자인</a></li>
                         <li><a href="contact.html">콘텍트</a></li>
@@ -95,22 +89,51 @@
         </header>
         <!-- //header -->
         <!-- section -->
-        <section class="visual">
-            <div class="type">
-                <div id="typedStr">
-                    <p>성장하는 웹 디자이너 &amp; 웹 퍼블리셔 <em>김정숙</em>입니다.<br />다음 페이지를 보시려면 아래 버튼을 클릭해 주세요.</p>
+        <section class="content">
+            <div class="title-wrap">
+                <div class="title">
+                    <h3>About Me</h3>
                 </div>
-                <span id="animatingString"></span>
-                <a href="about.html">프로필</a>
             </div>
-            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave">
-                <defs></defs>
-                <path id="wave-1" d="" />
-            </svg>
-            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave">
-                <defs></defs>
-                <path id="wave-2" d="" />
-            </svg>
+            <div class="about-wrap">
+                <div class="about-content">
+                    <div class="profile-pic">
+                        <div class="profile-img">
+                            <img src="http://placehold.co/300" alt="profile" />
+                        </div>
+                        <div class="profile-desc">
+                            <p>김정숙</p>
+                            <p>1995.08.05</p>
+                            <p>haeryun805@gmail.com</p>
+                            <p>#성실하게, #꼼꼼하게, #밝은</p>
+                        </div>
+                    </div>
+                    <div class="profile-txt">
+                        <div class="profile-mind">
+                            <h3>◆ MIND</h3>
+                            <p>
+                                <span>"혼자 부딪혀봐야 온전히 내 것이 된다."</span>는 마인드를 가지고 있으며, 혼자 찾아보고 고민하여 문제를 해결하는 것을
+                                좋아합니다.
+                            </p>
+                        </div>
+                        <div class="profile-edu">
+                            <h3>◆ EDUCATION</h3>
+                            <p>2024. 10. 28 ~ 2025. 03. 28 : (디지털디자인)UI/UX 반응형 웹디자인 &amp; 웹퍼블리셔(디자인&amp;코딩)양성 C(760H) 수료</p>
+                            <p>2022. 01. 01 ~ 2022. 01. 31 : 무슨 학교 졸업</p>
+                        </div>
+                        <div class="profile-license">
+                            <h3>◆ LICENSE</h3>
+                            <p>2022. 08 : 웹디자인기능사</p>
+                            <p>2022. 08 : GTQ</p>
+                            <p>2022. 08 : 운전면허증 1급 보통</p>
+                            <p>2022. 08 : 컴활 1급</p>
+                        </div>
+                        <div class="profile-skill">
+                            <h3>◆ SKILL</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- //section -->
         <!-- footer -->
